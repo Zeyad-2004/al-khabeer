@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+:root{
+    --main-color: #000000;
+    --second-color: #FD9802;
+    --gray: #FAFAFA;
+    --font: "Cairo", sans-serif;
+    --Dark-25: rgba(8, 8, 8, 0.25);
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+body{
+    direction: rtl;
+    min-height: 100vh;
+    font-family: var(--font);
+}
+
+/* Discount Bar Start */
+.discountbar{
+    position: relative;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.discountbar h1{
+    background-color: #fff;
+    color: var(--second-color);
+
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29.2px;
+}
+/* Discount Bar End */
+
+/* Main Navbar Start */
+#main-navbar{
+    width: 100%;
+    height: 113px;
+    padding: 25px 100px; 
+    
+    color: #ffffff;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-navbar .logo{
+    width: 215px;
+    height: 55px;
+    background-image: url(../media/main/logo-light.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#main-navbar .navbar-content{
+    display: flex;
+    column-gap: 40px;
+}
+
+#main-navbar .navbar-content .part a{
+    font-size: 20px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #ffffff;
+    text-decoration: none;
+
+    transition-duration: 0.3s;
+}
+.navbar-active, #main-navbar a:hover{
+    color: var(--second-color) !important;
+}
+#main-navbar .search{
+    position: relative;
+}
+#main-navbar .search .navbar-searchbar{
+    width: 360px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+
+    display: inline-flex;
+    padding: 9px 23px 9px 16px;
+    align-items: flex-end;
+    background: var(--gray);  
+}
+#main-navbar .search input::placeholder{
+    color: var(--Dark-25);
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+
+}
+
+#main-navbar .search .navbar-search-submit-icon{
+    background-color: transparent;
+    color: var(--Dark-25);
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 35px;
+    top: 25%;
+}
+#main-navbar .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+#main-navbar .user >*{
+    color: #ffffff;
+}
+#main-navbar .user .profile .user-image{
+    height: 70px;
+    width: 70px;
+    border-radius: 12px;
+
+    background-image: url(../media/default/profile_picture/profile.png);
+    background-position: center;
+    background-size: cover;
+}
+#main-navbar .user .profile .name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 10px;
+}
+.name a{
+    font-size: 20px;
+    color: #ffffff;
+    transition-duration: 0.3s;
+    font-weight: 700;
+}
+.name a:last-child{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Navbar End */
+
+
+/* HomePage Hero Start */
+#homepage-hero{    
+    width: 100%;
+    height: 620px;
+    
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(270deg, rgba(0, 0, 0, 0.50) 5.88%, rgba(0, 0, 0, 0.00) 89.44%), url(../media/main/hero.png), lightgray -295.518px -223.336px / 121.996% 220.068% no-repeat;
+    
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#homepage-hero .content{
+    margin-right: 100px;
+}
+#homepage-hero .content >*{
+    margin-bottom: 20px;
+}
+#homepage-hero .content h1{
+    color: #FFF;
+
+    text-align: right;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+}
+#homepage-hero .content h6{
+    width: 522px;
+    color: #FFF;
+
+    text-align: right;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px; /* 158.333% */
+}
+#homepage-hero .content button{
+    width: 140px;
+    height: 40px;
+    flex-shrink: 0;
+    background-color: var(--second-color);
+}
+#homepage-hero .content button a{
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px; /* 172.727% */
+}
+
+/* HomePage Hero Endd */
+
+
+/* Footer Start */
+#main-footer{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: #F4F4F4;
+}
+#main-footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+#main-footer .container a{
+    color: #000;
+
+    text-align: right;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+
+    transition-duration: 0.3s;
+}
+#main-footer .container a:hover{
+    font-size: 20px;
+    font-weight: 700;
+}
+#main-footer .container >*{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+}
+#main-footer .breaf{
+    
+    gap: 30px;
+    
+    width: 50%;
+}
+#main-footer .breaf .logo{
+    width: 288px;
+    height: 77px;
+    background-image: url(../media/main/logo-dark.png);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#main-footer .breaf .discreption{
+    width: 80%;
+    color: #000;
+    text-align: right;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29.2px;
+}
+#main-footer .content{
+    width: 20%;
+}
+#main-footer .contact{
+    width: 20%;
+}
+
+/* Footer End */
+
+/* Discound Bar Start */
+.copyright-service{
+    background-color: #fff;
+    position: relative;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright-service h1{
+    color: var(--second-color);
+
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29.2px;
+}
+/* Discound Bar End */
+
+
+
+/* General CSS USES */
+.flex{
+    display: flex;
+}
+.borderr{
+    border: 2px solid red;
+}
