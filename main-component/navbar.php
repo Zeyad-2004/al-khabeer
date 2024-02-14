@@ -1,6 +1,4 @@
-<div class="discountbar">
-    <h1>خصم 90% لفتره محدودة</h1>
-</div>    
+<?php include "main-component/discountbar.php" ?>
 
 <nav id="main-navbar" class="navbar navbar-expand-lg">
 
@@ -8,7 +6,7 @@
     </a>
     <div class="navbar-content">
         <div class="part">
-            <a href="#" class="navbar-active">الرئيسية</a>
+            <a href="index.php" class="navbar-active">الرئيسية</a>
         </div>
         <div class="part">
             <a href="#">الدورات</a>

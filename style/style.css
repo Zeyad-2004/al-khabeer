@@ -3,9 +3,10 @@
 :root{
     --main-color: #000000;
     --second-color: #FD9802;
-    --gray: #FAFAFA;
+    --White: #ffffff;
+    --Gray: #FAFAFA;
+
     --font: "Cairo", sans-serif;
-    --Dark-25: rgba(8, 8, 8, 0.25);
 }
 *{
     margin: 0;
@@ -20,8 +21,8 @@ body{
     font-family: var(--font);
 }
 
-/* Discount Bar Start */
-.discountbar{
+/*############# Discount Bar Start #############*/
+#discountbar{
     position: relative;
     height: 70px;
 
@@ -29,7 +30,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.discountbar h1{
+#discountbar h1{
     background-color: #fff;
     color: var(--second-color);
 
@@ -39,9 +40,19 @@ body{
     font-weight: 400;
     line-height: 29.2px;
 }
-/* Discount Bar End */
+#discountbar .close{
+    position: absolute;
+    left:10px;
+    top: 10px;
 
-/* Main Navbar Start */
+    color: black;
+    cursor: pointer;
+}
+#discountbar .close:hover{
+    color: var(--second-color);
+}
+
+/*############# Main Navbar Start #############*/
 #main-navbar{
     width: 100%;
     height: 113px;
@@ -93,23 +104,24 @@ body{
     display: inline-flex;
     padding: 9px 23px 9px 16px;
     align-items: flex-end;
-    background: var(--gray);  
+    background: var(--Gray);  
 }
 #main-navbar .search input::placeholder{
-    color: var(--Dark-25);
-    text-align: right;
-    font-feature-settings: 'clig' off, 'liga' off;
+    color: rgba(8, 8, 8, 0.25);
+    
     font-size: 18px;
-    font-style: normal;
     font-weight: 500;
+    text-align: right;
+    font-style: normal;
     line-height: normal;
     text-transform: capitalize;
+    font-feature-settings: 'clig' off, 'liga' off;
 
 }
 
 #main-navbar .search .navbar-search-submit-icon{
     background-color: transparent;
-    color: var(--Dark-25);
+    color: rgba(8, 8, 8, 0.25);
     width: 0px;
     height: 0px;
     position: absolute;
@@ -126,8 +138,8 @@ body{
     color: #ffffff;
 }
 #main-navbar .user .profile .user-image{
-    height: 70px;
     width: 70px;
+    height: 70px;
     border-radius: 12px;
 
     background-image: url(../media/default/profile_picture/profile.png);
@@ -141,74 +153,18 @@ body{
     gap: 5px;
     margin-right: 10px;
 }
-.name a{
+#main-navbar .user .profile .name a{
     font-size: 20px;
     color: #ffffff;
     transition-duration: 0.3s;
     font-weight: 700;
 }
-.name a:last-child{
+#main-navbar .user .profile .name a:last-child{
     font-size: 15px;
     font-weight: 500;
 }
 
-/* Navbar End */
-
-
-/* HomePage Hero Start */
-#homepage-hero{    
-    width: 100%;
-    height: 620px;
-    
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(270deg, rgba(0, 0, 0, 0.50) 5.88%, rgba(0, 0, 0, 0.00) 89.44%), url(../media/main/hero.png), lightgray -295.518px -223.336px / 121.996% 220.068% no-repeat;
-    
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-#homepage-hero .content{
-    margin-right: 100px;
-}
-#homepage-hero .content >*{
-    margin-bottom: 20px;
-}
-#homepage-hero .content h1{
-    color: #FFF;
-
-    text-align: right;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-}
-#homepage-hero .content h6{
-    width: 522px;
-    color: #FFF;
-
-    text-align: right;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 38px; /* 158.333% */
-}
-#homepage-hero .content button{
-    width: 140px;
-    height: 40px;
-    flex-shrink: 0;
-    background-color: var(--second-color);
-}
-#homepage-hero .content button a{
-    color: #ffffff;
-    font-size: 22px;
-    text-align: center;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 38px; /* 172.727% */
-}
-
-/* HomePage Hero Endd */
-
-
-/* Footer Start */
+/*############# Footer Start #############*/
 #main-footer{
     position: relative;
     width: 100%;
@@ -236,6 +192,7 @@ body{
 #main-footer .container a:hover{
     font-size: 20px;
     font-weight: 700;
+    color: var(--second-color);
 }
 #main-footer .container >*{
     display: flex;
@@ -274,9 +231,7 @@ body{
     width: 20%;
 }
 
-/* Footer End */
-
-/* Discound Bar Start */
+/*############# Discound Bar Start #############*/
 .copyright-service{
     background-color: #fff;
     position: relative;
@@ -295,14 +250,38 @@ body{
     font-weight: 400;
     line-height: 29.2px;
 }
-/* Discound Bar End */
 
 
 
-/* General CSS USES */
+
+/* ####################################### */
+/* ########## General CSS USES ###########*/
+/* ####################################### */
+
+/* ############ Display Flex ############# */
 .flex{
     display: flex;
+    gap: 10px;
 }
+
+/* ############ Working Border ############# */
 .borderr{
     border: 2px solid red;
 }
+
+/* ######## Scrollbar Customization ######## */
+
+::-webkit-scrollbar {
+    width: 16px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    opacity: 0.8
+  }
+  

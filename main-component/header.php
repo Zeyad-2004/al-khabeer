@@ -10,5 +10,9 @@
 
     <!-- Main Style files -->
     <link rel="stylesheet" href="style/style.css">
+    <link id="pageCssFile" rel="stylesheet">
+    
+    <!-- Main JS Files -->
+    <script src="js/general.js"></script>
 </head>
 <body>
