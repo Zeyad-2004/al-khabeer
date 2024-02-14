@@ -10,9 +10,7 @@
 
     <!-- Main Style files -->
     <link rel="stylesheet" href="style/style.css">
-    <link id="pageCssFile" rel="stylesheet">
-    
-    <!-- Main JS Files -->
-    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="style/<?php echo pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME)?>.css">
+
 </head>
 <body>
