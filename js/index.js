@@ -24,3 +24,18 @@ function setTrainers(e) {
     input.style.marginRight = "-" + num + "px";
 }
 setTrainers(radios[0]);
+
+
+// product-card mobile buttons script.
+let coursesBody = document.getElementById("courses-content");
+let leftBtn = document.getElementById("left");
+let rightBtn = document.getElementById("right");
+
+leftBtn.addEventListener("click", ()=> {
+    coursesBody.style.scrollBehavior = "smooth";
+    coursesBody.scrollLeft -= 333;
+});
+rightBtn.addEventListener("click", ()=> {
+    coursesBody.style.scrollBehavior = "smooth";
+    coursesBody.scrollLeft += 333;
+});
