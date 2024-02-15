@@ -21,6 +21,7 @@ body{
     font-family: var(--font);
 }
 
+/*##############################################*/
 /*############# Discount Bar Start #############*/
 #discountbar{
     position: relative;
@@ -52,6 +53,7 @@ body{
     color: var(--second-color);
 }
 
+/*#############################################*/
 /*############# Main Navbar Start #############*/
 #main-navbar{
     width: 100%;
@@ -164,6 +166,7 @@ body{
     font-weight: 500;
 }
 
+/*#########################################/
 /*############# Footer Start #############*/
 #main-footer{
     position: relative;
@@ -230,9 +233,54 @@ body{
 #main-footer .contact{
     width: 20%;
 }
+/* Responsive for mobiles) */
+@media (max-width: 768px) {
+    #main-footer{
+        height: auto;
+        padding: 50px 0;
+    }
+    #main-footer .container{
+        flex-direction: column;
+        height: auto;
+        row-gap: 20px;
+    }
+    #main-footer .container >*{
+        align-items: center;
+        text-align: center;
+    }
+    #main-footer .breaf{
+        gap: 30px;
+        width:auto;
+    }
+    #main-footer .breaf .logo{
+        width: 180px;
+        height: 50px;
+    }
+    #main-footer .breaf .discreption{
+        width: 290px;
+        color: #000;
 
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        line-height: 29.2px;
+    }
+}
+
+/* Responsive for tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #main-footer .breaf .discreption{
+        width: 290px;
+        color: #000;
+
+        font-size: 18px;
+    }
+}
+
+/*##############################################*/
 /*############# Discound Bar Start #############*/
-.copyright-service{
+#copyright-service{
     background-color: #fff;
     position: relative;
     height: 70px;
@@ -241,7 +289,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.copyright-service h1{
+#copyright-service h1{
     color: var(--second-color);
 
     text-align: center;
@@ -249,6 +297,11 @@ body{
     font-style: normal;
     font-weight: 400;
     line-height: 29.2px;
+}
+@media (max-width: 768px){
+    #copyright-service h1{
+        font-size: 14px;
+    }
 }
 
 

@@ -52,7 +52,7 @@
 
     </footer>
 
-    <div class="copyright-service">
+    <div id="copyright-service">
         <h1>
             جميع الحقوق محفوظه لدى منصة الخبير لعام 2024
         </h1>
