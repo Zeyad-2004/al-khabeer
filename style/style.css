@@ -233,7 +233,8 @@ body{
 #main-footer .contact{
     width: 20%;
 }
-/* Responsive for mobiles) */
+/*############# Footer responsive #############*/
+/* Responsive for mobiles */
 @media (max-width: 768px) {
     #main-footer{
         height: auto;
@@ -268,7 +269,7 @@ body{
     }
 }
 
-/* Responsive for tablets) */
+/* Responsive for tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
     #main-footer .breaf .discreption{
         width: 290px;

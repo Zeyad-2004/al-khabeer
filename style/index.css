@@ -57,6 +57,70 @@
     font-weight: 700;
     line-height: 38px;
 }
+/*############# Homepage hero responsive #############*/
+/* Responsive for mobiles */
+@media (max-width: 768px) {
+    #homepage-hero{
+        height: 280px;
+
+        background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+        background-image: url(../media/main/hero-mobile.png);
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #homepage-hero .content{
+        width: 100%;
+        margin: 0px;
+    }
+    #homepage-hero .content >*{
+        margin: 0px;
+    }
+    #homepage-hero .content h1{
+        font-size: 28px;
+        line-height: 23.22px;
+        text-align: center;
+        
+        width: 100%;
+    }
+    #homepage-hero .content h6{
+        width: 100%;
+        padding: 25px 30px;
+
+        font-size: 16px;
+        line-height: 20px; 
+        text-align: center;
+    }
+    #homepage-hero .content button{
+        width: 100px;
+        height: 35px;
+    }
+    #homepage-hero .content button a{
+        font-size: 16px;
+    }
+}
+
+/* Responsive for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #homepage-hero{
+        height: 280px;
+    }
+    #homepage-hero .content h1{
+        font-size: 28px;
+    }
+    #homepage-hero .content h6{
+        font-size: 20px;
+        line-height: 22px; 
+    }
+    #homepage-hero .content button{
+        width: 100px;
+        height: 35px;
+    }
+    #homepage-hero .content button a{
+        font-size: 16px;
+    }
+}
+
 
 /*############# Trainers Start #############*/
 #trainers{
