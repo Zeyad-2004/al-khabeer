@@ -1,11 +1,28 @@
 <?php include "main-component/header.php"; ?>
-<link rel="stylesheet" href="style/index.css">
-<section id="homepage-hero">
-    <div class="content">
-        <h1>استمر في ذاتك</h1>
-        <h6>واحصل علي المعرفة الني نلزمك للجطوة القادمة مع عشرات البرامج الاحترافبة في تخصصك</h6>
 
-        <button><a href="#">ابحث هنا</a></button>
+<nav id="main-navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-</section>
+  </div>
+</nav>
 <?php include "main-component/footer.php" ?>

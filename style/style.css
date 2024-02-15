@@ -56,12 +56,12 @@ body{
 /*#############################################*/
 /*############# Main Navbar Start #############*/
 #main-navbar{
-    width: 100%;
-    height: 113px;
-    padding: 25px 100px; 
+    max-width: 100vw;
+    height: 90px;
+    padding: 0 100px; 
     
-    color: #ffffff;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
 
     display: flex;
     justify-content: space-between;
@@ -96,15 +96,16 @@ body{
 }
 #main-navbar .search{
     position: relative;
+    width: auto;
 }
 #main-navbar .search .navbar-searchbar{
-    width: 360px;
+    width: 20vw;
     height: 50px;
     border: none;
     border-radius: 12px;
+    padding: 9px 23px 9px 16px;
 
     display: inline-flex;
-    padding: 9px 23px 9px 16px;
     align-items: flex-end;
     background: var(--Gray);  
 }
@@ -126,9 +127,11 @@ body{
     color: rgba(8, 8, 8, 0.25);
     width: 0px;
     height: 0px;
+
     position: absolute;
-    left: 35px;
+    left: 0;
     top: 25%;
+    transform: translateX(30px);
 }
 #main-navbar .user{
     display: flex;
@@ -138,6 +141,10 @@ body{
 }
 #main-navbar .user >*{
     color: #ffffff;
+}
+#main-navbar .user .profile{
+    justify-content: center;
+    align-items: center;
 }
 #main-navbar .user .profile .user-image{
     width: 70px;
@@ -164,6 +171,202 @@ body{
 #main-navbar .user .profile .name a:last-child{
     font-size: 15px;
     font-weight: 500;
+}
+
+#mobile-main-navbar{
+    visibility: hidden;
+    display: fixed;
+    width: 101%;
+    height: 90px;
+
+    position:fixed;
+    left: 0;
+    bottom: -3px;
+    z-index: 1011;
+    background-color: #000;
+}
+#mobile-main-navbar .container{
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center
+}
+#mobile-main-navbar .container >*{
+    width: 70px;
+}
+#mobile-main-navbar .icon{
+    padding: 30px 0px;
+}
+#mobile-main-navbar .icon h1{
+    color: #FFF;
+
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    font-family: "Avenir Arabic";
+
+    margin-top: 5px;
+}
+#mobile-main-navbar .mobile-navbar-active-icon{
+    color: var(--second-color);
+    border-top: 6px solid var(--second-color) !important;
+}
+#mobile-main-navbar .mobile-navbar-active-svg path, .mobile-navbar-active-icon a h1{
+    color: var(--second-color) !important;
+    stroke: var(--second-color);
+}
+
+
+/*############# Main-Navbar responsive #############*/
+/* Responsive for mobiles */
+@media (max-width: 768px) {
+    body{
+        margin-bottom: 90px;
+    }
+    #main-navbar .navbar-content, #main-navbar .search, #main-navbar .user{
+        display: none;
+    }
+    #main-navbar{
+        justify-content: center;
+    }
+    #mobile-main-navbar{
+        visibility: visible;
+    }
+    
+}
+
+/* Responsive for tablets */
+@media (min-width: 768px) and (max-width: 1410px) {
+    #main-navbar{
+        width: 100%;
+        height: 70px;
+        padding: 25px 35px;
+    }
+    #main-navbar .logo{
+        width: 120px;
+        height: 30px;
+    }
+    #main-navbar .navbar-content{
+        display: flex;
+        column-gap: 20px;
+    }
+    
+    #main-navbar .navbar-content .part a{
+        font-size: 12px;
+    }
+    #main-navbar .search .navbar-searchbar{
+        width: 100%;
+        height: 30px;
+        border: none;
+        border-radius: 12px;
+        padding: 9px 23px 9px 16px;  
+    }
+    #main-navbar .search input::placeholder{
+        font-size: 14px;
+    }
+    
+    #main-navbar .search .navbar-search-submit-icon{
+        width: auto;
+        height: auto;
+    
+        position: absolute;
+        right: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #main-navbar .user{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+    }
+    #main-navbar .user >*{
+        color: #fff;
+    }
+    #main-navbar .user .profile .user-image{
+        width: 40px;
+        height: 40px;
+    }
+    #main-navbar .user .profile .name{
+        margin-right: 5px;
+    }
+    #main-navbar .user .profile .name a{
+        font-size:11px;
+    }
+    #main-navbar .user .profile .name a:last-child{
+        font-size: 7px;
+    }
+    
+}
+@media (min-width: 1200px) and (max-width: 1410px) {
+    #main-navbar{
+        padding: 0 65px;
+    }
+    #main-navbar .logo{
+        width: 200px;
+        height: 50px;
+    }
+    
+    #main-navbar .navbar-content .part a{
+        font-size: 18px;
+    }
+    #main-navbar .user{
+        gap: 20px; 
+    }
+    #main-navbar .user .profile .name a{
+        font-size:16px;
+    }
+    #main-navbar .user .profile .name a:last-child{
+        font-size: 10px;
+    }    
+}
+@media (min-width: 768px) and (max-width: 900px) {
+    #main-navbar{
+        padding: 0 35px;
+    }
+    #main-navbar .logo{
+        width: 120px;
+        height: 30px;
+    }
+    
+    #main-navbar .navbar-content .part a{
+        font-size: 12px;
+    }
+    #main-navbar .search .navbar-searchbar{
+        width: 130px;
+        height: 25px;
+        border: none;
+        border-radius: 6px;
+        padding: 9px 10px 9px 16px;  
+    }
+    #main-navbar .search .navbar-search-submit-icon svg{
+        width: 14px;
+        height: 14px;
+    }
+    #main-navbar .search input::placeholder{
+        font-size: 11px;
+    }
+    #main-navbar .user{
+        gap: 20px; 
+    }
+    #main-navbar .user .cart{
+        width: 18px;
+        height: 18px; 
+    }
+    #main-navbar .user .profile .user-image{
+        width: 35px;
+        height: 35px;
+    }
+    #main-navbar .user .profile .name a{
+        font-size:12px;
+    }
+    #main-navbar .user .profile .name a:last-child{
+        font-size: 7px;
+    }    
 }
 
 /*#########################################/
