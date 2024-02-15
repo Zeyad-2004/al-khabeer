@@ -1,341 +1,470 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
 
-:root{
-    --main-color: #000000;
-    --second-color: #FD9802;
-    --White: #ffffff;
-    --Gray: #FAFAFA;
+:root {
+  --main-color: #000000;
+  --second-color: #fd9802;
+  --White: #ffffff;
+  --Gray: #fafafa;
 
-    --font: "Cairo", sans-serif;
+  --font: "Cairo", sans-serif;
 }
-*{
-    margin: 0;
-    padding: 0;
-    border: none !important;
-    text-decoration: none !important;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  border: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box;
 }
-body{
-    direction: rtl;
-    min-height: 100vh;
-    font-family: var(--font);
+body {
+  direction: rtl;
+  min-height: 100vh;
+  font-family: var(--font);
 }
 
 /*##############################################*/
 /*############# Discount Bar Start #############*/
-#discountbar{
-    position: relative;
-    height: 70px;
+#discountbar {
+  position: relative;
+  height: 70px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#discountbar h1{
-    background-color: #fff;
-    color: var(--second-color);
+#discountbar h1 {
+  background-color: #fff;
+  color: var(--second-color);
 
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 29.2px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.2px;
 }
-#discountbar .close{
-    position: absolute;
-    left:10px;
-    top: 10px;
+#discountbar .close {
+  position: absolute;
+  left: 10px;
+  top: 10px;
 
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
-#discountbar .close:hover{
-    color: var(--second-color);
+#discountbar .close:hover {
+  color: var(--second-color);
 }
 
 /*#############################################*/
 /*############# Main Navbar Start #############*/
-#main-navbar{
-    width: 100%;
-    height: 113px;
-    padding: 25px 100px; 
-    
-    color: #ffffff;
-    background-color: black;
+#main-navbar {
+  width: 100%;
+  height: 113px;
+  padding: 25px 100px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#main-navbar .logo{
-    width: 215px;
-    height: 55px;
-    background-image: url(../media/main/logo-light.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#main-navbar .navbar-content{
-    display: flex;
-    column-gap: 40px;
-}
+  color: #ffffff;
+  background-color: black;
 
-#main-navbar .navbar-content .part a{
-    font-size: 20px;
-    text-align: center;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    color: #ffffff;
-    text-decoration: none;
-
-    transition-duration: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.navbar-active, #main-navbar a:hover{
-    color: var(--second-color) !important;
+#main-navbar .logo {
+  width: 215px;
+  height: 55px;
+  background-image: url(../media/main/logo-light.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-#main-navbar .search{
-    position: relative;
-}
-#main-navbar .search .navbar-searchbar{
-    width: 360px;
-    height: 50px;
-    border: none;
-    border-radius: 12px;
-
-    display: inline-flex;
-    padding: 9px 23px 9px 16px;
-    align-items: flex-end;
-    background: var(--Gray);  
-}
-#main-navbar .search input::placeholder{
-    color: rgba(8, 8, 8, 0.25);
-    
-    font-size: 18px;
-    font-weight: 500;
-    text-align: right;
-    font-style: normal;
-    line-height: normal;
-    text-transform: capitalize;
-    font-feature-settings: 'clig' off, 'liga' off;
-
+#main-navbar .navbar-content {
+  display: flex;
+  column-gap: 40px;
 }
 
-#main-navbar .search .navbar-search-submit-icon{
-    background-color: transparent;
-    color: rgba(8, 8, 8, 0.25);
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    left: 35px;
-    top: 25%;
-}
-#main-navbar .user{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; 
-}
-#main-navbar .user >*{
-    color: #ffffff;
-}
-#main-navbar .user .profile .user-image{
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
+#main-navbar .navbar-content .part a {
+  font-size: 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #ffffff;
+  text-decoration: none;
 
-    background-image: url(../media/default/profile_picture/profile.png);
-    background-position: center;
-    background-size: cover;
+  transition-duration: 0.3s;
 }
-#main-navbar .user .profile .name{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    margin-right: 10px;
+.navbar-active,
+#main-navbar a:hover {
+  color: var(--second-color) !important;
 }
-#main-navbar .user .profile .name a{
-    font-size: 20px;
-    color: #ffffff;
-    transition-duration: 0.3s;
-    font-weight: 700;
+#main-navbar .search {
+  position: relative;
 }
-#main-navbar .user .profile .name a:last-child{
-    font-size: 15px;
-    font-weight: 500;
+#main-navbar .search .navbar-searchbar {
+  width: 360px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+
+  display: inline-flex;
+  padding: 9px 23px 9px 16px;
+  align-items: flex-end;
+  background: var(--Gray);
+}
+#main-navbar .search input::placeholder {
+  color: rgba(8, 8, 8, 0.25);
+
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+#main-navbar .search .navbar-search-submit-icon {
+  background-color: transparent;
+  color: rgba(8, 8, 8, 0.25);
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 35px;
+  top: 25%;
+}
+#main-navbar .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#main-navbar .user > * {
+  color: #ffffff;
+}
+#main-navbar .user .profile .user-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+
+  background-image: url(../media/default/profile_picture/profile.png);
+  background-position: center;
+  background-size: cover;
+}
+#main-navbar .user .profile .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-right: 10px;
+}
+#main-navbar .user .profile .name a {
+  font-size: 20px;
+  color: #ffffff;
+  transition-duration: 0.3s;
+  font-weight: 700;
+}
+#main-navbar .user .profile .name a:last-child {
+  font-size: 15px;
+  font-weight: 500;
 }
 
 /*#########################################/
 /*############# Footer Start #############*/
-#main-footer{
-    position: relative;
-    width: 100%;
-    height: 450px;
-    background-color: #F4F4F4;
+#main-footer {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background-color: #f4f4f4;
 }
-#main-footer .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#main-footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    height: 100%;
+  height: 100%;
 }
-#main-footer .container a{
-    color: #000;
+#main-footer .container a {
+  color: #000;
 
-    text-align: right;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 50px;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
 
-    transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-#main-footer .container a:hover{
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--second-color);
+#main-footer .container a:hover {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--second-color);
 }
-#main-footer .container >*{
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: right;
+#main-footer .container > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
 }
-#main-footer .breaf{
-    
-    gap: 30px;
-    
-    width: 50%;
-}
-#main-footer .breaf .logo{
-    width: 288px;
-    height: 77px;
-    background-image: url(../media/main/logo-dark.png);
+#main-footer .breaf {
+  gap: 30px;
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 50%;
 }
-#main-footer .breaf .discreption{
-    width: 80%;
-    color: #000;
-    text-align: right;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 29.2px;
+#main-footer .breaf .logo {
+  width: 288px;
+  height: 77px;
+  background-image: url(../media/main/logo-dark.png);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-#main-footer .content{
-    width: 20%;
+#main-footer .breaf .discreption {
+  width: 80%;
+  color: #000;
+  text-align: right;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29.2px;
 }
-#main-footer .contact{
-    width: 20%;
+#main-footer .content {
+  width: 20%;
+}
+#main-footer .contact {
+  width: 20%;
 }
 /*############# Footer responsive #############*/
 /* Responsive for mobiles */
 @media (max-width: 768px) {
-    #main-footer{
-        height: auto;
-        padding: 50px 0;
-    }
-    #main-footer .container{
-        flex-direction: column;
-        height: auto;
-        row-gap: 20px;
-    }
-    #main-footer .container >*{
-        align-items: center;
-        text-align: center;
-    }
-    #main-footer .breaf{
-        gap: 30px;
-        width:auto;
-    }
-    #main-footer .breaf .logo{
-        width: 180px;
-        height: 50px;
-    }
-    #main-footer .breaf .discreption{
-        width: 290px;
-        color: #000;
+  #main-footer {
+    height: auto;
+    padding: 50px 0;
+  }
+  #main-footer .container {
+    flex-direction: column;
+    height: auto;
+    row-gap: 20px;
+  }
+  #main-footer .container > * {
+    align-items: center;
+    text-align: center;
+  }
+  #main-footer .breaf {
+    gap: 30px;
+    width: auto;
+  }
+  #main-footer .breaf .logo {
+    width: 180px;
+    height: 50px;
+  }
+  #main-footer .breaf .discreption {
+    width: 290px;
+    color: #000;
 
-        font-size: 14px;
-        font-weight: 400;
-        font-style: normal;
-        text-align: center;
-        line-height: 29.2px;
-    }
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    line-height: 29.2px;
+  }
 }
 
 /* Responsive for tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
-    #main-footer .breaf .discreption{
-        width: 290px;
-        color: #000;
+  #main-footer .breaf .discreption {
+    width: 290px;
+    color: #000;
 
-        font-size: 18px;
-    }
+    font-size: 18px;
+  }
 }
 
 /*##############################################*/
 /*############# Discound Bar Start #############*/
-#copyright-service{
-    background-color: #fff;
-    position: relative;
-    height: 70px;
+#copyright-service {
+  background-color: #fff;
+  position: relative;
+  height: 70px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#copyright-service h1{
-    color: var(--second-color);
+#copyright-service h1 {
+  color: var(--second-color);
 
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 29.2px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.2px;
 }
-@media (max-width: 768px){
-    #copyright-service h1{
-        font-size: 14px;
-    }
+@media (max-width: 768px) {
+  #copyright-service h1 {
+    font-size: 14px;
+  }
 }
 
+/* ####################### CARD STYLES ###################### */
 
+.courses .courses-content .card {
+  width: 285px;
+  height: 436px;
+  flex-shrink: 0;
+  position: relative;
+  border: none;
+}
 
+.courses .courses-content .card .best-seller {
+  position: absolute;
+  top: 8px;
+  right: 1px;
+  display: flex;
+  width: 70px;
+  padding: 0px 5px 2px 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  background: #fd9802;
+  color: #000;
+  text-align: right;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.courses .courses-content .card .card-pic {
+  width: 100%;
+  height: 157px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.courses .courses-content .card .category {
+  color: #000;
+  text-align: right;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+
+.courses .courses-content .card .title {
+  color: #000;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 5px;
+}
+
+.courses .courses-content .card .author,
+.courses .courses-content .card .description,
+.courses .courses-content .card .rating-box {
+  color: #000;
+  text-align: right;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 8px;
+}
+
+.courses .courses-content .card .description,
+.courses .courses-content .card .rating-box {
+  color: #848484;
+}
+
+.courses .courses-content .card .rating-box {
+  font-family: "Segoe UI";
+  line-height: 19px;
+  display: flex;
+  padding: 2px 0px 0.51px 132px;
+  align-items: flex-start;
+  gap: 8.61px;
+  align-self: stretch;
+  margin-top: 20px;
+}
+
+.courses .courses-content .card .rating-box .rating {
+  gap: 6px;
+}
+
+.courses .courses-content .card .price-box {
+  display: flex;
+  gap: 11px;
+  font-family: "Segoe UI", sans-serif;
+  color: #fd9802;
+  text-align: right;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 20px;
+}
+
+.courses .courses-content .card .price-box .price {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.courses .courses-content .card .price-box .price-discount {
+  font-family: "Cairo";
+}
+
+.courses .courses-content .card .buy-button {
+  width: 248px;
+  height: 48px;
+  min-height: 24px;
+  padding: 12px 32.45px;
+  align-self: stretch;
+  border-radius: 2px;
+  background: #000;
+  color: #fff;
+  text-align: right;
+  font-family: "Segoe UI";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 16px;
+  cursor: pointer;
+}
 
 /* ####################################### */
 /* ########## General CSS USES ###########*/
 /* ####################################### */
 
 /* ############ Display Flex ############# */
-.flex{
-    display: flex;
-    gap: 10px;
+.flex {
+  display: flex;
+  gap: 10px;
 }
 
 /* ############ Working Border ############# */
-.borderr{
-    border: 2px solid red;
+.borderr {
+  border: 2px solid red;
 }
 
 /* ######## Scrollbar Customization ######## */
 
 ::-webkit-scrollbar {
-    width: 16px;
-    height: 12px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #000;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--second-color);
-    opacity: 0.8
-  }
-  
+  width: 16px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+  opacity: 0.8;
+}
