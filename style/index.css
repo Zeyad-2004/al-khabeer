@@ -226,7 +226,7 @@
     overflow-x: scroll;
   }
   .courses .courses-content::-webkit-scrollbar {
-    visibility: hidden;
+    display: none !important;
   }
   .courses .scroll-buttons {
     display: block;
