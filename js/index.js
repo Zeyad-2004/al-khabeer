@@ -1,5 +1,5 @@
-const cards = [...document.querySelectorAll("#trainers .slider .wrapper .cards")];
-const radios = [...document.querySelectorAll("#trainers .navigator .radio")];
+const cards = [...document.querySelectorAll("#trainers .slider .wrapper .card")];
+let radios = [...document.querySelectorAll("#trainers .navigator .radio")];
 
 const cssRoot = getComputedStyle(document.documentElement);
 
@@ -23,19 +23,68 @@ function setTrainers(e) {
     num += card_gap/2;
     input.style.marginRight = "-" + num + "px";
 }
-setTrainers(radios[0]);
+function setTrainersRadios(){
+    function setRadios(num){
+
+        const navigator = document.querySelector("#trainers .navigator");
+        navigator.innerHTML = "";
+        
+        if(num == 0){
+            navigator.innerHTML = `<div class="scroll-buttons" style="display: flex;">
+                                        <button onclick="scrollButtons(this.id)" class="right" id="r-trainers-cards"><i class="fa-solid fa-chevron-right"></i></button>
+                                        <button onclick="scrollButtons(this.id)" class="left" id="l-trainers-cards"><i class="fa-solid fa-chevron-left"></i></button>
+                                    </div>
+                                    `
+        }else{
+            for(let i=1;i<=num;i++){
+                navigator.innerHTML += `<label for="radio${i}" class="radio" onclick="setTrainers(this)">
+                                            <input type="radio" name="radio-btn" id="radio${i}">
+                                        </label>
+                                        `
+            }
+        }
+        radios = [...document.querySelectorAll("#trainers .navigator .radio")];
+        
+    }
+    if(window.matchMedia("(max-width: 768px)").matches){
+        setRadios(0);
+    }
+    else if(window.matchMedia("(max-width: 960px)").matches){
+        setRadios(cards.length/3 + (cards.length % 3 > 0));
+    }
+    else if(window.matchMedia("(max-width: 1200px)").matches){
+        setRadios(cards.length/4 + (cards.length % 4 > 0));
+    }
+    else if(window.matchMedia("(max-width: 2600px)").matches){
+        setRadios(cards.length/5 + (cards.length % 5 > 0));
+    }
+
+    setTrainers(radios[0]);
+    cards[0].style.marginRight = "-" + 24 + "px";
+
+}
 
 
-// product-card mobile buttons script.
-let coursesBody = document.getElementById("courses-content");
-let leftBtn = document.getElementById("left");
-let rightBtn = document.getElementById("right");
-
-leftBtn.addEventListener("click", ()=> {
-    coursesBody.style.scrollBehavior = "smooth";
-    coursesBody.scrollLeft -= 333;
+//  Add event listeners to the trainers' radio buttons to inc or dec accordingly to screen size
+window.addEventListener('DOMContentLoaded', function(){
+    setTrainersRadios();
 });
-rightBtn.addEventListener("click", ()=> {
-    coursesBody.style.scrollBehavior = "smooth";
-    coursesBody.scrollLeft += 333;
+window.addEventListener('resize', function(){
+    setTrainersRadios();
 });
+
+
+
+
+function scrollButtons(e){
+    const container_id = document.getElementById(e.slice(2));
+    
+    if(e[0] == 'l'){
+        container_id.style.scrollBehavior = "smooth";
+        container_id.scrollLeft -= 333;
+    }
+    else if(e[0] == 'r'){
+        container_id.style.scrollBehavior = "smooth";
+        container_id.scrollLeft += 333;
+    }
+}

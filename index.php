@@ -27,8 +27,8 @@
         <?php include("main-component/product-card.php") ?>
     </div>
     <div class="scroll-buttons">
-        <button class="right" id="right"><i class="fa-solid fa-chevron-right"></i></button>
-        <button class="left" id="left"><i class="fa-solid fa-chevron-left"></i></button>
+        <button onclick="scrollButtons(this.id)" class="right" id="r-courses-content"><i class="fa-solid fa-chevron-right"></i></button>
+        <button onclick="scrollButtons(this.id)" class="left" id="l-courses-content"><i class="fa-solid fa-chevron-left"></i></button>
     </div>
 </section>
 
@@ -95,7 +95,7 @@
     </div>
     <div class="slider flex">
         <div class="wrapper flex container-fluid">
-            <div class="cards flex row container-fluid">
+            <div class="cards flex row container-fluid" id="trainers-cards">
                 <div class="card">
                     <div class="background">
                         <div class="trainer-photo">
@@ -476,7 +476,6 @@
         <label for="radio3" class="radio" onclick="setTrainers(this)">
             <input type="radio" name="radio-btn" id="radio3">
         </label>
-
     </div>
 </section>
 
