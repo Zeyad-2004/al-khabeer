@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --title-font :24px;
+    --sub-title-font :18px;
+    --title-font-family :'Cairo';
+    --title-font-color:#161616;
+    --sub-title-font-color:#505050; 
+}
+.strong_points{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 60px;
+
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+/* start top-sec */
+.strong_points .top_sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.strong_points .top-sec h3{
+    height: 28.38px;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #000;
+}
+
+.strong_points .top-sec .line{
+    width: 30vw;
+    height: 4px;
+    background: var(--second-color);
+}
+
+/* start center-sec */
+
+
+.strong_points .center-sec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 50px;
+}
+.strong_points .center-sec >*{
+    width: 40%;
+}
+
+.strong_points .center-sec .item{
+    display: flex;
+    gap: 50px;
+}
+.strong_points .center-sec .item h1,.strong_points .center-sec .item p{
+    height: 23px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    color: #000;
+}
+
+.strong_points .center-sec .item p{
+    width: 85%;
+    height: 47px;
+    font-weight: 400;
+}
+@media screen and (max-width:1000px) {
+   
+    .strong_points .top-sec h3{
+        font-size: 30px;
+        margin: 20px;
+    }
+    .strong_points .top-sec .line{
+        width: 50vw;
+    }
+    
+    .strong_points .center-sec{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-direction: column;
+    }
+    
+    .strong_points .center-sec .item {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        gap: 10px;
+
+        text-align: center;
+    }
+    .strong_points .center-sec .item h1{
+        margin-bottom: 10px;
+    }
+    .strong_points .center-sec .item .t{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .strong_points .center-sec .item p{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+     
+}
+
+ 
+ 
+ 
+
+

@@ -22,8 +22,10 @@ body {
   font-family: var(--font);
 }
 
+
 /*##############################################*/
 /*############# Discount Bar Start #############*/
+/*##############################################*/
 #discountbar {
   position: relative;
   height: 70px;
@@ -54,8 +56,10 @@ body {
   color: var(--second-color);
 }
 
+
 /*#############################################*/
 /*############# Main Navbar Start #############*/
+/*#############################################*/
 #main-navbar{
     max-width: 100vw;
     height: 90px;
@@ -182,7 +186,7 @@ body {
 
     position:fixed;
     left: 0;
-    bottom: -3px;
+    bottom: -1px;
     z-index: 1011;
     background-color: #000;
 }
@@ -199,7 +203,7 @@ body {
     width: 70px;
 }
 #mobile-main-navbar .icon{
-    padding: 30px 0px;
+    padding: 25px 0px 30px 0;
 }
 #mobile-main-navbar .icon h1{
     color: #FFF;
@@ -370,8 +374,10 @@ body {
     }    
 }
 
-/*#########################################/
+
+/*#########################################*/
 /*############# Footer Start #############*/
+/*#########################################*/
 #main-footer {
   position: relative;
   width: 100%;
@@ -436,6 +442,7 @@ body {
 #main-footer .contact {
   width: 20%;
 }
+
 /*############# Footer responsive #############*/
 /* Responsive for mobiles */
 @media (max-width: 768px) {
@@ -482,8 +489,10 @@ body {
   }
 }
 
+
 /*##############################################*/
 /*############# Discound Bar Start #############*/
+/*##############################################*/
 #copyright-service {
   background-color: #fff;
   position: relative;
@@ -508,8 +517,10 @@ body {
   }
 }
 
-/* ####################### CARD STYLES ###################### */
 
+/* ########################################################## */
+/* ####################### CARD STYLES ###################### */
+/* ########################################################## */
 .courses .courses-content .card {
   width: 285px;
   height: 436px;
@@ -528,7 +539,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 2px;
-  background: #fd9802;
+  background: var(--second-color);
   color: #000;
   text-align: right;
   font-family: "Segoe UI", sans-serif;
@@ -603,7 +614,7 @@ body {
   display: flex;
   gap: 11px;
   font-family: "Segoe UI", sans-serif;
-  color: #fd9802;
+  color: var(--second-color);
   text-align: right;
   font-size: 15px;
   font-style: normal;

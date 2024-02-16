@@ -10,16 +10,16 @@
 * {
   transition-duration: 0.3s;
 }
+
+
+/*############################################### */
 /*############# HomePage Hero Start #############*/
+/*############################################### */
 #homepage-hero {
   width: 100%;
   height: 620px;
 
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%,rgba(0, 0, 0, 0.2) 100%),
     linear-gradient(270deg, rgba(0, 0, 0, 0.5) 5.88%, rgba(0, 0, 0, 0) 89.44%),
     url(../media/main/hero.png),
     lightgray -295.518px -223.336px / 121.996% 220.068% no-repeat;
@@ -67,6 +67,8 @@
   font-weight: 700;
   line-height: 38px;
 }
+
+
 /*############# Homepage hero responsive #############*/
 /* Responsive for mobiles */
 @media (max-width: 768px) {
@@ -135,7 +137,10 @@
   }
 }
 
+
+/*########################################## */
 /* ############ courses start ############## */
+/*########################################## */
 .courses {
   width: 100%;
   padding: 0 250px 121px;
@@ -162,7 +167,7 @@
   width: 164px;
   height: 2px;
   flex-shrink: 0;
-  background: #fd9802;
+  background: var(--second-color);
   position: absolute;
   bottom: -20px;
   right: 0;
@@ -267,7 +272,132 @@
   }
 }
 
+/*############################################## */
+/*############# Stronge Point Start############# */
+/*############################################## */
+.strong_points{
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  row-gap: 60px;
+
+  padding: 50px 0;
+  background-color: #fff;
+
+  overflow: hidden;
+}
+
+/* start top-sec */
+.strong_points .top_sec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.strong_points .top-sec h3{
+  height: 28.38px;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: #000;
+}
+
+.strong_points .top-sec .line{
+  width: 30vw;
+  height: 4px;
+  background: var(--second-color);
+}
+
+/* start center-sec */
+
+.strong_points .center-sec{
+  max-width: var(--card-wrapper-size);
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  gap: 50px;
+}
+
+.strong_points .center-sec .item{
+  display: flex;
+  gap: 50px;
+  width: 500px;
+}
+.strong_points .center-sec .item .t{
+  /* width: 50%; */
+}
+.strong_points .center-sec .item h1,.strong_points .center-sec .item p{
+  height: 23px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  color: #000;
+}
+
+.strong_points .center-sec .item p{
+  width: 100%;
+  height: 47px;
+  font-weight: 400;
+}
+
+/*############# Homepage hero responsive #############*/
+/* Responsive for tablets & mobiles */
+@media screen and (max-width:1100px) {
+ 
+  .strong_points .top-sec h3{
+      font-size: 30px;
+      margin: 20px;
+  }
+  .strong_points .top-sec .line{
+      width: 50vw;
+  }
+  
+  .strong_points .center-sec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+  }
+  
+  .strong_points .center-sec .item {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      gap: 10px;
+
+      text-align: center;
+  }
+  .strong_points .center-sec .item h1{
+      margin-bottom: 10px;
+  }
+  .strong_points .center-sec .item .t{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .strong_points .center-sec .item p{
+      margin-bottom: 10px;
+      text-align: center;
+  }
+   
+}
+
+
+/*########################################## */
 /*############# Trainers Start #############*/
+/*########################################## */
 #trainers {
   flex-direction: column;
   justify-content: center;
