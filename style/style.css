@@ -396,7 +396,7 @@ body {
   color: #000;
 
   text-align: right;
-  font-size: 18px;
+  font-size: clamp(18px, 2vw, 18px);
   font-style: normal;
   font-weight: 500;
   line-height: 50px;
@@ -416,12 +416,11 @@ body {
 }
 #main-footer .breaf {
   gap: 30px;
-
   width: 50%;
 }
 #main-footer .breaf .logo {
-  width: 288px;
-  height: 77px;
+  width: clamp(180px, calc((100vw) *.17), 288px);
+  height: clamp(48px, calc((100vw) *.045), 78px);
   background-image: url(../media/main/logo-dark.png);
 
   background-position: center;
@@ -432,16 +431,16 @@ body {
   width: 80%;
   color: #000;
   text-align: right;
-  font-size: 20px;
+  font-size: clamp(12px, 1.5vw, 20px);
   font-style: normal;
   font-weight: 500;
   line-height: 29.2px;
 }
 #main-footer .content {
-  width: 20%;
+  width: clamp(150px ,20%, 200px);
 }
 #main-footer .contact {
-  width: 20%;
+  width: clamp(150px ,20%, 200px);
 }
 
 /*############# Footer responsive #############*/
@@ -462,31 +461,11 @@ body {
   }
   #main-footer .breaf {
     gap: 30px;
-    width: auto;
-  }
-  #main-footer .breaf .logo {
-    width: 180px;
-    height: 50px;
+    width: 80%;
   }
   #main-footer .breaf .discreption {
-    width: 290px;
-    color: #000;
-
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
+    width: 100%;
     text-align: center;
-    line-height: 29.2px;
-  }
-}
-
-/* Responsive for tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-  #main-footer .breaf .discreption {
-    width: 290px;
-    color: #000;
-
-    font-size: 18px;
   }
 }
 
@@ -507,15 +486,10 @@ body {
   color: var(--second-color);
 
   text-align: center;
-  font-size: 18px;
+  font-size: clamp(12px ,2vw, 18px);
   font-style: normal;
   font-weight: 400;
   line-height: 29.2px;
-}
-@media (max-width: 768px) {
-  #copyright-service h1 {
-    font-size: 14px;
-  }
 }
 
 
@@ -670,16 +644,18 @@ body {
 
 /* ######## Scrollbar Customization ######## */
 
-::-webkit-scrollbar {
-  width: 16px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--second-color);
-  opacity: 0.8;
+@media screen and (min-width: 1100px) {
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    opacity: 0.8;
+  }
 }
