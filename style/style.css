@@ -33,16 +33,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
 }
 #discountbar h1 {
   background-color: #fff;
   color: var(--second-color);
 
   text-align: center;
-  font-size: 18px;
+  font-size: clamp(12px, 2vw, 26px);
   font-style: normal;
   font-weight: 400;
-  line-height: 29.2px;
+  line-height: 29.4px;
 }
 #discountbar .close {
   position: absolute;
@@ -61,20 +62,22 @@ body {
 /*############# Main Navbar Start #############*/
 /*#############################################*/
 #main-navbar{
-    max-width: 100vw;
-    height: 90px;
-    padding: 0 100px; 
-    
-    color: #fff;
-    background-color: #000;
+  max-width: 100vw;
+  height: 90px;
+  padding: 0 100px; 
+  
+  
+  color: #fff;
+  background-color: #000;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #main-navbar .logo {
-  width: 215px;
-  height: 55px;
+  width: clamp(150px, calc((100vw) *.19), 210px);
+  height: clamp(40px, calc((100vw) *.0475), 55px);
+  
   background-image: url(../media/main/logo-light.png);
   background-position: center;
   background-size: cover;
@@ -105,8 +108,8 @@ body {
     width: auto;
 }
 #main-navbar .search .navbar-searchbar{
-    width: 20vw;
-    height: 50px;
+    width: clamp(130px, calc(100vw * 0.13), 280px);
+    height: clamp(25px, calc(100vw * 0.033), 40px);
     border: none;
     border-radius: 12px;
     padding: 9px 23px 9px 16px;
@@ -144,6 +147,10 @@ body {
   align-items: center;
   gap: 20px;
 }
+#main-navbar .user .cart{
+  width: clamp(18px, calc(100vw * .0155), 26px);
+  height: clamp(18px, calc(100vw * .0155) , 26px); 
+}
 #main-navbar .user > * {
   color: #ffffff;
 }
@@ -178,6 +185,7 @@ body {
   font-weight: 500;
 }
 
+
 #mobile-main-navbar{
     visibility: hidden;
     display: fixed;
@@ -200,15 +208,19 @@ body {
     text-align: center
 }
 #mobile-main-navbar .container >*{
-    width: 70px;
+    width: 20%;
 }
 #mobile-main-navbar .icon{
     padding: 25px 0px 30px 0;
 }
+#mobile-main-navbar .icon svg{
+  width: clamp(22px, calc(100vw *.09), 36px);
+  height: clamp(22px, calc(100vw * .09), 36px);
+}
 #mobile-main-navbar .icon h1{
     color: #FFF;
 
-    font-size: 12px;
+    font-size: clamp(10px, calc(100vw * .018), 14px);
     font-weight: 500;
     font-style: normal;
     line-height: normal;
@@ -228,7 +240,7 @@ body {
 
 /*############# Main-Navbar responsive #############*/
 /* Responsive for mobiles */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     body{
         margin-bottom: 90px;
     }
@@ -236,8 +248,13 @@ body {
         display: none;
     }
     #main-navbar{
-        padding: 0 5vw ;
-        justify-content: center;
+      height: 85px;
+      padding: 0 5vw;
+      justify-content: center;
+    }
+    #main-navbar .logo{
+      width: clamp(150px, calc((100vw) *.24), 210px);
+      height: clamp(40px, calc((100vw) *.065), 55px);
     }
     #mobile-main-navbar{
         visibility: visible;
@@ -248,28 +265,11 @@ body {
 /* Responsive for tablets */
 @media (min-width: 768px) and (max-width: 1410px) {
     #main-navbar{
-        width: 100%;
-        height: 70px;
-        padding: 25px 35px;
-    }
-    #main-navbar .logo{
-        width: 120px;
-        height: 30px;
+        padding: 0 35px;
     }
     #main-navbar .navbar-content{
         display: flex;
         column-gap: 20px;
-    }
-    
-    #main-navbar .navbar-content .part a{
-        font-size: 12px;
-    }
-    #main-navbar .search .navbar-searchbar{
-        width: 100%;
-        height: 30px;
-        border: none;
-        border-radius: 12px;
-        padding: 9px 23px 9px 16px;  
     }
     #main-navbar .search input::placeholder{
         font-size: 14px;
@@ -312,10 +312,6 @@ body {
     #main-navbar{
         padding: 0 65px;
     }
-    #main-navbar .logo{
-        width: 200px;
-        height: 50px;
-    }
     
     #main-navbar .navbar-content .part a{
         font-size: 18px;
@@ -330,23 +326,16 @@ body {
         font-size: 10px;
     }    
 }
-@media (min-width: 768px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 1000px) {
     #main-navbar{
-        padding: 0 35px;
+        padding: 0 25px;
     }
-    #main-navbar .logo{
-        width: 120px;
-        height: 30px;
-    }
-    
     #main-navbar .navbar-content .part a{
         font-size: 12px;
     }
     #main-navbar .search .navbar-searchbar{
-        width: 130px;
-        height: 25px;
         border: none;
-        border-radius: 6px;
+        border-radius: 12px;
         padding: 9px 10px 9px 16px;  
     }
     #main-navbar .search .navbar-search-submit-icon svg{
@@ -359,20 +348,10 @@ body {
     #main-navbar .user{
         gap: 20px; 
     }
-    #main-navbar .user .cart{
-        width: 18px;
-        height: 18px; 
-    }
     #main-navbar .user .profile .user-image{
         width: 35px;
         height: 35px;
     }
-    #main-navbar .user .profile .name a{
-        font-size:12px;
-    }
-    #main-navbar .user .profile .name a:last-child{
-        font-size: 7px;
-    }    
 }
 
 
