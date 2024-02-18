@@ -75,8 +75,6 @@
 }
 @media (max-width: 768px) {
   #homepage-hero {
-    /* height: 280px; */
-
     background-color: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2) 0%,
@@ -414,7 +412,7 @@
 #trainers .intro h1 {
   color: #161616;
 
-  font-size: 24px;
+  font-size: clamp(16px, calc(100vw * 0.024),24px);
   font-weight: 700;
   font-style: normal;
   line-height: 28.38px;
@@ -425,7 +423,7 @@
 #trainers .intro h4 {
   color: #505050;
 
-  font-size: 18px;
+  font-size: clamp(12px, calc(100vw * 0.018),18px);
   font-weight: 400;
   line-height: 23.22px;
   font-style: normal;
@@ -446,6 +444,7 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   column-gap: var(--card-gap);
+  margin-right: calc(var(--card-gap)/2);
 
   transition: 1.2s !important;
 }
@@ -604,27 +603,28 @@
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1300px){
   :root{
     --slider-cards-num: 4;
   }
 }
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
   :root{
     --slider-cards-num: 3;
   }
   #trainers .intro h1 {
     color: var(--second-color);
   }
+  #trainers .intro h4 {
+    width: 80vw;
+  }
 }
 @media screen and (max-width: 768px) {
   :root{
-    --slider-cards-num: 1.2;
-    --card-width: 285px;
-  }
-  #trainers .slider .wrapper {
-    padding: 0 2rem;
-    
+    --slider-cards-num: 1.3;
+    --card-width: 135px;
+    --card-wrapper-size: 100vw;
+    --card-gap: 28px;
   }
   #trainers .cards {
     flex-wrap: initial !important;
@@ -632,6 +632,22 @@
   }
   #trainers .cards::-webkit-scrollbar {
     display: none !important;
+  }
+  #trainers .slider .cards .card .background .trainer-photo {
+    width: 52px;
+    height: 52px;
+    z-index: 101;
+  }
+  #trainers .slider .cards .card .background .trainer-photo .roll {
+    width: 100%;
+    height: 40%;
+    font-size: 9px;
+  }
+  #trainers .slider .cards .card .details .trainer-data h1 {
+    font-size: 14px;
+  }
+  #trainers .slider .cards .card .details .trainer-data h4 {
+    font-size: 11px;
   }
   #trainers .navigator .scroll-buttons {
     display: block;
