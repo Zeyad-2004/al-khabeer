@@ -30,7 +30,7 @@ function setTrainersRadios(){
         navigator.innerHTML = "";
         
         if(num == 0){
-            navigator.innerHTML = `<div class="scroll-buttons" style="display: flex;">
+            navigator.innerHTML = `<div class="scroll-buttons" style="display: flex;margin-bottom: 40px">
                                         <button onclick="scrollButtons(this.id)" class="right" id="r-trainers-cards"><i class="fa-solid fa-chevron-right"></i></button>
                                         <button onclick="scrollButtons(this.id)" class="left" id="l-trainers-cards"><i class="fa-solid fa-chevron-left"></i></button>
                                     </div>
@@ -49,10 +49,10 @@ function setTrainersRadios(){
     if(window.matchMedia("(max-width: 768px)").matches){
         setRadios(0);
     }
-    else if(window.matchMedia("(max-width: 960px)").matches){
+    else if(window.matchMedia("(max-width: 1050px)").matches){
         setRadios(cards.length/3 + (cards.length % 3 > 0));
     }
-    else if(window.matchMedia("(max-width: 1200px)").matches){
+    else if(window.matchMedia("(max-width: 1300px)").matches){
         setRadios(cards.length/4 + (cards.length % 4 > 0));
     }
     else if(window.matchMedia("(max-width: 2600px)").matches){
