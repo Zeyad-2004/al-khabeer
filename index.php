@@ -13,7 +13,7 @@
 <section class="courses">
     <div class="courses-header d-flex justify-content-between align-items-center">
         <div class="title">دوراتنا</div>
-        <a href="all-courses.php" class="d-flex justify-content-center align-items-center">اكتشف المزيد<i class="bx bx-chevron-left"></i></a>
+        <a href="#" class="d-flex justify-content-center align-items-center">اكتشف المزيد<i class="bx bx-chevron-left"></i></a>
     </div>
     <div id="courses-content" class="courses-content d-flex gap-5 flex-wrap">
         <?php include("main-component/product-card.php") ?>
