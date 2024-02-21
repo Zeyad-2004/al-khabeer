@@ -59,7 +59,10 @@ function setTrainersRadios(){
         setRadios(cards.length/5 + (cards.length % 5 > 0));
     }
 
-    setTrainers(radios[0]);
+    if(radios.length > 0){
+        setTrainers(radios[0]);
+    }
+
     cards[0].style.marginRight = "-" + 24 + "px";
 
 }
@@ -76,7 +79,7 @@ window.addEventListener('resize', function(){
 
 
 
-function scrollButtons(e){
+function scrollButtons(e, scroll_value = 333){
     const container_id = document.getElementById(e.slice(2));
     
     if(e[0] == 'l'){

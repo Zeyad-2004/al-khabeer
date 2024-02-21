@@ -70,7 +70,7 @@
 /* Responsive for mobiles */
 @media (max-width: 400px) {
   #homepage-hero{
-    background-position: -60px;
+    background-position: -40px;
   }
 }
 @media (max-width: 768px) {
@@ -324,7 +324,7 @@
 
 .strong_points .center-sec .item{
   display: flex;
-  gap: 50px;
+  gap: 30px;
   width: 40vw;
 }
 .strong_points .center-sec .item svg{
@@ -340,7 +340,7 @@
 }
 
 .strong_points .center-sec .item p{
-  /* width: 100%; */
+  width: 88%;
   font-weight: 400;
 }
 
