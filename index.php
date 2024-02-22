@@ -25,10 +25,8 @@
         <?php include("main-component/product-card.php") ?>
         <?php include("main-component/product-card.php") ?>
     </div>
-    <div class="scroll-buttons">
-        <button onclick="scrollButtons(this.id)" class="right" id="r-courses-content"><i class="fa-solid fa-chevron-right"></i></button>
-        <button onclick="scrollButtons(this.id)" class="left" id="l-courses-content"><i class="fa-solid fa-chevron-left"></i></button>
-    </div>
+    
+    <?php include("main-component/scroll-buttons.php"); getScrollButtons("courses-content", 333);?>
 </section>
 
 <section class="strong_points">

@@ -475,7 +475,7 @@ body {
 /* ########################################################## */
 /* ####################### CARD STYLES ###################### */
 /* ########################################################## */
-.courses .courses-content .card {
+.course-preview-card {
   width: 285px;
   height: 436px;
   flex-shrink: 0;
@@ -483,7 +483,7 @@ body {
   border: none;
 }
 
-.courses .courses-content .card .best-seller {
+.course-preview-card .best-seller {
   position: absolute;
   top: 8px;
   right: 1px;
@@ -504,14 +504,14 @@ body {
   text-transform: uppercase;
 }
 
-.courses .courses-content .card .card-pic {
+.course-preview-card .card-pic {
   width: 100%;
   height: 157px;
   flex-shrink: 0;
   object-fit: cover;
 }
 
-.courses .courses-content .card .category {
+.course-preview-card .category {
   color: #000;
   text-align: right;
   font-size: 11px;
@@ -522,7 +522,7 @@ body {
   margin-top: 7px;
 }
 
-.courses .courses-content .card .title {
+.course-preview-card .title {
   color: #000;
   text-align: right;
   font-size: 18px;
@@ -532,9 +532,9 @@ body {
   margin-top: 5px;
 }
 
-.courses .courses-content .card .author,
-.courses .courses-content .card .description,
-.courses .courses-content .card .rating-box {
+.course-preview-card .author,
+.course-preview-card .description,
+.course-preview-card .rating-box {
   color: #000;
   text-align: right;
   font-size: 13px;
@@ -544,12 +544,12 @@ body {
   margin-top: 8px;
 }
 
-.courses .courses-content .card .description,
-.courses .courses-content .card .rating-box {
+.course-preview-card .description,
+.course-preview-card .rating-box {
   color: #848484;
 }
 
-.courses .courses-content .card .rating-box {
+.course-preview-card .rating-box {
   font-family: "Segoe UI";
   line-height: 19px;
   display: flex;
@@ -560,11 +560,11 @@ body {
   margin-top: 20px;
 }
 
-.courses .courses-content .card .rating-box .rating {
+.course-preview-card .rating-box .rating {
   gap: 6px;
 }
 
-.courses .courses-content .card .price-box {
+.course-preview-card .price-box {
   display: flex;
   gap: 11px;
   font-family: "Segoe UI", sans-serif;
@@ -577,17 +577,17 @@ body {
   margin-top: 20px;
 }
 
-.courses .courses-content .card .price-box .price {
+.course-preview-card .price-box .price {
   display: flex;
   flex-direction: row-reverse;
   gap: 5px;
 }
 
-.courses .courses-content .card .price-box .price-discount {
+.course-preview-card .price-box .price-discount {
   font-family: "Cairo";
 }
 
-.courses .courses-content .card .buy-button {
+.course-preview-card .buy-button {
   width: 248px;
   height: 48px;
   min-height: 24px;
@@ -606,6 +606,40 @@ body {
   cursor: pointer;
 }
 
+
+/* ####################################### */
+/* ########## Scroll BUttons ###########*/
+/* ####################################### */
+.scroll-buttons {
+  display: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  width: 100%;
+  margin-top: 34px;
+  margin-inline: auto;
+}
+
+.scroll-buttons .left,
+.scroll-buttons .right {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e3e3e3;
+  color: #000;
+  cursor: pointer;
+}
+
+.scroll-buttons .left:hover,
+.scroll-buttons .right:hover,
+.scroll-buttons .left:active,
+.scroll-buttons .right:active {
+  background: #000;
+  color: #e3e3e3;
+}
 /* ####################################### */
 /* ########## General CSS USES ###########*/
 /* ####################################### */
