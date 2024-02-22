@@ -15,7 +15,7 @@
             <a href="#">المدونة</a>
         </div>
         <div class="part">
-            <a href="#">حول</a>
+            <a href="about-us.php">حول</a>
         </div>
         <div class="part">
             <a href="#main-footer">اتصل بنا</a>
