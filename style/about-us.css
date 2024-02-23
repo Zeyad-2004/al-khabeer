@@ -3,11 +3,21 @@
 /* ####################################### */
 
 .about-us-hero {
-  background: url(../media/about-us/549ca55ffb02a39f4fb188d7aeb5473f.png)
-    lightgray 0px -171.381px / cover no-repeat;
+  background-image: url(../media/about-us/549ca55ffb02a39f4fb188d7aeb5473f.png);
+  /* background-position: 0 -171px; */
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 587px;
   padding: 91px 103px 0 0;
+  position: relative;
+}
+.about-us-hero::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  inset: 0 0 0 0;
+  z-index: 1;
 }
 
 .about-us-hero h1,
@@ -16,20 +26,36 @@
   text-align: right;
   font-family: Cairo;
   font-style: normal;
+  position: relative;
+  z-index: 2;
 }
 
 .about-us-hero h1 {
-  height: 92px;
-  font-size: 64px;
+  font-size: clamp(24px, 8vw, 64px);
   font-weight: 700;
-  line-height: 36.281%;
+  margin-bottom: 30px;
 }
 
 .about-us-hero h5 {
-  font-size: 24px;
+  font-size: clamp(16px, 5vw, 24px);
   font-weight: 400;
   line-height: 158.333%;
-  width: 658px;
+  padding-left: 10vw;
+}
+@media (width < 765px) {
+  .about-us-hero {
+    text-align: center;
+    height: 455px;
+    padding-inline: 70px;
+    display: grid;
+    place-content: center;
+  }
+  .about-us-hero h1,
+  .about-us-hero h5 {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
 }
 
 /* ####################################### */
@@ -39,23 +65,25 @@
 .about-us-content {
   width: 100%;
   margin-top: 21px;
-  /* padding: 0 10rem; */
 }
 
 /* ================== ratings ================== */
+.about-us-content .ratings {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
-.about-us-content .ratings > div {
+.about-us-content .ratings .rating {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .about-us-content .ratings .title {
-  color: #fd9802;
-  font-size: 50px;
+  color: var(--second-color);
+  font-size: clamp(36px, 8vw, 50px);
   font-style: normal;
   font-weight: 600;
-  line-height: 112%;
   text-align: center;
   direction: ltr;
 }
@@ -63,10 +91,17 @@
 .about-us-content .ratings .subtitle {
   color: #1c1c1c;
   text-align: center;
+  font-size: clamp(16px, 5vw, 25px);
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
-  line-height: 96%;
+}
+
+@media (width < 765px) {
+  .about-us-content .ratings {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 20px;
+  }
 }
 
 /* ================== about us ================== */
@@ -80,13 +115,14 @@
 .about-us-content .about-us .title {
   color: #000;
   text-align: center;
-  font-size: 48px;
+  font-size: clamp(36px, 8vw, 48px);
   font-style: normal;
   font-weight: 700;
   line-height: 54.167%;
 }
 
 .about-us-content .about-us .subtitle {
+  padding-inline: 12%;
   margin-top: 53px;
   color: #686868;
   text-align: center;
@@ -94,4 +130,144 @@
   font-style: normal;
   font-weight: 600;
   line-height: 168.75%;
+}
+
+@media (width < 765px) {
+  .about-us-content .about-us {
+    padding: 100px 50px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+  }
+
+  .about-us-content .about-us .title {
+    color: var(--second-color);
+  }
+
+  .about-us-content .about-us .subtitle {
+    padding: 0;
+  }
+}
+
+/*############################################## */
+/*############# Stronge Point Start############# */
+/*############################################## */
+.strong_points {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  row-gap: 90px;
+
+  padding: 50px 0;
+  margin-bottom: 75px;
+  background-color: #fff;
+
+  overflow: hidden;
+}
+
+/* start top-sec */
+.strong_points .top_sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.strong_points .top-sec .line {
+  width: clamp(200px, 30vw, 500px);
+  height: 4px;
+  background: var(--second-color);
+  display: none;
+}
+
+.strong_points .top-sec h3 {
+  color: #161616;
+  text-align: center;
+  font-family: Cairo;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 59.125%;
+}
+/* start center-sec */
+
+.strong_points .center-sec {
+  max-width: 80vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 50px;
+}
+
+.strong_points .center-sec .item {
+  display: flex;
+  gap: 30px;
+  width: 40vw;
+}
+.strong_points .center-sec .item svg {
+  width: clamp(30px, calc(100vw * 0.38), 54px);
+  height: clamp(30px, calc(100vw * 0.38), 54px);
+}
+.strong_points .center-sec .item h1,
+.strong_points .center-sec .item p {
+  font-size: clamp(18px, calc(100vw * 0.014), 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  color: #505050;
+}
+
+.strong_points .center-sec .item p {
+  width: 88%;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1100px) {
+  .strong_points .top-sec h3 {
+    font-size: 30px;
+    margin: 20px;
+  }
+  .strong_points .top-sec .line {
+    display: block;
+  }
+
+  .strong_points .center-sec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .strong_points .center-sec .item {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+
+    text-align: center;
+  }
+  .strong_points .center-sec .item h1 {
+    margin-bottom: 10px;
+  }
+  .strong_points .center-sec .item .t {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .strong_points .center-sec .item p {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .strong_points .center-sec .item svg {
+    width: 60px;
+    height: 60px;
+  }
 }
