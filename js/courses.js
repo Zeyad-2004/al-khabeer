@@ -50,8 +50,6 @@ setCoursesLimits();
 
 
 window.addEventListener('scroll', function(){
-    console.log(this.innerHeight + this.scrollY);
-    console.log(document.body.scrollHeight - 600);
     if(this.innerHeight + this.scrollY >= 600 && this.innerHeight + this.scrollY <= document.body.scrollHeight - 600){
         popup_navbar.style.visibility = 'visible';
     }

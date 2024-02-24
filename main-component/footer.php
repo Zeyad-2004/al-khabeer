@@ -11,21 +11,21 @@
                     <a href="index.php">الرئيسية</a>
                 </div>
                 <div class="part">
-                    <a href="#">الدورات</a>
+                    <a href="courses.php">الدورات</a>
                 </div>
                 <div class="part">
                     <a href="#">المدونة</a>
                 </div>
                 <div class="part">
-                    <a href="#">حول</a>
+                    <a href="about-us.php">حول</a>
                 </div>
             </div>
             <div class="contact">
                 <div class="part">
-                    <a href="#">تواصل معنا</a>
+                    <a href="#main-footer">تواصل معنا</a>
                 </div>
                 <div class="part">
-                    <a href="#">المدربين</a>
+                    <a href="#trainers">المدربين</a>
                 </div>
                 <div class="part">
                     <a href="#">تابعنا</a>

@@ -229,18 +229,18 @@ body {
     margin-top: 5px;
 }
 #mobile-main-navbar .mobile-navbar-active-icon{
-    color: var(--second-color);
+    color: #fff;
     border-top: 6px solid var(--second-color) !important;
 }
-#mobile-main-navbar .mobile-navbar-active-svg path, .mobile-navbar-active-icon a h1{
+#mobile-main-navbar .mobile-navbar-active-icon path, .mobile-navbar-active-icon a h1{
     color: var(--second-color) !important;
-    stroke: var(--second-color);
+    stroke: var(--second-color) !important;
 }
 
 
 /*############# Main-Navbar responsive #############*/
 /* Responsive for mobiles */
-@media (max-width: 767px) {
+@media (width <= 768px) {
     body{
         margin-bottom: 90px;
     }
@@ -263,7 +263,7 @@ body {
 }
 
 /* Responsive for tablets */
-@media (min-width: 768px) and (max-width: 1410px) {
+@media (width >= 768px) and (width <= 1410px) {
     #main-navbar{
         padding: 0 35px;
     }
