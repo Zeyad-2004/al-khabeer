@@ -1,0 +1,208 @@
+/*########################################## */
+/*######### Contact-us hero start ########## */
+/*########################################## */
+#hero{
+    width: 100%;
+    height: clamp(280px, calc(100vw *.4), 600px);
+    background: url(../media/contact-us/hero.png), lightgray 50% / cover no-repeat;
+
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+
+    padding: clamp(40px, calc(100vw * 0.043), 60px);
+}
+#hero .content h1{
+    color: #FFF;
+
+    font-size: clamp(35px, calc(100vw * 0.046), 64px);
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+
+    margin-bottom: clamp(25px, calc(100vw * 0.043), 60px);
+}
+#hero .content h6{
+    width: 50%;
+    color: #ffffff9d;
+
+    font-size: clamp(16px, calc(100vw * 0.017), 24px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+    text-align: right;
+}
+
+/*####################################################*/
+/*############ Contact-us hero responsive ############*/
+@media screen and (width <= 768px){
+    #hero{
+        transform: scaleX(-1);
+        
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%,rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(270deg, rgba(0, 0, 0, 0.5) 5.88%, rgba(0, 0, 0, 0) 89.44%),
+        url(../media/contact-us/hero.png);
+        
+        background-size: cover;
+        background-position:bottom;
+        background-repeat: no-repeat;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #hero .content{
+        transform: scaleX(-1);
+    }
+    #hero .content h1{
+        font-size: clamp(18px, calc(100vw * 0.036), 28px);
+        text-align: center;
+    }
+    #hero .content h6{
+        width: 100%;
+        
+        font-size: clamp(12px, calc(100vw * 0.026), 18px);
+        text-align: center;
+
+        line-height: 35px;
+    }
+}
+
+
+/*########################################## */
+/*####### Contact-us Content start ######### */
+/*########################################## */
+#content{
+    height: 800px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    gap: clamp(50px, calc(100vw * 0.0625), 100px);
+    padding: clamp(50px, calc(100vw * 0.0625), 100px);
+}
+#content >*{
+    width: 50%;
+    height: 100%;
+}
+#content #contact-form input{
+    height: 50px;
+}
+#contact-form .text{
+    margin-bottom: 50px;
+}
+#contact-form .text h1{
+    color: #3E4145;
+    font-size: clamp(30px, calc(100vw * 0.034), 48px);
+    
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+}
+#contact-form .text p{
+    color: #3E4145;
+    font-size: clamp(12px, calc(100vw * 0.017), 20px);
+    
+    font-weight: 500;
+    font-style: normal;
+    text-align: right;
+    line-height: normal;    
+}
+#contact-form input, textarea{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+
+    outline: none !important;
+    padding-right: 20px;
+
+    transition: 0.3s;
+}
+textarea{
+    padding: 20px;
+}
+input::placeholder, textarea::placeholder{
+    color: rgba(50, 50, 50, 0.25);
+}
+input:focus, textarea:focus{
+    border: 2px solid var(--second-color) !important;
+}
+
+#content #contact-form .form button{
+    width: clamp(100px, calc(100vw * 0.155), 170px);
+    height: clamp(30px, calc(100vw * 0.045), 50px);
+    flex-shrink: 0;
+    border: none;
+    border-radius: 0;
+    background-color: var(--second-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact-form .form button h1 {
+    color: #FFF;
+
+    font-size: clamp(16px, calc(100vw * 0.021), 22px);
+    font-weight: 600;
+    font-style: normal;
+
+    margin: 0;
+}
+#contact-form .form .line{
+    position: relative;
+}
+#contact-form .form .mobile-input-label{
+    background-color: var(--White);
+    color: #848484;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Avenir Arabic";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    position: absolute;
+    right: 25px;
+    top: -10px;
+    
+    display: none;
+    padding: 0 10px;
+}
+
+/*####################################################*/
+/*########## Contact-us Content responsive ###########*/
+
+@media screen and (width <= 1000px){
+    #content{
+        flex-direction: column;
+        height: 1300px;
+        padding: 30px clamp(30px, calc(100vw * 0.072), 55px);
+    }
+    #content >*{
+        width: 100%;
+        height: 100%;
+    }
+    input::placeholder, textarea::placeholder{
+        color: transparent;
+    }
+    #contact-form input, textarea{
+        border-radius: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        padding-right: 27px;
+    }
+    #contact-form .form .line{
+        position: relative;
+        margin-bottom: 20px;
+    }
+    #contact-form .form .mobile-input-label{
+        display: block;
+    }
+    #contact-form .form .form-submit{
+        display: flex;
+        justify-content: center;
+    }
+}
