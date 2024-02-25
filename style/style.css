@@ -108,7 +108,7 @@ body {
     width: auto;
 }
 #main-navbar .search .navbar-searchbar{
-    width: clamp(130px, calc(100vw * 0.13), 280px);
+    width: clamp(130px, calc(100vw * 0.18), 250px);
     height: clamp(25px, calc(100vw * 0.033), 40px);
     border: none;
     border-radius: 12px;
