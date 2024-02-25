@@ -28,7 +28,7 @@
                     <a href="#">المدربين</a>
                 </div>
                 <div class="part">
-                    <a href="#">تابعنا</a>
+                    <a href="contact-us.php">تابعنا</a>
                 </div>
                 <div class="part icons flex">
                     <a href="#">
