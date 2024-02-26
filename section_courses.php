@@ -1,6 +1,5 @@
 <?php require_once "main-component/header.php" ?>
 <?php require_once "main-component/navbar.php" ?>
-<?php include "main-component/scroll-buttons.php" ?>
 
 <section id="all-courses-preview" class="d-flex">
     <section id="side-navbar" class="d-flex flex-column align-items-start">
@@ -15,24 +14,24 @@
         </div>
         <div class="line"></div>
 
-        <div class="nav-content">
+        <div id="nav-content" class="nav-content">
 
-            <a href="#" class="active">الرسم الهندسي</a>
-            <a href="#">الفن و الكتابة</a>
-            <a href="#">امن المعلومات</a>
-            <a href="#">تصميمات</a>
-            <a href="#">هاتف</a>
-            <a href="#">تسويق</a>
-            <a href="#">اعلانات</a>
-            <a href="#">رسوم</a>
-            <a href="#">نحت</a>
-            <a href="#">تصوير</a>
-            <a href="#">تصميم</a>
-            <a href="#">رسوم متحركة</a>
-            <a href="#">كتبة</a>
-            <a href="#">موضة</a>
-            <a href="#">صفحات ويب</a>
-            <a href="#">موسيقى</a>
+            <a id="section-id-1">الرسم الهندسي</a>
+            <a id="section-id-2">الفن و الكتابة</a>
+            <a id="section-id-3">امن المعلومات</a>
+            <a id="section-id-4">تصميمات</a>
+            <a id="section-id-5">هاتف</a>
+            <a id="section-id-6">تسويق</a>
+            <a id="section-id-7">اعلانات</a>
+            <a id="section-id-8">رسوم</a>
+            <a id="section-id-9">نحت</a>
+            <a id="section-id-10">تصوير</a>
+            <a id="section-id-11">تصميم</a>
+            <a id="section-id-12">رسوم متحركة</a>
+            <a id="section-id-13">كتبة</a>
+            <a id="section-id-14">موضة</a>
+            <a id="section-id-15">صفحات ويب</a>
+            <a id="section-id-16">موسيقى</a>
 
         </div>
 
@@ -80,7 +79,7 @@
                 <?php include("main-component/product-card.php") ?>
             </div>
 
-            <?php getScrollButtons("card-id-1", 333); ?>
+            <?php include "main-component/scroll-buttons.php"; getScrollButtons("card-id-1", 333); ?>
 
         </div>
         
