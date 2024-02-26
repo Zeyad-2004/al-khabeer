@@ -18,7 +18,7 @@
             <a href="about-us.php">حول</a>
         </div>
         <div class="part">
-            <a href="#main-footer">اتصل بنا</a>
+            <a href="login.php">اتصل بنا</a>
         </div>
     </div>
     <div class="search">
@@ -102,3 +102,4 @@
         </div>
     </div>
 </nav>
+<!-- login-popup -->
