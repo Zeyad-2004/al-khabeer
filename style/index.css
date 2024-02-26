@@ -4,9 +4,6 @@
   --slider-cards-num: 5;
   --card-wrapper-size: calc(var(--card-width) * var(--slider-cards-num) + var(--card-gap) * var(--slider-cards-num));
 }
-* {
-  transition-duration: 0.3s;
-}
 
 
 /*############################################### */
@@ -442,12 +439,14 @@
   column-gap: var(--card-gap);
   margin-right: calc(var(--card-gap)/2);
 
-  transition: 1.2s !important;
 }
 
 #trainers .slider .cards .card {
   width: var(--card-width);
   height: 100%;
+  border: none;
+
+  transition: 0.8s ease-in-out !important;
 }
 #trainers .slider .cards .card .background {
   position: relative;

@@ -6,16 +6,16 @@
     </a>
     <div class="navbar-content">
         <div class="part">
-            <a href="index.php" class="navbar-active">الرئيسية</a>
+            <a href="index.php" class=" <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "index") echo 'navbar-active';?>">الرئيسية</a>
         </div>
-        <div class="part">
-            <a href="#">الدورات</a>
+        <div class="part navbar-active">
+            <a href="courses.php" class=" <?php if(in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses"])) echo 'navbar-active';?>">الدورات</a>
         </div>
         <div class="part">
             <a href="#">المدونة</a>
         </div>
         <div class="part">
-            <a href="about-us.php">حول</a>
+            <a href="about-us.php" class=" <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "about-us") echo 'navbar-active';?>">حول</a>
         </div>
         <div class="part">
             <a href="contact-us.php">اتصل بنا</a>
@@ -33,7 +33,7 @@
         </form>
     </div>
     <div class="user">
-        <a href="#">
+        <a href="#" style="transition: 0.3s;">
             <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
                 <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
             </svg>
@@ -53,9 +53,10 @@
 </nav>
 <nav id="mobile-main-navbar">
     <div class="container">
-        <div class="icon mobile-navbar-active-icon">
-            <a href="#">
-                <svg class="mobile-navbar-active-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <div class="icon <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "index") echo 'mobile-navbar-active-icon'; ?>">
+            <a href="index.php">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <path d="M11.6505 4.16797L4.68842 9.59297C3.52592 10.4971 2.58301 12.4217 2.58301 13.8813V23.4526C2.58301 26.4492 5.02426 28.9034 8.02092 28.9034H22.9784C25.9751 28.9034 28.4163 26.4492 28.4163 23.4655V14.0621C28.4163 12.4992 27.3701 10.4971 26.0913 9.60589L18.1088 4.01297C16.3005 2.74714 13.3943 2.81172 11.6505 4.16797Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M15.5 23.7373V19.8623V23.7373Z" fill="white" />
                     <path d="M15.5 23.7373V19.8623" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -88,8 +89,8 @@
                 <h1>السلة</h1>
             </a>
         </div>
-        <div class="icon">
-            <a href="#">
+        <div class="icon <?php if(in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses"])) echo 'mobile-navbar-active-icon'; ?>">
+            <a href="courses.php">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <path d="M28.4167 11.5047V5.64051C28.4167 3.81926 27.59 3.08301 25.5363 3.08301H20.3179C18.2642 3.08301 17.4375 3.81926 17.4375 5.64051V11.4918C17.4375 13.3259 18.2642 14.0493 20.3179 14.0493H25.5363C27.59 14.0622 28.4167 13.3259 28.4167 11.5047Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
