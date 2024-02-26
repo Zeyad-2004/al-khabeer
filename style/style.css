@@ -111,12 +111,12 @@ body {
   position: relative;
   width: auto;
 }
-#main-navbar .search .navbar-searchbar {
-  width: clamp(130px, calc(100vw * 0.13), 280px);
-  height: clamp(25px, calc(100vw * 0.033), 40px);
-  border: none;
-  border-radius: 12px;
-  padding: 9px 23px 9px 16px;
+#main-navbar .search .navbar-searchbar{
+    width: clamp(130px, calc(100vw * 0.18), 250px);
+    height: clamp(25px, calc(100vw * 0.033), 40px);
+    border: none;
+    border-radius: 12px;
+    padding: 9px 23px 9px 16px;
 
   display: inline-flex;
   align-items: flex-end;
@@ -231,85 +231,84 @@ body {
 
   margin-top: 5px;
 }
-#mobile-main-navbar .mobile-navbar-active-icon {
-  color: var(--second-color);
-  border-top: 6px solid var(--second-color) !important;
+#mobile-main-navbar .mobile-navbar-active-icon{
+    color: #fff;
+    border-top: 6px solid var(--second-color) !important;
 }
-#mobile-main-navbar .mobile-navbar-active-svg path,
-.mobile-navbar-active-icon a h1 {
-  color: var(--second-color) !important;
-  stroke: var(--second-color);
+#mobile-main-navbar .mobile-navbar-active-icon path, .mobile-navbar-active-icon a h1{
+    color: var(--second-color) !important;
+    stroke: var(--second-color) !important;
 }
 
 /*############# Main-Navbar responsive #############*/
 /* Responsive for mobiles */
-@media (max-width: 767px) {
-  body {
-    margin-bottom: 90px;
-  }
-  #main-navbar .navbar-content,
-  #main-navbar .search,
-  #main-navbar .user {
-    display: none;
-  }
-  #main-navbar {
-    height: 85px;
-    padding: 0 5vw;
-    justify-content: center;
-  }
-  #main-navbar .logo {
-    width: clamp(150px, calc((100vw) * 0.24), 210px);
-    height: clamp(40px, calc((100vw) * 0.065), 55px);
-  }
-  #mobile-main-navbar {
-    visibility: visible;
-  }
+@media (width <= 768px) {
+    body{
+        margin-bottom: 90px;
+    }
+    #main-navbar .navbar-content, #main-navbar .search, #main-navbar .user{
+        display: none;
+    }
+    #main-navbar{
+      height: 85px;
+      padding: 0 5vw;
+      justify-content: center;
+    }
+    #main-navbar .logo{
+      width: clamp(150px, calc((100vw) *.24), 210px);
+      height: clamp(40px, calc((100vw) *.065), 55px);
+    }
+    #mobile-main-navbar{
+        visibility: visible;
+    }
+    
 }
 
 /* Responsive for tablets */
-@media (min-width: 768px) and (max-width: 1410px) {
-  #main-navbar {
-    padding: 0 35px;
-  }
-  #main-navbar .navbar-content {
-    display: flex;
-    column-gap: 20px;
-  }
-  #main-navbar .search input::placeholder {
-    font-size: 14px;
-  }
-
-  #main-navbar .search .navbar-search-submit-icon {
-    width: auto;
-    height: auto;
-
-    position: absolute;
-    right: 80%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #main-navbar .user {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  #main-navbar .user > * {
-    color: #fff;
-  }
-  #main-navbar .user .profile .user-image {
-    width: 40px;
-    height: 40px;
-  }
-  #main-navbar .user .profile .name {
-    margin-right: 5px;
-  }
-  #main-navbar .user .profile .name a {
-    font-size: 11px;
-  }
-  #main-navbar .user .profile .name a:last-child {
-    font-size: 7px;
-  }
+@media (width >= 768px) and (width <= 1410px) {
+    #main-navbar{
+        padding: 0 35px;
+    }
+    #main-navbar .navbar-content{
+        display: flex;
+        column-gap: 20px;
+    }
+    #main-navbar .search input::placeholder{
+        font-size: 14px;
+    }
+    
+    #main-navbar .search .navbar-search-submit-icon{
+        width: auto;
+        height: auto;
+    
+        position: absolute;
+        right: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #main-navbar .user{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+    }
+    #main-navbar .user >*{
+        color: #fff;
+    }
+    #main-navbar .user .profile .user-image{
+        width: 40px;
+        height: 40px;
+    }
+    #main-navbar .user .profile .name{
+        margin-right: 5px;
+    }
+    #main-navbar .user .profile .name a{
+        font-size:11px;
+    }
+    #main-navbar .user .profile .name a:last-child{
+        font-size: 7px;
+    }
+    
 }
 @media (min-width: 1200px) and (max-width: 1410px) {
   #main-navbar {
