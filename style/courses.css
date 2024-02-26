@@ -4,7 +4,9 @@ body{
 /* ############################################################ */
 /* #################    Courses page Start    ################# */
 /* ############################################################ */
-
+a{
+    cursor: pointer !important;
+}
 #all-courses-preview{
     overflow: hidden;
     margin: 25px 0 40px 0;
@@ -106,6 +108,15 @@ body{
 #courses .course .more a{
     color: var(--main-color);
 }
+
+#courses .course .more:hover .title,
+#courses .course .more:hover svg path{
+    text-decoration: underline !important;
+    
+    color: var(--second-color);
+    fill: var(--second-color) !important;
+}
+
 #courses .course .title{
     color: #000;
     
@@ -114,10 +125,14 @@ body{
     line-height: 23.22px;
     font-style: normal;
     text-align: right;
+
+    transition: .3s;
 }
 #courses .course .title svg{
     width: clamp(10px, calc(100vw * 0.013), 16px);
     height: clamp(10px, calc(100vw * 0.013), 16px);
+    
+    transition: .3s;
 }
 
 #courses .line{
@@ -144,6 +159,8 @@ body{
     font-weight: 400;
     line-height: 24px;
     font-style: normal;
+
+    margin: 0;
 }
 
 #all-courses-preview .scroll-buttons {
@@ -189,6 +206,7 @@ body{
 
     transition: 0.5s ease-in;
 }
+
 /* ############################################################ */
 /* #################  Courses page responsive ################# */
 
