@@ -22,7 +22,7 @@
             </div>
             <div class="contact">
                 <div class="part">
-                    <a href="#main-footer">تواصل معنا</a>
+                    <a href="contact-us.php">تواصل معنا</a>
                 </div>
                 <div class="part">
                     <a href="#trainers">المدربين</a>
