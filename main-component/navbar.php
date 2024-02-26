@@ -18,7 +18,7 @@
             <a href="about-us.php" class=" <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "about-us") echo 'navbar-active';?>">حول</a>
         </div>
         <div class="part">
-            <a href="contact-us.php">اتصل بنا</a>
+            <a href="contact-us.php" class=" <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "contact-us") echo 'navbar-active';?>">اتصل بنا</a>
         </div>
     </div>
     <div class="search">
