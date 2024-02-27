@@ -18,6 +18,8 @@ let mobileSignupPopup = document.getElementById("mobile-signup-popup");
 let mobileProfile = document.getElementById("mobile-profile-link");
 let mobilePopup = document.getElementById("mobile-popup");
 
+let isPopupOpen = false;
+
 const switchPopup = (e) => {
   if (e.id == "dont-have-account") {
     mobileSigninPopup.style.display = "none";
@@ -30,4 +32,25 @@ const switchPopup = (e) => {
 
 mobileProfile.addEventListener("click", () => {
   mobilePopup.classList.toggle("active");
+  isPopupOpen = mobilePopup.classList.contains("active");
+
+  document.body.style.overflow = isPopupOpen ? "hidden" : "auto";
+});
+
+mobilePopup.addEventListener("click", (event) => {
+  if (
+    !mobileSigninPopup.contains(event.target) &&
+    !mobileSignupPopup.contains(event.target) &&
+    isPopupOpen
+  ) {
+    mobilePopup.classList.remove("active");
+    isPopupOpen = false;
+    document.body.style.overflow = "auto";
+  }
+});
+
+document.body.addEventListener("touchmove", (event) => {
+  if (isPopupOpen) {
+    event.preventDefault();
+  }
 });
