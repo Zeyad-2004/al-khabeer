@@ -40,13 +40,13 @@
                 </svg>
             </a>
             <div class="profile flex">
-                <a href="#">
+                <a href="profile.php">
                     <div class="user-image">
 
                     </div>
                 </a>
                 <div class="name">
-                    <a href="#">مرحبا بك زياد</a>
+                    <a href="profile.php">مرحبا بك زياد</a>
                     <a href="#">تسجيل الخروج</a>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                 <h1>الرئيسية</h1>
             </a>
         </div>
-        <div class="icon">
+        <div class="icon <?php if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "profile") echo 'mobile-navbar-active-icon'; ?>">
             <a 
                 <?php if(false): ?>
                     href="index.php" 
