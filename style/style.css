@@ -188,6 +188,11 @@ body {
   font-size: 15px;
   font-weight: 500;
 }
+#main-navbar .login-register a{
+  color: var(--White);
+  font-size: clamp(14px, calc(100vw * 0.0143), 20px);
+  transition: 0.3s;
+}
 
 #mobile-main-navbar {
   visibility: hidden;
@@ -247,9 +252,7 @@ body {
   body {
     margin-bottom: 90px;
   }
-  #main-navbar .navbar-content,
-  #main-navbar .search,
-  #main-navbar .user {
+  #main-navbar *:not(:first-child) {
     display: none;
   }
   #main-navbar {
@@ -356,6 +359,170 @@ body {
     height: 35px;
   }
 }
+
+
+/*==================================================================
+==================== Mobile Signin/up Popup ========================
+==================================================================== */
+.mobile-login-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 1000;
+  transform-origin: bottom;
+  transform: translateY(1000px);
+  transition: 0.5s linear !important;
+  visibility: hidden;
+}
+
+.mobile-login-container.active {
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.content-wrapper {
+  width: 85%;
+  height: auto;
+  background: #fff;
+  position: absolute;
+  bottom: 80px;
+  border-radius: 20px 20px 0 0;
+  padding: 30px 15px;
+  text-align: center;
+  transition: 0.5s linear;
+}
+
+#mobile-signup-popup {
+  display: none;
+}
+
+.mobile-login-container form {
+  margin-bottom: 26px;
+}
+
+.mobile-login-container h1 {
+  color: #fd9802;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.mobile-login-container h3 {
+  color: #0d1b39;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.mobile-login-container .inputs-container {
+  margin-top: 30px;
+}
+
+.mobile-login-container input {
+  width: 100%;
+  border: 1px solid #828282;
+  text-align: center;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+#mobile-login {
+  border-radius: 6px 6px 0 0;
+}
+
+#mobile-password {
+  border-radius: 0 0 6px 6px;
+  border-top: 0;
+}
+
+.mobile-login-container button {
+  padding: 10px;
+  margin-top: 23px;
+  width: 100%;
+  background: var(--second-color);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.889px;
+  border-radius: 5px;
+}
+
+.mobile-login-container button:hover {
+  filter: brightness(1.1);
+}
+
+.mobile-login-container button:active {
+  background-color: #000;
+}
+
+.mobile-login-container .dont-have-account,
+.mobile-login-container .have-account {
+  color: #5a5a5a;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.722px;
+}
+
+/* ============================================================ */
+/* ================== mobile-sign-up section ================== */
+
+.mobile-login-container .sign-up-socials h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.mobile-login-container .sign-up-socials button {
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid rgba(21, 21, 21, 0.66);
+  background: rgba(255, 255, 255, 0);
+  color: rgba(13, 27, 57, 0.57);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.889px;
+  margin-top: 0;
+}
+
+.mobile-login-container .sign-up-socials button:hover {
+  background-color: var(--second-color);
+  border: none;
+  color: #fff;
+}
+
+.mobile-login-container h5 {
+  color: #0d1b39;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.889px;
+}
+
+.mobile-sign-up-form input {
+  border-bottom: none;
+}
+
+#mobile-signup-name {
+  border-radius: 6px 6px 0 0;
+}
+
+#mobile-signup-phone {
+  border-radius: 0 0 6px 6px;
+  border-bottom: 1px solid #828282;
+}
+
 
 /*#########################################*/
 /*############# Footer Start #############*/
@@ -639,6 +806,11 @@ body {
   background: #000;
   color: #e3e3e3;
 }
+
+
+
+
+
 /* ####################################### */
 /* ########## General CSS USES ###########*/
 /* ####################################### */
@@ -672,164 +844,3 @@ body {
   }
 }
 
-/*==================================================================
-==================== Mobile Signin/up Popup ========================
-==================================================================== */
-
-.mobile-login-container {
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  inset: 0 0 0 0;
-  z-index: 1000;
-  transform-origin: bottom;
-  transform: translateY(1000px);
-  transition: 0.5s linear;
-  visibility: hidden;
-}
-
-.mobile-login-container.active {
-  transform: translateY(0px);
-  visibility: visible;
-}
-
-.content-wrapper {
-  width: 90%;
-  height: auto;
-  background: #fff;
-  position: absolute;
-  bottom: 80px;
-  border-radius: 20px 20px 0 0;
-  padding: 30px 15px;
-  text-align: center;
-  transition: 0.5s linear;
-}
-
-#mobile-signup-popup {
-  display: none;
-}
-
-.mobile-login-container form {
-  margin-bottom: 26px;
-}
-
-.mobile-login-container h1 {
-  color: #fd9802;
-  text-align: center;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -2px;
-}
-
-.mobile-login-container h3 {
-  color: #0d1b39;
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
-
-.mobile-login-container .inputs-container {
-  margin-top: 30px;
-}
-
-.mobile-login-container input {
-  width: 100%;
-  border: 1px solid #828282;
-  text-align: center;
-  padding: 10px;
-  outline: none;
-  font-size: 16px;
-}
-
-#mobile-login {
-  border-radius: 6px 6px 0 0;
-}
-
-#mobile-password {
-  border-radius: 0 0 6px 6px;
-  border-top: 0;
-}
-
-.mobile-login-container button {
-  padding: 10px;
-  margin-top: 23px;
-  width: 100%;
-  background: var(--second-color);
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.889px;
-  border-radius: 5px;
-}
-
-.mobile-login-container button:hover {
-  filter: brightness(1.1);
-}
-
-.mobile-login-container button:active {
-  background-color: #000;
-}
-
-.mobile-login-container .dont-have-account,
-.mobile-login-container .have-account {
-  color: #5a5a5a;
-  text-align: center;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -0.722px;
-}
-
-/* ================== mobile-sign-up section ================== */
-
-.mobile-login-container .sign-up-socials h3 {
-  font-size: 16px;
-  margin-bottom: 0;
-}
-
-.mobile-login-container .sign-up-socials button {
-  width: 50%;
-  border-radius: 5px;
-  border: 1px solid rgba(21, 21, 21, 0.66);
-  background: rgba(255, 255, 255, 0);
-  color: rgba(13, 27, 57, 0.57);
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: -0.889px;
-  margin-top: 0;
-}
-
-.mobile-login-container .sign-up-socials button:hover {
-  background-color: var(--second-color);
-  border: none;
-  color: #fff;
-}
-
-.mobile-login-container h5 {
-  color: #0d1b39;
-  text-align: center;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -0.889px;
-}
-
-.mobile-sign-up-form input {
-  border-bottom: none;
-}
-
-#mobile-signup-name {
-  border-radius: 6px 6px 0 0;
-}
-
-#mobile-signup-phone {
-  border-radius: 0 0 6px 6px;
-  border-bottom: 1px solid #828282;
-}

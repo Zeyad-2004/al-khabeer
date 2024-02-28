@@ -35,9 +35,14 @@
                 <form action="" class="d-flex flex-column gap-3">
                     <input type="text" name="register-name" id="register-name" placeholder="الاسم">
                     <input type="email" name="register-email" id="register-email" placeholder="الايميل">
-                    <div class="d-flex gap-4 phone-city">
-                        <input type="text" name="register-phone" id="register-phone" placeholder="الجوال">
-                        <input type="text" name="register-city" id="register-city" placeholder="المدينة">
+
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+                            <input type="text" name="register-phone" id="register-phone" placeholder="الجوال">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="register-city" id="register-city" placeholder="المدينة">
+                        </div>
                     </div>
                     <div class="password-field">
                         <input class="password" type="password" name="register-password" id="register-password"

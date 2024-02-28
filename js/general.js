@@ -15,7 +15,6 @@ function scrollButtons(e, scroll_value = 333) {
 
 let mobileSigninPopup = document.getElementById("mobile-login-popup");
 let mobileSignupPopup = document.getElementById("mobile-signup-popup");
-let mobileProfile = document.getElementById("mobile-profile-link");
 let mobilePopup = document.getElementById("mobile-popup");
 
 let isPopupOpen = false;
@@ -30,12 +29,12 @@ const switchPopup = (e) => {
   }
 };
 
-mobileProfile.addEventListener("click", () => {
+const openClosePopup = () => {
   mobilePopup.classList.toggle("active");
   isPopupOpen = mobilePopup.classList.contains("active");
 
   document.body.style.overflow = isPopupOpen ? "hidden" : "auto";
-});
+}
 
 mobilePopup.addEventListener("click", (event) => {
   if (

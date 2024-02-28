@@ -136,10 +136,6 @@
     width: 100%;
     padding-inline: 50px;
   }
-
-  .login-page .signup-section .phone-city {
-    gap: 10px !important;
-  }
 }
 
 /* ======================================= */
