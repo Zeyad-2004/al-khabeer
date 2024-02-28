@@ -1,0 +1,179 @@
+.login-page {
+  height: auto;
+}
+
+/* ======================================= */
+/* ========== LEFT SECTION ========== */
+/* ======================================= */
+.login-page .left-section {
+  width: 50%;
+  padding: 110px 90px;
+}
+
+.login-page .left-section h1 {
+  color: var(--grayish);
+  text-align: center;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.login-page .left-section h3 {
+  color: var(--darker-grey);
+  text-align: right;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.login-page .left-section input:not(.login-check-box) {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: var(--White);
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  outline: none;
+}
+
+.login-page .left-section input::placeholder {
+  color: var(--inputfield-text);
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.login-page .left-section button {
+  width: 100%;
+  background-color: var(--second-color);
+  padding: 0.3rem;
+  color: #fff;
+  text-align: center;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.login-page .left-section button:hover {
+  filter: brightness(1.1);
+}
+
+.login-page .left-section button:active {
+  background: #000;
+}
+
+/* login section ======================== */
+
+.login-page .login-section {
+  margin-top: 70px;
+}
+
+.login-page .password-field {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.login-page .show-pass {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--grayish);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-page .login-section .forgot-remember a {
+  color: var(--grayish);
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.login-page .login-section .forgot-remember a:hover {
+  text-decoration: underline;
+  color: var(--second-color);
+}
+
+.login-page .login-section .remember-me input {
+  border-color: var(--second-color);
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.login-page .login-section .remember-me input:checked {
+  background-color: var(--second-color);
+}
+
+.login-page .login-section .remember-me span {
+  color: #5a5a5a;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+/* sign up section */
+
+@media (width < 765px) {
+  .login-page .left-section {
+    width: 100%;
+    padding-inline: 50px;
+  }
+}
+
+/* ======================================= */
+/* ========== BREAK LINE ========== */
+/* ======================================= */
+.left-section .break-line {
+  height: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #f3f3f3;
+  margin-top: 122px;
+  margin-bottom: 35px;
+}
+
+/* ======================================= */
+/* ========== RIGHT SECTION ========== */
+/* ======================================= */
+
+.login-page .right-section {
+  background-image: url(../media/login/login-hero.png);
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+
+.login-page .right-section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+@media (width < 765px) {
+  .login-page .right-section {
+    display: none;
+  }
+}

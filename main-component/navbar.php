@@ -2,23 +2,23 @@
 
 <nav id="main-navbar">
 
-    <a href="#" class="logo-image logo">
+    <a href="index.php" class="logo-image logo">
     </a>
     <div class="navbar-content">
         <div class="part">
-            <a href="index.php" class=" <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "index") echo 'navbar-active';?>">الرئيسية</a>
+            <a href="index.php" class=" <?php if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "index") echo 'navbar-active'; ?>">الرئيسية</a>
         </div>
         <div class="part navbar-active">
-            <a href="courses.php" class=" <?php if(in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses"])) echo 'navbar-active';?>">الدورات</a>
+            <a href="courses.php" class=" <?php if (in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses"])) echo 'navbar-active'; ?>">الدورات</a>
         </div>
         <div class="part">
             <a href="#">المدونة</a>
         </div>
         <div class="part">
-            <a href="about-us.php" class=" <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "about-us") echo 'navbar-active';?>">حول</a>
+            <a href="about-us.php" class=" <?php if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "about-us") echo 'navbar-active'; ?>">حول</a>
         </div>
         <div class="part">
-            <a href="contact-us.php" class=" <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "contact-us") echo 'navbar-active';?>">اتصل بنا</a>
+            <a href="contact-us.php" class=" <?php if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "contact-us") echo 'navbar-active'; ?>">اتصل بنا</a>
         </div>
     </div>
     <div class="search">
@@ -32,28 +32,34 @@
             </button>
         </form>
     </div>
-    <div class="user">
-        <a href="#" style="transition: 0.3s;">
-            <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
-                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
-            </svg>
-        </a>
-        <div class="profile flex">
-            <a href="#">
-                <div class="user-image">
-
-                </div>
+    <?php if (false) : ?>
+        <div class="user">
+            <a href="#" style="transition: 0.3s;">
+                <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                </svg>
             </a>
-            <div class="name">
-                <a href="#">مرحبا بك زياد</a>
-                <a href="#">تسجيل الخروج</a>
+            <div class="profile flex">
+                <a href="#">
+                    <div class="user-image">
+
+                    </div>
+                </a>
+                <div class="name">
+                    <a href="#">مرحبا بك زياد</a>
+                    <a href="#">تسجيل الخروج</a>
+                </div>
             </div>
         </div>
-    </div>
+    <?php else : ?>
+        <div class="login-register">
+            <a href="login.php">تسجيل الدخول / تسجيل جديد</a>
+        </div>
+    <?php endif; ?>
 </nav>
 <nav id="mobile-main-navbar">
     <div class="container">
-        <div class="icon <?php if(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "index") echo 'mobile-navbar-active-icon'; ?>">
+        <div class="icon <?php if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "index") echo 'mobile-navbar-active-icon'; ?>">
             <a href="index.php">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -65,8 +71,16 @@
             </a>
         </div>
         <div class="icon">
-            <a href="#">
-
+            <a 
+                <?php if(false): ?>
+                    href="index.php" 
+                
+                <?php else: ?>
+                    onclick="openClosePopup()"
+                
+                <?php endif; ?>
+            >
+            
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <path d="M16.1603 17.04C16.067 17.0266 15.947 17.0266 15.8403 17.04C13.4936 16.96 11.627 15.04 11.627 12.68C11.627 10.2666 13.5736 8.30664 16.0003 8.30664C18.4136 8.30664 20.3736 10.2666 20.3736 12.68C20.3603 15.04 18.507 16.96 16.1603 17.04Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M24.987 25.8401C22.6137 28.0134 19.467 29.3334 16.0003 29.3334C12.5337 29.3334 9.38701 28.0134 7.01367 25.8401C7.14701 24.5867 7.94701 23.3601 9.37367 22.4001C13.027 19.9734 19.0003 19.9734 22.627 22.4001C24.0537 23.3601 24.8537 24.5867 24.987 25.8401Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -89,7 +103,7 @@
                 <h1>السلة</h1>
             </a>
         </div>
-        <div class="icon <?php if(in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses"])) echo 'mobile-navbar-active-icon'; ?>">
+        <div class="icon <?php if (in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses"])) echo 'mobile-navbar-active-icon'; ?>">
             <a href="courses.php">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -103,3 +117,48 @@
         </div>
     </div>
 </nav>
+
+<?php if(true):?>
+
+    <!-- Mobile Signin/up Popup -->
+    <div class="mobile-login-container d-flex justify-content-center mobile-popup" id="mobile-popup">
+        <div class="content-wrapper" id="mobile-login-popup">
+            <h1>مرحبا</h1>
+            <h3>برجاء تسجيل الدخول للمتابعة</h3>
+            <form action="" class="d-flex flex-column">
+                <div class="d-flex flex-column inputs-container">
+                    <input type="text" name="mobile-login" id="mobile-login" placeholder="اسم المستخدم">
+                    <input type="password" name="mobile-password" id="mobile-password" placeholder="كلمة المرور">
+                </div>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+            <a class="dont-have-account" id="dont-have-account" onclick="switchPopup(this)">ليس لديك حساب ؟ انشاء
+                حساب الان</a>
+        </div>
+        <div class="content-wrapper" id="mobile-signup-popup">
+            <h1>تسجيل حساب جديد</h1>
+            <div class="sign-up-socials d-flex flex-column gap-2 my-3">
+                <h3>وسائل تواصل اجتماعي</h3>
+                <div class="d-flex gap-3">
+                    <button>تويتر</button>
+                    <button>انستغرام</button>
+                </div>
+            </div>
+            <div class="mobile-sign-up-form">
+                <h5>او اميل الالكتروني</h5>
+                <form action="">
+                    <div>
+                        <input type="text" name="mobile-signup-name" id="mobile-signup-name" placeholder="الاسم">
+                        <input type="email" name="mobile-signup-email" id="mobile-signup-email" placeholder="الايميل">
+                        <input type="password" name="mobile-signup-password" id="mobile-signup-password" placeholder="كلمة المرور">
+                        <input type="text" name="mobile-signup-phone" id="mobile-signup-phone" placeholder="رقم الهاتف">
+                    </div>
+                    <button type="submit">تسجيل الدخول</button>
+                </form>
+                <a class="have-account" id="have-account" onclick="switchPopup(this)">لديك حساب بالفعل؟ تسجيل
+                    جديد</a>
+            </div>
+        </div>
+    </div>
+
+<?php endif; ?>

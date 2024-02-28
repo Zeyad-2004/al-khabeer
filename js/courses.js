@@ -6,12 +6,12 @@ let courses = [...document.querySelectorAll('.course-container')];
 function openPopup(){
     overlay.style.visibility = 'visible';
     document.body.style.overflow = "hidden";
-    navbar.style.transform = 'translate(-50%, -10vh)';
+    navbar.style.transform = 'translate(-50%, 0)';
 }
 function closePopup(){
     overlay.style.visibility = 'hidden';
     document.body.style.overflow = "scroll";
-    navbar.style.transform = 'translate(-50%, 75vh)';
+    navbar.style.transform = 'translate(-50%, 100%)';
 }
 
 function setCoursesLimits(){
