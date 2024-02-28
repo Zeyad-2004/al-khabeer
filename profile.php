@@ -56,10 +56,14 @@
     <div class="line mobile-view"></div>
     
     <!-- ##################################################################################### -->
-    <!-- you have one class [mobile-view -> to make this element display form 768px to below]  -->
-    <!-- you have one class [desktop-view -> to make this element display from 768px to above] -->
-    <!-- !! Delete after start work !! -->
+    <!-- you have a general class [mobile-view -> to make this element display from 768px to below]  -->
+    <!-- you have a general class [desktop-view -> to make this element display from 768px to above] -->
+    <!-- !! Delete comments after start work !! -->
     <section id="content-section" class="border">
+        <!-- make a container to your content-section part -->
+        <!-- name it as a class like "content-section-partNumber" -->
+        <!-- in css as like to avoid merge conflict  -->
+        <!-- !! Delete comments after start work !! -->
         <p>عيش يا باشااااااااااا</p>
     </section>
 </section>
