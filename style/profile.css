@@ -1,0 +1,262 @@
+#profile{
+    width: 100%;
+    min-height: 80vh;
+    
+    display: flex;
+    gap: 5%;
+    
+    padding: 100px clamp(45px, calc(100vw * 0.057), 80px);
+    
+    position: relative;
+}
+@media screen and (width <= 768px){
+    #profile{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 50px clamp(25px, calc(100vw * 0.052), 50px);
+        
+        .top-section{
+            width: 100%;
+            position: relative;
+            
+            .content{
+                
+                h1{
+                    font-size: clamp(24px, calc(100vw * 0.06), 45px);
+                    text-align: center;
+                }
+                .logout{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    
+                    a{
+                        color: var(--second-color);
+                        font-size: clamp(11px, calc(100vw * 0.026), 20px);
+                    }
+                }
+            }
+        }
+        .line{
+            margin: 30px 0;
+            background-color: #0D1B39;
+            width: 85%;
+        }
+    }
+    .mobile-view{
+        display: block !important;
+    }
+    .desktop-view{
+        display: none !important;
+    }
+}
+
+
+/* ############################################################# */
+/* ################## Fixed-Section Start ###################### */
+/* ############################################################# */
+#fixed-section{
+    width: 30%;
+    
+    .user {
+        margin-bottom: 40px;
+        
+        .image{
+            width: clamp(50px, calc(100vw * 0.056), 78px);
+            height: clamp(50px, calc(100vw * 0.056), 78px);
+            border-radius: 50%;
+            
+            background-image: url(../media/default/profile_picture/profile.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .content{
+            
+            h1{
+                height: 50%;
+                color: #3E4145;
+                text-align: right;
+                font-size: clamp(18px, calc(100vw * 0.018), 25px);
+                font-weight: 600;
+                text-transform: capitalize;
+                margin: 0;
+            }
+            h3{
+                color: #888;
+                text-align: right;
+                font-size: clamp(15px, calc(100vw * 0.014), 20px);
+                font-weight: 400;
+                height: 50%;
+            }
+        }
+    }
+    .sections{
+        margin-bottom: 30px;
+        
+        .line{
+            height: 1px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+        .partition{
+            width: 100%;
+            height: clamp(50px, calc(100vw * 0.043), 72px);
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            cursor: pointer;
+            transition: .2s;
+        }
+        .partition:hover{
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+        .active{
+            background-color: var(--second-color);
+            
+            p{
+                color: var(--White);
+            }
+        }
+        p{
+            margin: 0;
+            font-size:  clamp(15px, calc(100vw * 0.014), 20px);
+            font-weight: 500;
+            
+            padding-right:  clamp(10px, calc(100vw * 0.021), 30px);
+        }
+    }
+    .logout{
+        display: flex;
+        flex-direction: row-reverse;
+        
+        a{
+            text-decoration: none;
+            color: #3E4145;
+            
+            font-size:  clamp(15px, calc(100vw * 0.014), 20px);
+            font-weight: 500;
+            transition: .3s;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: var(--second-color);
+        }
+    }
+}
+
+/* ############################################################# */
+/* ############### Fixed-Section Responsive #################### */
+@media screen and (width <= 768px){
+    #fixed-section{
+        width: 90%;
+        
+        
+        .user{
+            margin-bottom: 20px;
+            
+            .image{
+                width: clamp(50px, calc(100vw * 0.083), 64px);
+                height: clamp(50px, calc(100vw * 0.083), 64px);
+            }
+            .content{
+
+                h1{
+                    font-family: Poppins;
+                    font-size: clamp(18px, calc(100vw * 0.03125), 24px);
+                }
+                h3{
+                    font-family: Poppins;
+                    font-size: clamp(18px, calc(100vw * 0.03125), 24px);
+                }
+            }
+        }
+        .info{
+            margin: 25px 0 10px 0;
+
+            h1{
+                color: #3E4145;
+
+                font-family: Poppins;
+                text-align: right;
+                font-size: clamp(20px, calc(100vw * 0.059), 45px);
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+        .sections{
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+
+            .partition{
+                width: 30%;
+                border-radius: 8px;
+                border: 1px solid var(--second-color);
+                color: var(--second-color);
+
+                p{
+                    margin: 0 auto;
+                    padding: 0;
+                    font-size: clamp(8px, calc(100vw * 0.03125), 24px);
+                }
+            }
+        }
+    }
+}
+
+
+/* ############################################################# */
+/* ################# Content-Section Start ##################### */
+/* ############################################################# */
+#content-section{
+    width: 65%;
+}
+
+/* ############################################################# */
+/* ############## Content-Section Responsive ################### */
+@media screen and (width <= 768px) {
+    #content-section{
+        width: 90%;
+    }
+}
+
+
+
+
+/* ############################################### */
+/* ############### General Style ################# */
+/* ############################################### */
+
+/* ================ Line Element ================= */
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+/* ================ Logout Element =============== */
+.logout{
+    display: flex;
+    flex-direction: row-reverse;
+    
+    a{
+        text-decoration: none;
+        color: #3E4145;
+        
+        font-size:  clamp(15px, calc(100vw * 0.014), 20px);
+        font-weight: 500;
+        transition: .3s;
+    }
+    a:hover{
+        color: var(--second-color);
+    }
+}
+/* ================ Logout Element =============== */
+.mobile-view{
+    display: none;
+}
+  
