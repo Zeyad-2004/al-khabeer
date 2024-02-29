@@ -20,26 +20,33 @@
 
     padding: 50px clamp(25px, calc(100vw * 0.052), 50px);
 
-    .top-section {
-      width: 100%;
-      position: relative;
+    #fixed-section{ 
+        width: 100%;
 
-      .content {
-        h1 {
-          font-size: clamp(24px, calc(100vw * 0.06), 45px);
-          text-align: center;
+        .line{
+            width: 100%;
         }
-        .logout {
-          position: absolute;
-          left: 0;
-          bottom: 0;
+        .top-section {
+        width: 100%;
+        position: relative;
 
-          a {
-            color: var(--second-color);
-            font-size: clamp(11px, calc(100vw * 0.026), 20px);
-          }
+        .content {
+            h1 {
+                font-size: clamp(24px, calc(100vw * 0.06), 45px);
+                text-align: center;
+            }
+            .logout {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                a {
+                    color: var(--second-color);
+                    font-size: clamp(11px, calc(100vw * 0.026), 20px);
+                }
+            }
         }
-      }
+    }
     }
     .line {
       margin: 30px 0;
@@ -219,6 +226,13 @@
                         font-size: clamp(8px, calc(100vw * 0.03125), 24px);
                         color: var(--second-color);
                     }
+                }
+            }
+            .partition:hover{
+                background-color: #fff;
+                
+                h1{
+                    color: var(--second-color);
                 }
             }
             .active a h1{
