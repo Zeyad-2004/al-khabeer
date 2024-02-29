@@ -30,23 +30,26 @@
 
         <div class="sections">
 
-            <div class="partition <?php if (!isset($_GET['page']) || !in_array($_GET['page'], array(2, 3)))
-                echo "active"; ?>">
-                <a href="profile.php">تفاصيل الحساب</a>
+            <div class="partition <?php if (!isset($_GET['page']) || !in_array($_GET['page'], array(2, 3))) echo "active"; ?>">
+                <a href="profile.php">
+                    <h1>تفاصيل الحساب</h1>
+                </a>
             </div>
 
             <div class="line desktop-view"></div>
 
-            <div class="partition <?php if (isset($_GET['page']) && $_GET['page'] == 2)
-                echo "active"; ?>">
-                <a href="profile.php?page=2">دوراتي</a>
+            <div class="partition <?php if (isset($_GET['page']) && $_GET['page'] == 2) echo "active"; ?>">
+                <a href="profile.php?page=2">
+                    <h1>دوراتي</h1>
+                </a>
             </div>
 
             <div class="line desktop-view"></div>
 
-            <div class="partition <?php if (isset($_GET['page']) && $_GET['page'] == 3)
-                echo "active"; ?>">
-                <a href="profile.php?page=3">شهاداتي</a>
+            <div class="partition <?php if (isset($_GET['page']) && $_GET['page'] == 3) echo "active"; ?>">
+                <a href="profile.php?page=3">
+                    <h1>شهاداتي</h1>
+                </a>
             </div>
 
             <div class="line desktop-view"></div>
