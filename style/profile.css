@@ -115,8 +115,21 @@
             transition: .2s;
 
             a{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                width: 100%;
+                height: 100%;
                 text-decoration: none;
-                color: var(--main-color);
+
+                h1{
+                    margin: 0;
+                    font-size:  clamp(15px, calc(100vw * 0.014), 20px);
+                    font-weight: 500;
+                    color: var(--main-color);
+                    
+                }
             }
         }
         .partition:hover{
@@ -125,15 +138,11 @@
         .active{
             background-color: var(--second-color);
             
-            a{
+            a h1{
                 color: var(--White);
             }
         }
         a{
-            margin: 0;
-            font-size:  clamp(15px, calc(100vw * 0.014), 20px);
-            font-weight: 500;
-            
             padding-right:  clamp(10px, calc(100vw * 0.021), 30px);
         }
     }
@@ -207,13 +216,17 @@
                 border: 1px solid var(--second-color);
                 
                 a{
-                    color: var(--second-color);
+                    justify-content: center;
                     margin: 0 auto;
                     padding: 0;
-                    font-size: clamp(8px, calc(100vw * 0.03125), 24px);
+                    
+                    h1{
+                        font-size: clamp(8px, calc(100vw * 0.03125), 24px);
+                        color: var(--second-color);
+                    }
                 }
             }
-            .active a{
+            .active a h1{
                 color: var(--White);
             }
         }
