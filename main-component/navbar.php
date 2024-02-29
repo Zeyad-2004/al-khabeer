@@ -73,7 +73,7 @@
         <div class="icon <?php if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "profile") echo 'mobile-navbar-active-icon'; ?>">
             <a 
                 <?php if(false): ?>
-                    href="index.php" 
+                    href="profile.php" 
                 
                 <?php else: ?>
                     onclick="openClosePopup()"
