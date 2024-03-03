@@ -34,7 +34,7 @@
     </div>
     <?php if (true) : ?>
         <div class="user">
-            <a href="cart.php" style="transition: 0.3s;">
+            <a href="cart.php" style="transition: 0.3s;" class="active">
                 <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
                     <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
                 </svg>
@@ -89,7 +89,7 @@
                 <h1>الملف الشخصي</h1>
             </a>
         </div>
-        <div class="icon">
+        <div class="icon <?php if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) === "cart") echo 'mobile-navbar-active-icon'; ?>">
             <a href="#">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">

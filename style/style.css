@@ -147,13 +147,26 @@ body {
 }
 #main-navbar .user {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 20px;
+
+  position: relative;
 }
 #main-navbar .user .cart {
   width: clamp(18px, calc(100vw * 0.0155), 26px);
   height: clamp(18px, calc(100vw * 0.0155), 26px);
+}
+#main-navbar .user .active::before{
+  content: "";
+  width: 6px;
+  height: 6px;
+  
+  background-color: var(--second-color);
+  border-radius: 50%;
+
+  position: absolute;
+  right: -8px;
 }
 #main-navbar .user > * {
   color: #ffffff;
