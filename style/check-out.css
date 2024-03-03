@@ -190,8 +190,7 @@
     -webkit-appearance: none;
     border: 0.2rem solid #fff;
     border-radius: 50%;
-    background-color: #e8e8e8;
-    box-shadow: 0 0 0 1px #999;
+    box-shadow: 0 0 0 2px #999;
 }
 .checkout-container .left-section .payment-options input:focus-visible{
     outline-offset: 0;
@@ -202,7 +201,7 @@
 }
 
 .checkout-container .left-section .payment-options input:checked {
-    box-shadow: 0 0 0 1px #fd9802;
+    box-shadow: 0 0 0 2px #fd9802;
     background-color: #fd9802;
     border-width: 0.2rem;
 }

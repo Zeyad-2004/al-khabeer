@@ -14,15 +14,15 @@
                     <div class="paywith" >Pay With:</div>
                     <form action="" class="payment-options d-flex">
                         <span>
-                            <input type="radio" name="option-1" id="option-1">
+                            <input type="radio" name="option" id="option-1">
                             <label for="option-1">Card</label>
                         </span>
                         <span>
-                            <input type="radio" name="option-2" id="option-2">
+                            <input type="radio" name="option" id="option-2">
                             <label for="option-2">Bank</label>
                         </span>
                         <span>
-                            <input type="radio" name="option-3" id="option-3">
+                            <input type="radio" name="option" id="option-3">
                             <label for="option-3">Transfer</label>
                         </span>
                     </form>
