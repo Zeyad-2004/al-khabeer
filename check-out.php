@@ -11,19 +11,19 @@
                 <h1>Payment</h1>
                 <div class="line-breaker"></div>
                 <div class="payment-method">
-                    <div>Pay With:</div>
-                    <form action="">
+                    <div class="paywith" >Pay With:</div>
+                    <form action="" class="payment-options d-flex">
                         <span>
-                            <label for="">Card</label>
-                            <input type="radio" name="" id="">
+                            <input type="radio" name="option-1" id="option-1">
+                            <label for="option-1">Card</label>
                         </span>
                         <span>
-                            <label for="">Bank</label>
-                            <input type="radio" name="" id="">
+                            <input type="radio" name="option-2" id="option-2">
+                            <label for="option-2">Bank</label>
                         </span>
                         <span>
-                            <label for="">Transfer</label>
-                            <input type="radio" name="" id="">
+                            <input type="radio" name="option-3" id="option-3">
+                            <label for="option-3">Transfer</label>
                         </span>
                     </form>
                 </div>
@@ -47,22 +47,22 @@
                     </div>
                 </div>
                 <div class="line-breaker"></div>
-                <form class="discount-code">
+                <form class="discount-code d-flex">
                     <input type="text" name="discount-code" id="discount-code" placeholder="Gift or discount code">
                     <button type="submit">Apply</button>
                 </form>
                 <div class="line-breaker"></div>
-                <div class="sub-total">
+                <div class="sub-total d-flex justify-content-between">
                     <span>Subtotal</span>
                     <span>$49.80</span>
                 </div>
                 <div class="line-breaker"></div>
-                <div class="total">
+                <div class="total d-flex justify-content-between">
                     <span>
-                        <div>Total</div>
+                        <div class="total-title" >Total</div>
                         <div class="taxes">Including $2.24 in taxes</div>
                     </span>
-                    <span>
+                    <span class="total-price" >
                         $59.28
                     </span>
                 </div>

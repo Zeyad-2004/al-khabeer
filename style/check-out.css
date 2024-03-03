@@ -5,27 +5,14 @@
   background: #acacac;
   margin: 36px 0;
 }
-/* ====================== checkout container & wrapper ====================== */
-.checkout-container {
-  padding: 50px 153px 50px 135px;
-  direction: ltr;
-}
 
-.checkout-wrapper {
-  gap: 18px;
-}
-
-/* ====================== RIGHT SECTION ====================== */
-
-.checkout-container .right-section {
-  border: 1px solid #d9d9d9;
-  background: #f9fafa;
-}
-.checkout-container .right-section-wrapper {
+.checkout-container .right-section-wrapper,
+.checkout-container .left-section-wrapper {
   padding: 48px;
+  width: 570px;
 }
 
-.checkout-container .right-section h1 {
+.checkout-container h1 {
   margin-bottom: -20px;
   color: var(--Text, #0a0d13);
   font-family: "Inter", sans-serif;
@@ -34,8 +21,28 @@
   font-weight: 600;
   letter-spacing: -0.48px;
 }
+/* ====================== checkout container & wrapper ====================== */
+.checkout-container {
+  padding: 50px 153px 50px 135px;
+  direction: ltr;
+  height: 100vh;
+}
 
-/* ====================== SEPARATOR ====================== */
+.checkout-wrapper {
+  gap: 18px;
+  height: 100%;
+}
+
+/* ====================== RIGHT SECTION ====================== */
+
+.checkout-container .right-section {
+  border: 1px solid #d9d9d9;
+  background: #f9fafa;
+  padding-top: 75px;
+  padding-right: 130px;
+}
+
+/* ====================== product-wrapper ====================== */
 .checkout-container .right-section .product-wrapper {
   gap: 1rem;
 }
@@ -71,17 +78,23 @@
   font-weight: 500;
 }
 
-/* ====================== SEPARATOR ====================== */
+/* ====================== discount wrapper ====================== */
+.checkout-container .right-section .discount-code {
+  width: 100%;
+  gap: 1rem;
+}
 .checkout-container .right-section .discount-code input {
-  padding: 1rem;
+  /* padding: 14px 16px; */
+  padding: 10px 16px;
   border-radius: 4px;
-  border: 1.5px solid var(--Stroke);
+  border: 1.5px solid #adadac;
   background-color: #fff;
   outline: none;
+  width: 100%;
 }
 
 .checkout-container .right-section .discount-code input::placeholder {
-  color: var(--Stroke, #acacac);
+  color: #adadac;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -89,13 +102,111 @@
 }
 
 .checkout-container .right-section .discount-code button {
-    padding: 1rem;
-    border-radius: 4px;
-    /* background-color: var(--Stroke); */
+  padding: 13px 23px;
+  border-radius: 4px;
+  background-color: #adadac;
+  border: 1.5px solid #adadac;
+  color: var(--Text-2, #f3f3f3);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
 }
-/* ====================== SEPARATOR ====================== */
-/* ====================== SEPARATOR ====================== */
-/* ====================== SEPARATOR ====================== */
+
+.checkout-container .right-section .discount-code button:hover {
+  filter: brightness(0.9);
+}
+
+/* ====================== subtotal ====================== */
+.checkout-container .right-section .sub-total {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ====================== total price ====================== */
+.checkout-container .right-section .total .total-title {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.checkout-container .right-section .total .taxes {
+  color: var(--Stroke, #acacac);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.checkout-container .right-section .total .total-price {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ====================== LEFT-SECTION ====================== */
+.checkout-container .left-section {
+  padding-top: 75px;
+  padding-left: 130px;
+}
+
+.checkout-container .left-section .paywith {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.checkout-container .left-section .payment-options{
+    gap: 1rem;
+    margin-top: 16px;
+}
+
+.checkout-container .left-section .payment-options label,
+.checkout-container .left-section .payment-options input {
+    cursor: pointer;
+}
+
+/* 
+    --color: #999;
+    --checked-color: #ff5722;
+
+    --bg-color: #e8e8e8;
+
+*/
+
+.checkout-container .left-section .payment-options input {
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0.2rem solid #fff;
+    border-radius: 50%;
+    background-color: #e8e8e8;
+    box-shadow: 0 0 0 1px #999;
+}
+.checkout-container .left-section .payment-options input:focus-visible{
+    outline-offset: 0;
+}
+
+.checkout-container .left-section .payment-options input:hover {
+    border-width: 0;
+}
+
+.checkout-container .left-section .payment-options input:checked {
+    box-shadow: 0 0 0 1px #fd9802;
+    background-color: #fd9802;
+    border-width: 0.2rem;
+}
+
 /* ====================== SEPARATOR ====================== */
 /* ====================== SEPARATOR ====================== */
 /* ====================== SEPARATOR ====================== */
