@@ -1,12 +1,12 @@
 <?php include "./main-component/header.php" ?>
 <?php include "./main-component/navbar.php" ?>
 
-<section class="container-fluid checkout-container">
-    <section class="container checkout-wrapper d-flex">
+<section class=" checkout-container">
+    <section class="checkout-wrapper d-flex justify-content-center">
         <!-- ===================================================
         ======== LEFT-SECTION ==================================
         ======================================================== -->
-        <section class="left-section container-fluid">
+        <section class="left-section">
             <div class="left-section-wrapper">
                 <h1>Payment</h1>
                 <div class="line-breaker"></div>
@@ -32,13 +32,13 @@
         <!-- ===================================================
         ======== RIGHT-SECTION ==================================
         ======================================================== -->
-        <section class="right-section container-fluid">
+        <section class="right-section ">
             <div class="right-section-wrapper">
                 <h1>Order Summary</h1>
                 <div class="line-breaker"></div>
                 <div class="product-wrapper d-flex">
                     <img src="media/main/autocad.png" alt="product-img">
-                    <div class="product d-flex justify-content-between container-fluid">
+                    <div class="product d-flex justify-content-between">
                         <span>
                             <div class="product-title">AutoCAD Course</div>
                             <div class="product-desc">Lorem, ipsum dolor.</div>
