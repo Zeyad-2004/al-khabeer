@@ -164,49 +164,36 @@
   font-weight: 600;
 }
 
-.checkout-container .left-section .payment-options{
-    gap: 1rem;
-    margin-top: 16px;
+.checkout-container .left-section .payment-options {
+  gap: 1rem;
+  margin-top: 16px;
 }
 
 .checkout-container .left-section .payment-options label,
 .checkout-container .left-section .payment-options input {
-    cursor: pointer;
+  cursor: pointer;
 }
-
-/* 
-    --color: #999;
-    --checked-color: #ff5722;
-
-    --bg-color: #e8e8e8;
-
-*/
 
 .checkout-container .left-section .payment-options input {
-    height: 14px;
-    width: 14px;
-    margin-right: 5px;
-    appearance: none;
-    -webkit-appearance: none;
-    border: 0.2rem solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px #999;
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0.2rem solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #999;
 }
-.checkout-container .left-section .payment-options input:focus-visible{
-    outline-offset: 0;
+.checkout-container .left-section .payment-options input:focus-visible {
+  outline-offset: 0;
 }
 
 .checkout-container .left-section .payment-options input:hover {
-    border-width: 0;
+  border-width: 0;
 }
 
 .checkout-container .left-section .payment-options input:checked {
-    box-shadow: 0 0 0 2px #fd9802;
-    background-color: #fd9802;
-    border-width: 0.2rem;
+  box-shadow: 0 0 0 2px #fd9802;
+  background-color: #fd9802;
+  border-width: 0.2rem;
 }
-
-/* ====================== SEPARATOR ====================== */
-/* ====================== SEPARATOR ====================== */
-/* ====================== SEPARATOR ====================== */
-/* ====================== SEPARATOR ====================== */
