@@ -1,45 +1,62 @@
-let moreBtn = document.querySelector(".category-content .more");
-let moreicon = document.querySelector(".category-content .more svg");
-let moretitle = document.querySelector(".category-content .more h6");
-let moreCommentBtn = document.querySelector(".more-comments-btn");
+// Mkasil aktb Comments dlw2ty elsra7a XD
 
-let moreCommenticon = document.querySelector(".more-comments-btn svg");
-let moreCommenttitle = document.querySelector(".more-comments-btn h6");
-let moreComment = document.querySelector(" .more-comments");
-
-let moreVideos =document.querySelector(".course-container .video-container-more");
+const videos_dropdown = document.getElementById('vid-card');
+const comments_dropdown = document.getElementById('comment');
 
 
-moreBtn.onclick = ()=>{
-    if(moreVideos.style.display ==="grid"){
-        moreVideos.style.display ="none"
-        moretitle.innerText = "  مشاهدة المزيد"
-        moreicon.style.transform = "rotate(180deg)";
-    }else{
-        moreVideos.style.display ="grid";
-        moretitle.innerText = "عناصر اقل";
-        moreVideos.style.marginBottom = "20px";
-        moreicon.style.transform = "rotate(180deg)";
+function handel_list_elements(e, min, className) {
+    const elements = e.previousElementSibling.querySelectorAll('.' + className);
 
+    if (elements.length > min) {
 
+        if (e.classList.contains('get')) {
+            e.classList.remove('get');
+            e.querySelector('h6').innerHTML = 'عرض أقل';
+            e.querySelector('svg').style.transform = "rotate(180deg)";
+            
+            for (let i = min; i < elements.length; i++) {
+                elements[i].style.display = 'block';
+            }
+        }
+        else {
+            e.classList.add('get');
+            e.querySelector('h6').innerHTML = 'عرض المزيد';
+            e.querySelector('svg').style.transform = "rotate(0deg)";
+
+            for (let i = min; i < elements.length; i++) {
+                elements[i].style.display = 'none';
+            }
+        }
+    }
+    else {
+        e.style.display = 'none';
     }
 }
 
-moreCommentBtn.onclick = ()=>{
-    if(moreComment.style.display ==="flex"){
-        moreComment.style.display ="none"
-        moreCommenttitle.innerHTML = "تعليقات اقل"
-        moreCommenticon.style.transform = "rotate(180deg)";
-
-    }else{
-        moreComment.style.display ="flex"
-        moreCommenttitle.innerHTML = " المزيد من التعليقات"
-        moreComment.style.marginBottom = "20px"
-        moreCommenticon.style.transform = "rotate(180deg)";
+window.addEventListener('load', () => {
+    handel_list_elements(videos_dropdown, 8, 'vid-card');
+    handel_list_elements(comments_dropdown, 3, 'comment');
+});
 
 
 
-    }
-}
+const questions_dropdown = [...document.querySelectorAll(".title svg")];
 
+questions_dropdown.forEach(dropdown => {
+    dropdown.addEventListener("click", (e) => {
+        const answer = dropdown.parentNode.nextElementSibling;
 
+        if (answer.classList.contains("hidden")) {
+            answer.classList.remove("hidden");
+            answer.classList.add("visible");
+
+            dropdown.style.transform = "rotate(180deg)";
+        }
+        else {
+            answer.classList.remove("visible");
+            answer.classList.add("hidden");
+
+            dropdown.style.transform = "rotate(0deg)";
+        }
+    })
+});
