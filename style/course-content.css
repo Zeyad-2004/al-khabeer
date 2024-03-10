@@ -5,13 +5,18 @@
   list-style: none;
 }
 /* Disable Bootstrap !! margin !! style [Add a "!important" at your custom style] */
-h1, h2, h3, h4, h5, h6, p{    
-    margin: 0 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 !important;
 }
-#co-dev{
-    width: 100%;
+#co-dev {
+  width: 100%;
 }
-
 
 /* ############################################# */
 /* ############ Price Card Start ############### */
@@ -22,23 +27,23 @@ h1, h2, h3, h4, h5, h6, p{
   width: max(220px, 25%);
   min-height: 80vh;
   max-height: 90vh;
-  
+
   margin-left: clamp(50px, calc(100vw * 0.0625), 100px);
   padding: 30px clamp(15px, calc(100vw * (30 / 1400)), 30px);
 
   border-radius: 25px;
   border: 1px solid rgba(0, 0, 0, 0.18) !important;
-  
+
   position: sticky;
   left: 0;
   top: 5vh;
   z-index: 100;
   overflow-y: scroll;
-  
 
   background: #fbfbfb;
 }
-.pricing-card::-webkit-scrollbar { /* Hide scrollbar for WebKit browsers */
+.pricing-card::-webkit-scrollbar {
+  /* Hide scrollbar for WebKit browsers */
   display: none;
 }
 .pricing-card .price {
@@ -51,22 +56,22 @@ h1, h2, h3, h4, h5, h6, p{
   display: flex;
   align-items: baseline;
   flex-direction: row;
-  gap:  clamp(6px, calc(100vw * (10 / 1400)), 10px);
+  gap: clamp(6px, calc(100vw * (10 / 1400)), 10px);
 }
 .pricing-card .price .after {
   margin-bottom: 5px;
 }
-.pricing-card .price .after h3{
+.pricing-card .price .after h3 {
   color: #161616;
 
-  font-size:  clamp(20px, calc(100vw * (30 / 1400)), 30px);
+  font-size: clamp(20px, calc(100vw * (30 / 1400)), 30px);
   font-weight: 400;
   text-align: right;
   font-family: "Segoe UI";
 }
-.pricing-card .price .after p{
+.pricing-card .price .after p {
   color: #161616;
-  
+
   font-size: clamp(12px, calc(100vw * (16 / 1400)), 16px);
   font-weight: 700;
   text-align: right;
@@ -85,17 +90,16 @@ h1, h2, h3, h4, h5, h6, p{
 .pricing-card .price .before p::after {
   content: "";
   display: block;
-  
+
   width: 100%;
   height: 1px;
-  
+
   position: absolute;
   top: 50%;
   left: 0;
-  
+
   background-color: #00000056;
 }
-
 
 .pricing-card .buy-btn {
   display: flex;
@@ -108,14 +112,14 @@ h1, h2, h3, h4, h5, h6, p{
   justify-content: center;
   align-items: center;
   gap: 10px;
-  
+
   font-size: clamp(10px, calc(100vw * (18 / 1400)), 18px);
   font-weight: 400;
 
   border-radius: 2px;
   color: var(--White);
   background: #fd9802;
-  
+
   padding: clamp(9px, calc(100vw * (14 / 1400)), 14px) 0px;
   margin-bottom: 10px;
   transition: 0.3s;
@@ -124,9 +128,8 @@ h1, h2, h3, h4, h5, h6, p{
   background: #644c2a;
 }
 .pricing-card .buy-btn a svg {
-  width:  clamp(14px, calc(100vw * (19 / 1400)), 19px);
+  width: clamp(14px, calc(100vw * (19 / 1400)), 19px);
 }
-
 
 .pricing-card .discount-time {
   display: flex;
@@ -134,7 +137,7 @@ h1, h2, h3, h4, h5, h6, p{
   flex-direction: row;
   gap: 8px;
 
-  color: #FD9802;
+  color: #fd9802;
   margin-bottom: 10px;
 
   font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
@@ -143,35 +146,33 @@ h1, h2, h3, h4, h5, h6, p{
   font-family: "Segoe UI";
 }
 
-
 .pricing-card .information {
   width: 100%;
-  
+
   border-radius: 4px;
   border: 1px solid #ccc;
   background: #fff;
 
   margin: 20px 0;
   padding: clamp(18px, calc(100vw * (30 / 1400)), 30px)
-           clamp(8px, calc(100vw * (20 / 1400)), 20px)
-           clamp(30px, calc(100vw * (50 / 1400)), 50px)
-           clamp(8px, calc(100vw * (20 / 1400)), 20px);
+    clamp(8px, calc(100vw * (20 / 1400)), 20px)
+    clamp(30px, calc(100vw * (50 / 1400)), 50px)
+    clamp(8px, calc(100vw * (20 / 1400)), 20px);
 }
-.pricing-card .information h5{
+.pricing-card .information h5 {
   color: #fd9802;
-  
-  font-size:  clamp(8px, calc(100vw * (12 / 1400)), 12px);
+
+  font-size: clamp(8px, calc(100vw * (12 / 1400)), 12px);
   font-weight: 400;
   text-align: right;
   font-family: "Segoe UI";
 
   margin-bottom: 15px !important;
-
 }
 .pricing-card .information p {
   color: #161616;
-  
-  font-size:  clamp(10px, calc(100vw * (14 / 1400)), 14px);
+
+  font-size: clamp(10px, calc(100vw * (14 / 1400)), 14px);
   font-weight: 400;
   text-align: right;
   font-family: "Segoe UI";
@@ -184,11 +185,9 @@ h1, h2, h3, h4, h5, h6, p{
   text-decoration: none;
 }
 
-
 .pricing-card .icons {
   text-align: right;
   font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
-
 }
 .pricing-card .icons ul {
   display: flex;
@@ -217,12 +216,9 @@ h1, h2, h3, h4, h5, h6, p{
   margin-left: 10px;
 }
 
-
-
 /* ############################################# */
 /* ########## Course Section Start ############# */
 /* ############################################# */
-
 
 /* ############################################# */
 /* ########## Category Content Start ########### */
@@ -232,16 +228,17 @@ h1, h2, h3, h4, h5, h6, p{
   cursor: pointer;
 }
 .category-content {
-  margin: clamp(50px, calc(100vw * 0.0625), 100px) clamp(50px, calc(100vw * 0.0625), 100px);
+  margin: clamp(50px, calc(100vw * 0.0625), 100px)
+    clamp(50px, calc(100vw * 0.0625), 100px);
   width: 55%;
   position: relative;
   z-index: 10;
 }
-.category-content .course{
-    width: 100%;
+.category-content .course {
+  width: 100%;
 }
 .category-content .course .course-title {
-    width: 80%;
+  width: 80%;
 }
 .category-content .course .course-title h1 {
   font-size: 48px;
@@ -262,48 +259,47 @@ h1, h2, h3, h4, h5, h6, p{
   margin-bottom: 10px !important;
 }
 .category-content .course .course-title .icons {
-    height: 18px;
-    margin-bottom: 20px;
+  height: 18px;
+  margin-bottom: 20px;
 }
 .category-content .course .course-title .icons ul {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.category-content .course .course-title .icons ul li p{
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-    margin: 0 !important;
-    color: #161616;
+.category-content .course .course-title .icons ul li p {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin: 0 !important;
+  color: #161616;
 
-    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
-    font-weight: 400;
-    letter-spacing: -0.4px;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+  letter-spacing: -0.4px;
 }
 .category-content .course .course-title .icons ul div {
-    color: #000;
+  color: #000;
 
-    font-family: "Segoe UI";
-    font-size: 11px;
-    
-    height: 18px;
-    padding: 0 10px;
-    
-    background-color: #fd9802;
-    text-transform: uppercase;
-}
-.category-content .course .course-title .icons ul div p{
-    color: #000;
-    font-size: 11px;
-    font-weight: 400;
-}
+  font-family: "Segoe UI";
+  font-size: 11px;
 
+  height: 18px;
+  padding: 0 10px;
+
+  background-color: #fd9802;
+  text-transform: uppercase;
+}
+.category-content .course .course-title .icons ul div p {
+  color: #000;
+  font-size: 11px;
+  font-weight: 400;
+}
 
 .category-content .course video {
   width: 100%;
   aspect-ratio: 966/465;
-  
+
   background-image: url("../media/main/autocad.png");
   background-size: cover;
   background-position: center;
@@ -317,28 +313,26 @@ h1, h2, h3, h4, h5, h6, p{
   margin-bottom: 10px !important;
 }
 .category-content .course .information h5 {
-    color: #000;
-    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
-    margin-bottom: 10px !important;
+  color: #000;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  margin-bottom: 10px !important;
 }
 .category-content .course .information p {
-    color: #848484;
-    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
-    margin-bottom: 20px !important;
+  color: #848484;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  margin-bottom: 20px !important;
 }
-
 
 .line {
-    width: 60%;
-    height: 3px;
+  width: 60%;
+  height: 3px;
 
-    position: relative;
-    right: -100px;
-    
-    margin: 30px 0;
-    background-color: #fd9802;
+  position: relative;
+  right: -100px;
+
+  margin: 30px 0;
+  background-color: #fd9802;
 }
-
 
 /* ############################################# */
 /* ########## Course Container Start ########### */
@@ -346,18 +340,18 @@ h1, h2, h3, h4, h5, h6, p{
   width: 90%;
 }
 .course-container h1 {
-    color: #000;
-    
-    font-size:  clamp(16px, calc(100vw * (24 / 1400)), 24px);
-    font-weight: 400;
+  color: #000;
 
-    text-align: right;
-    margin-bottom: 10px !important;
+  font-size: clamp(16px, calc(100vw * (24 / 1400)), 24px);
+  font-weight: 400;
+
+  text-align: right;
+  margin-bottom: 10px !important;
 }
 .course-container p {
-    font-size:  clamp(11px, calc(100vw * (14 / 1400)), 14px);
-    
-    margin-bottom: 25px !important;
+  font-size: clamp(11px, calc(100vw * (14 / 1400)), 14px);
+
+  margin-bottom: 25px !important;
 }
 .course-container .video-container {
   display: grid;
@@ -377,7 +371,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .course-container .video-container .vid-card h1 {
   color: #161616;
-  font-size:  clamp(12px, calc(100vw * (18 / 1400)), 18px);
+  font-size: clamp(12px, calc(100vw * (18 / 1400)), 18px);
 }
 .course-container .video-container .vid-card h2 {
   display: flex;
@@ -385,7 +379,7 @@ h1, h2, h3, h4, h5, h6, p{
   gap: 5px;
 
   color: #848484;
-  font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
 }
 .course-container .video-container .vid-card h2 svg {
   width: clamp(10px, calc(100vw * (16 / 1400)), 16px);
@@ -399,31 +393,30 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .category-content .more {
-    width: 100%;
-    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
+  width: 100%;
 
-    cursor: pointer;
-    margin: 25px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  margin: 25px 0;
 }
 .category-content .more h6 {
-  font-size: clamp(9px, calc(100vw*(20 / 1400)), 20px);
+  font-size: clamp(9px, calc(100vw * (20 / 1400)), 20px);
 }
 .category-content .more svg {
-  width: clamp(14px, calc(100vw*(24 / 1400)), 24px);
-  height: clamp(14px, calc(100vw*(24 / 1400)), 24px);
+  width: clamp(14px, calc(100vw * (24 / 1400)), 24px);
+  height: clamp(14px, calc(100vw * (24 / 1400)), 24px);
 }
-.category-content .more >*{
-    transition: 0.3s;
+.category-content .more > * {
+  transition: 0.3s;
 }
 .category-content .more:hover,
-.category-content .more:hover svg{
-    color: var(--second-color);
+.category-content .more:hover svg {
+  color: var(--second-color);
 }
-
 
 /* ############################################# */
 /* ########## to-learn Section Start ########### */
@@ -433,63 +426,62 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .to-learn h1 {
   color: #000;
-  
-  font-size:  clamp(14px, calc(100vw * (18 / 1400)), 18px);
+
+  font-size: clamp(14px, calc(100vw * (18 / 1400)), 18px);
   font-weight: 600;
   text-align: right;
-  
+
   margin-bottom: 10px !important;
 }
 .to-learn h2 {
-    color: #000;
+  color: #000;
 
-    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
-    font-weight: 600;
-    text-align: right;
-    
-    margin-bottom: clamp(20px, calc(100vw * (40 / 1400)), 40px) !important;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 600;
+  text-align: right;
+
+  margin-bottom: clamp(20px, calc(100vw * (40 / 1400)), 40px) !important;
 }
 .to-learn .to-learn-cards {
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .to-learn .to-learn-cards .learn-card {
-    width: 100%;
-    
-    display: flex;
-    gap: 2%;
+  width: 100%;
+
+  display: flex;
+  gap: 2%;
 }
 .to-learn .to-learn-cards .learn-card .cont {
-    width: 32%;
-    
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
+  width: 32%;
+
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }
-.to-learn .to-learn-cards .learn-card .cont svg{
-    width:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
-    aspect-ratio: 1;
+.to-learn .to-learn-cards .learn-card .cont svg {
+  width: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  aspect-ratio: 1;
 }
 .to-learn .to-learn-cards .learn-card .cont p {
-    color: #848484;
+  color: #848484;
 
-    font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
-    font-weight: 500;
-    text-align: right;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 500;
+  text-align: right;
 }
-
 
 /* ############################################# */
 /* ########## Review Section Start ############# */
 .reviews {
-    width: 100%;
+  width: 100%;
 }
 .reviews h1 {
   color: #161616;
-  font-size:  clamp(20px, calc(100vw * (30 / 1400)), 30px);
+  font-size: clamp(20px, calc(100vw * (30 / 1400)), 30px);
 
   margin-bottom: 30px !important;
 }
@@ -501,28 +493,28 @@ h1, h2, h3, h4, h5, h6, p{
   margin-bottom: clamp(40px, calc(100vw * (70 / 1400)), 70px);
 }
 .reviews .rev-icons li {
-    height: 65px;
+  height: 65px;
 }
 .reviews .rev-icons li .test {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .reviews .rev-icons li .test div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .reviews .rev-icons li .test div svg {
   width: clamp(15px, calc(100vw * (30 / 1400)), 30px);
   aspect-ratio: 1;
 }
 .reviews .rev-icons li .test div p {
-    color: #161616;
-    
-    font-size:  clamp(15px, calc(100vw * (30 / 1400)), 30px);
+  color: #161616;
+
+  font-size: clamp(15px, calc(100vw * (30 / 1400)), 30px);
 }
-.reviews .rev-icons li:nth-child(1) .test :where(p, span){
+.reviews .rev-icons li:nth-child(1) .test :where(p, span) {
   color: #fd9802;
 }
 .reviews .rev-icons li .test span {
@@ -540,50 +532,50 @@ h1, h2, h3, h4, h5, h6, p{
   gap: 15px;
 }
 .comments .comment {
-    width: 100%;
-    padding:  clamp(10px, calc(100vw * (20 / 1400)), 20px) 10px;
+  width: 100%;
+  padding: clamp(10px, calc(100vw * (20 / 1400)), 20px) 10px;
 
-    display: flex;
-    flex-direction: column;
-    
-    border: 2px solid rgba(217, 217, 217, 0.50);
-    border-radius: 9px;
+  display: flex;
+  flex-direction: column;
 
-    margin-bottom: 20px;
+  border: 2px solid rgba(217, 217, 217, 0.5);
+  border-radius: 9px;
+
+  margin-bottom: 20px;
 }
 .comments .comment .title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .comments .comment .title h1,
 .comments .comment .title h2 {
-    color: #161616;
-  
-    font-size:  clamp(11px, calc(100vw * (14 / 1400)), 14px);
-    font-weight: 400;
-    text-align: right;
+  color: #161616;
 
-    margin: 0 !important;
+  font-size: clamp(11px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+  text-align: right;
+
+  margin: 0 !important;
 }
 .comments .comment .title h2 {
   color: #848484;
 
-  font-size:  clamp(8px, calc(100vw * (14 / 1400)), 14px);
+  font-size: clamp(8px, calc(100vw * (14 / 1400)), 14px);
 }
 .comments .comment .title div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 
-    height: clamp(30px, calc(100vw * (40 / 1400)), 40px);
+  height: clamp(30px, calc(100vw * (40 / 1400)), 40px);
 }
 .comments .comment .title img {
-  width:  clamp(30px, calc(100vw * (40 / 1400)), 40px);
+  width: clamp(30px, calc(100vw * (40 / 1400)), 40px);
   aspect-ratio: 1;
 
   border-radius: 50%;
@@ -596,12 +588,12 @@ h1, h2, h3, h4, h5, h6, p{
   margin-bottom: clamp(10px, calc(100vw * (20 / 1400)), 20px);
 }
 .comments .comment .co-content .svg {
-    text-align: center;
-    width:  clamp(30px, calc(100vw * (40 / 1400)), 40px);
+  text-align: center;
+  width: clamp(30px, calc(100vw * (40 / 1400)), 40px);
 }
 .comments .comment .co-content .svg svg {
-    width:  clamp(20px, calc(100vw * (40 / 1400)), 40px);
-    aspect-ratio: 1;
+  width: clamp(20px, calc(100vw * (40 / 1400)), 40px);
+  aspect-ratio: 1;
 }
 .comments .comment .co-content p {
   color: #848484;
@@ -612,15 +604,15 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .more-comments-btn {
-    width: 90%;
+  width: 90%;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    
-    cursor: pointer;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  cursor: pointer;
+  margin-top: 10px;
 }
 .more-comments-btn h6 {
   font-size: clamp(9px, calc(100vw * (20 / 1400)), 20px);
@@ -629,14 +621,13 @@ h1, h2, h3, h4, h5, h6, p{
   width: clamp(14px, calc(100vw * (24 / 1400)), 24px);
   height: clamp(14px, calc(100vw * (24 / 1400)), 24px);
 }
-.more-comments-btn >*{
-    transition: 0.3s;
+.more-comments-btn > * {
+  transition: 0.3s;
 }
 .more-comments-btn:hover,
 .more-comments-btn:hover svg {
-    color: var(--second-color);
+  color: var(--second-color);
 }
-
 
 /* ############################################# */
 /* ########### About Trainer Start ############# */
@@ -647,37 +638,36 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .about-trainer h4 {
   color: #161616;
-  font-size:  clamp(18px, calc(100vw * (30 / 1400)), 30px);
+  font-size: clamp(18px, calc(100vw * (30 / 1400)), 30px);
 
   margin-bottom: clamp(20px, calc(100vw * (40 / 1400)), 40px) !important;
 }
 .about-trainer .trainer-info {
   display: flex;
   width: 100%;
-  height:  clamp(100px, calc(100vw * (180 / 1400)), 180px);
+  height: clamp(100px, calc(100vw * (180 / 1400)), 180px);
   gap: 10%;
 
-  margin-bottom:  clamp(35px, calc(100vw * (75 / 1400)), 75px);
+  margin-bottom: clamp(35px, calc(100vw * (75 / 1400)), 75px);
 }
 .about-trainer .trainer-info img {
-  width:  clamp(100px, calc(100vw * (180 / 1400)), 180px);
-  height:  clamp(100px, calc(100vw * (180 / 1400)), 180px);
+  width: clamp(100px, calc(100vw * (180 / 1400)), 180px);
+  height: clamp(100px, calc(100vw * (180 / 1400)), 180px);
 }
 .about-trainer .trainer-info .name {
   display: flex;
   flex-direction: column;
-  
-  margin-bottom:  clamp(28px, calc(100vw * (50 / 1400)), 50px);
+
+  margin-bottom: clamp(28px, calc(100vw * (50 / 1400)), 50px);
 }
 .about-trainer .trainer-info .name h1 {
-  font-size:  clamp(20px, calc(100vw * (30 / 1400)), 30px);
+  font-size: clamp(20px, calc(100vw * (30 / 1400)), 30px);
   margin-bottom: 5px !important;
 }
 .about-trainer .trainer-info .name h2 {
   color: #848484;
   font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
   font-weight: 400;
-
 }
 .about-trainer .trainer-info .name .test {
   display: flex;
@@ -685,8 +675,8 @@ h1, h2, h3, h4, h5, h6, p{
   align-items: center;
   gap: 12px;
 
-  margin-top:  clamp(14px, calc(100vw * (25 / 1400)), 25px);
-  margin-bottom:  clamp(10px, calc(100vw * (20 / 1400)), 20px);
+  margin-top: clamp(14px, calc(100vw * (25 / 1400)), 25px);
+  margin-bottom: clamp(10px, calc(100vw * (20 / 1400)), 20px);
 }
 .about-trainer .trainer-info .name .date p {
   color: #848484;
@@ -697,7 +687,7 @@ h1, h2, h3, h4, h5, h6, p{
   display: flex;
   gap: 12px;
 }
-.about-trainer .trainer-info .name .test .icons a svg{
+.about-trainer .trainer-info .name .test .icons a svg {
   width: clamp(12px, calc(100vw * (14 / 1400)), 16px);
   aspect-ratio: 1;
 
@@ -711,11 +701,11 @@ h1, h2, h3, h4, h5, h6, p{
   color: #fff;
   font-size: clamp(8px, calc(100vw * (14 / 1400)), 14px);
   text-align: center;
-  
+
   padding: 1px 10px;
   border-radius: 2px;
   background: var(--second-color);
-  
+
   transition: 0.3s;
 }
 .about-trainer .trainer-info .name .test button:hover {
@@ -724,19 +714,18 @@ h1, h2, h3, h4, h5, h6, p{
 .about-trainer p {
   color: #161616;
 
-  font-size:  clamp(10px, calc(100vw * (18 / 1400)), 18px);
+  font-size: clamp(10px, calc(100vw * (18 / 1400)), 18px);
   font-weight: 400;
   text-align: right;
 
-  margin-bottom:  clamp(9px, calc(100vw * (34 / 1400)), 34px) !important;
+  margin-bottom: clamp(9px, calc(100vw * (34 / 1400)), 34px) !important;
 }
-
 
 /* ############################################# */
 /* ########## Questions Section Start ########## */
 .questions {
   max-width: 90%;
-  
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -744,16 +733,16 @@ h1, h2, h3, h4, h5, h6, p{
   font-weight: 400;
   font-style: normal;
 
-  overflow: hidden
+  overflow: hidden;
 }
 .questions h1 {
   margin: 5%;
 
   color: #161616;
-  font-size: clamp(20px, calc(100vw*(48 / 1400)), 48px);
+  font-size: clamp(20px, calc(100vw * (48 / 1400)), 48px);
   font-weight: 700;
 }
-.questions .question .title{
+.questions .question .title {
   padding: 10px 0;
 
   display: flex;
@@ -762,7 +751,7 @@ h1, h2, h3, h4, h5, h6, p{
 
   position: relative;
 }
-.questions .question .title::before{
+.questions .question .title::before {
   content: "";
   width: 60%;
   height: 3px;
@@ -785,21 +774,21 @@ h1, h2, h3, h4, h5, h6, p{
 
 .questions .question .title svg {
   width: 10%;
-  height:  clamp(8px, calc(100vw * (16 / 1400)), 16px);
-  
+  height: clamp(8px, calc(100vw * (16 / 1400)), 16px);
+
   cursor: pointer;
   transition: 0.3s;
 }
-.questions .question .title svg path{
+.questions .question .title svg path {
   transition: 0.3s;
 }
-.questions .question .title svg:hover path{
+.questions .question .title svg:hover path {
   fill: var(--second-color);
 }
-.questions .question .answer{
+.questions .question .answer {
   width: 90%;
   color: var(--second-color);
-  font-size:  clamp(12px, calc(100vw * (20 / 1400)), 20px);
+  font-size: clamp(12px, calc(100vw * (20 / 1400)), 20px);
 
   /* transition: opacity 0.5s linear; */
   transition: 0.5s;
@@ -816,7 +805,6 @@ h1, h2, h3, h4, h5, h6, p{
   padding-top: 30px;
 }
 
-
 /* ############################################# */
 /* ########## Another Courses Start ############ */
 .another-courses {
@@ -824,7 +812,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .another-courses h1 {
   color: #161616;
-  
+
   font-size: clamp(14px, calc(100vw * (24 / 1400)), 24px);
   font-weight: 400;
 
@@ -837,7 +825,7 @@ h1, h2, h3, h4, h5, h6, p{
   font-size: clamp(10px, calc(100vw * (18 / 1400)), 18px);
   font-weight: 400;
 }
-.another-courses .test{
+.another-courses .test {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -845,16 +833,16 @@ h1, h2, h3, h4, h5, h6, p{
 .another-courses .test .subline {
   width: 30%;
   height: 2px;
-  
+
   margin: 30px 0;
   background-color: #fd9802 !important;
 }
-.another-courses .test a{
+.another-courses .test a {
   display: flex;
   align-items: center;
   color: #000;
-  
-  font-size:  clamp(10px, calc(100vw * (16 / 1400)), 16px);
+
+  font-size: clamp(10px, calc(100vw * (16 / 1400)), 16px);
   font-weight: 700;
   text-decoration: none;
 
@@ -878,7 +866,7 @@ h1, h2, h3, h4, h5, h6, p{
   justify-content: space-around;
   row-gap: 40px;
 }
-.another-courses .scroll-buttons{
+.another-courses .scroll-buttons {
   display: none;
 }
 
@@ -908,52 +896,100 @@ h1, h2, h3, h4, h5, h6, p{
   }
 }
 
-/* ******************************Responsive section*********************** */
-/* !!- This Responsive Setting on Abd-Elrahman Style but now the preview Style had been edited and responsive is Good for Screen ( width > 768px) -!! */
-/* !!- So do your edits on Screen (width <= 768px) and Good luck x\ -!! */
-/* #################################### */
-/* # !!!Delete This after Reading !!! # */
-/* #################################### */
+/* =================================================================================
+=========================== Responsive section for less than 768px ===========================
+================================================================================= */
 
-@media (max-width: 768px) {
-  .category-content {
-    width: 80%;
+@media (width < 768px) {
+  * {
+    border: 1px solid green !important;
+    box-sizing: border-box !important;
   }
-  .category-content .course-title :nth-child(1){
-display: flex;
-justify-content: space-between;
-}
-  .category-content .buy {
-    display: inline-block ;
-    width: 15%;
 
+  #co-dev {
+    width: 95%;
+    margin-inline: auto;
+  }
+
+  .pricing-card {
+    display: none;
+  }
+
+  .category-content {
+    width: 100%;
+  }
+
+  .category-content .course-title {
+    width: 100% !important;
+  }
+
+  .category-content .course-title :nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .category-content .buy {
+    display: inline-block;
+    width: initial;
+  }
+
+  .category-content .buy button {
+    background-color: #fd9802;
+    color: #fff !important;
+    padding: 5px 16px;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 700;
     cursor: pointer;
   }
-  .category-content .buy p{
-    font-size: 12px !important;
-    color: #fff !important;
-    font-weight: 500 !important;
 
+  .category-content .buy button:hover,
+  .category-content .buy button:active {
+    background: #000;
   }
+
+  .category-content .buy button svg {
+    display: none !important;
+  }
+
   .category-content {
     margin: 3% 1%;
   }
 
   .category-content .course video {
     order: 1;
-    width: 110%;
-    margin-right: 15%;
+    width: 100%;
+    margin-right: 0;
   }
 
   .category-content .course .course-title {
     order: 2;
+    padding: 1rem;
   }
+
   .category-content .course .course-title h1 {
-    font-size: 30px;
+    color: #161616;
+    text-align: right;
+    font-family: Cairo;
+    font-size: 18px !important;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0 !important;
   }
 
   .category-content .course .course-title p {
-    font-size: 14px;
+    color: #848484;
+    text-align: right;
+    font-family: Cairo;
+    font-size: 13px !important;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+    padding-left: 36px;
   }
 
   .category-content .course .course-title .icons {
@@ -967,10 +1003,6 @@ justify-content: space-between;
   .category-content .course {
     display: flex;
     flex-direction: column;
-  }
-
-  .pricing-card {
-    display: none;
   }
 
   .course-container {
@@ -1041,19 +1073,19 @@ justify-content: space-between;
   .reviews .rev-icons {
     margin-right: 50% !important;
     width: 100%;
-        gap: 1% !important;
+    gap: 1% !important;
   }
 
-  .reviews .rev-icons li a span,.reviews .rev-icons li a p {
+  .reviews .rev-icons li a span,
+  .reviews .rev-icons li a p {
     width: 100%;
     font-size: 80% !important;
-
   }
-  .reviews .rev-icons li a p{
+  .reviews .rev-icons li a p {
     margin-top: 10px;
   }
 
-  .reviews .rev-icons li div{
+  .reviews .rev-icons li div {
     width: 100px;
   }
 
@@ -1061,20 +1093,16 @@ justify-content: space-between;
     margin-top: 70% !important;
     height: 144px;
     margin-right: 5%;
-    width:220%;
+    width: 220%;
     overflow: hidden;
     transform: translateY(-100%) !important;
-
   }
 
-
-
-  .reviews .comment{
+  .reviews .comment {
     border: none !important;
     width: 100% !important;
-
   }
-  
+
   .more-comments-btn {
     gap: 2%;
     display: none;
@@ -1094,11 +1122,11 @@ justify-content: space-between;
     flex-direction: row;
     transform: translateY(-10%);
   }
-  .comments .comment .co-content svg{
+  .comments .comment .co-content svg {
     width: 40px;
     margin-left: 10%;
   }
-  .comments .comment .co-content p{
+  .comments .comment .co-content p {
     font-size: 80%;
   }
   /* 8*************************************** */
@@ -1110,18 +1138,17 @@ justify-content: space-between;
   }
 
   .about-trainer {
-    width: 10%;  
-    height: 80vh !important;   
+    width: 10%;
+    height: 80vh !important;
     transform: translateY(-50%);
   }
   .about-trainer h4 {
     display: none;
   }
 
-  .about-trainer img{
+  .about-trainer img {
     margin-right: 50%;
     transform: translateX(50%);
-
   }
 
   .about-trainer .trainer-info .name {
@@ -1138,14 +1165,12 @@ justify-content: space-between;
   .about-trainer .trainer-info .name h1 {
     order: 1;
     font-size: 24px;
-
   }
 
   .about-trainer .trainer-info h2 {
-    order: 2;    margin-right: 10px;
+    order: 2;
+    margin-right: 10px;
     margin-right: 10%;
-
-
   }
   .about-trainer .trainer-info .name .date {
     order: 3;
@@ -1158,7 +1183,7 @@ justify-content: space-between;
 
   .about-trainer .trainer-info {
     display: flex;
-    margin-right: 35px;        
+    margin-right: 35px;
 
     flex-direction: column;
     width: 100%;
@@ -1174,8 +1199,8 @@ justify-content: space-between;
     margin-bottom: 0px;
   }
 
-  .about-trainer .trainer-info .name button{
-    width: 10px ;
+  .about-trainer .trainer-info .name button {
+    width: 10px;
     margin-right: 13%;
     margin-bottom: 15px;
     font-size: 13px;
@@ -1189,32 +1214,28 @@ justify-content: space-between;
     font-size: 12px;
     margin-bottom: 1% !important;
   }
- 
+
   /* **************************************************** */
   .questions {
     text-align: center;
     width: 100%;
     transform: translateY(-30%);
-
   }
   .questions h1 {
     margin: 5%;
 
     color: #161616;
     font-size: 23px !important;
-
   }
   .questions p {
     margin-right: 10px;
     width: 100% !important;
-        font-size: 18px !important;
+    font-size: 18px !important;
   }
 
-  
   /* ************************************ */
   .another-courses {
     width: 100%;
-   
   }
 
   .another-courses h1 {
@@ -1229,7 +1250,6 @@ justify-content: space-between;
   }
 
   .another-courses .subline {
- 
     display: none;
   }
 
@@ -1274,12 +1294,12 @@ justify-content: space-between;
     gap: 25%;
   }
 
-  #rev-bt{
-  width: 100% !important;
-  height: 70px !important;
+  #rev-bt {
+    width: 100% !important;
+    height: 70px !important;
 
-  border: 2px !important;
-  transform: translate(100%,-100%) !important;
+    border: 2px !important;
+    transform: translate(100%, -100%) !important;
   }
 
   .comments {
@@ -1317,7 +1337,6 @@ justify-content: space-between;
   .about-trainer .trainer-info .name button {
     width: 20%;
     margin-right: 15%;
-   
   }
   /* **************************************************** */
   .questions {
@@ -1355,155 +1374,45 @@ justify-content: space-between;
   }
 }
 
-@media(max-width:426px){
-    .category-content .buy {
-      display:block ;
-      width: 30%;
-      font-size: 14px;
-      padding: 3px 5px !important;
-    }
-    
-    .reviews {
-      height: 90vh !important;
-  
-    }
-    .reviews .rev-icons {
-      margin-right: 10% !important;
-      width: 100%;
-          gap: 1% !important;
-    }
-    .reviews .comments {
-      transform: translateY(-30%) !important;
-
-    }
-
-    .comments .comment .title {
-      transform: translateX(55%) !important;
-    }
-
-    
-    .about-trainer {
-      width: 100%; 
-      height: 100vh !important; 
-      transform: translateY(-20%);
-    }
-    .about-trainer p{
-      font-size: 13px !important;
-
-    }
-
-    .about-trainer .trainer-info .name {  
-      transform: translateX(40%);
-    }
-
-    .about-trainer .trainer-info .name h1 {
-      font-size: 20px;
-
-    }
-
-    .about-trainer p {
-      margin-right: 15%;
-    }
-    .about-trainer .trainer-info .icons {
-      margin-right: 18%;
-    }
-    .about-trainer .trainer-info .name button {
-      width: 40%;
-      margin-right: 26%;
-    
-    }
-
-    .questions h1 {
-      font-size: 18px !important;
-
-    }
-    .questions p {
-          font-size: 10px !important;
-    }
-
-    .another-courses h1 {
-      width: 251px;
-      font-size: 18px !important;
-    }
-
-    .another-courses h2 {
-      color: #848484;
-      width: 100%;
-      font-size: 10px !important;
-    }
-
-
-}
-
-@media(max-width:376px){
-  #co-dev{
-    width: 90vw;
-  }
-  .category-content .course-title h1{
-    font-size: 15px !important;
-  }
+@media (max-width: 426px) {
   .category-content .buy {
-    display:block ;
-    width: 50% ;
-   
-    margin-right: 10px;
-    font-size: 12px;
+    display: block;
+    width: 30%;
+    font-size: 14px;
+    padding: 3px 5px !important;
   }
-  .to-learn p{
-    font-size: 11px !important;
-    width: 140% !important;
-  }
-  .to-learn h2{
-    width: 100%;
-    font-size: 13px !important;
-  }
-  .category-content .video-container{
-    width: 200%;
-  }
-  .category-content .video-container .vid-card video{
-    width: 90% !important;
-  }
-  
+
   .reviews {
     height: 90vh !important;
- 
   }
-
   .reviews .rev-icons {
-    margin-right: 0% !important;
-    width: 60% !important;
-        gap: 0% !important;
+    margin-right: 10% !important;
+    width: 100%;
+    gap: 1% !important;
+  }
+  .reviews .comments {
+    transform: translateY(-30%) !important;
   }
 
-  .reviews .rev-icons li{
-    width: 190%;
-  }
-  .reviews .rev-icons li button{
-    font-size: 11px !important;
-  }
-  
   .comments .comment .title {
-    transform: translateX(48%) !important;
+    transform: translateX(55%) !important;
   }
 
-  
   .about-trainer {
-    width: 100%; 
-    height: 100vh !important; 
+    width: 100%;
+    height: 100vh !important;
     transform: translateY(-20%);
   }
-  .about-trainer p{
+  .about-trainer p {
     font-size: 13px !important;
-
   }
 
-  .about-trainer .trainer-info .name {  
+  .about-trainer .trainer-info .name {
     transform: translateX(40%);
   }
 
   .about-trainer .trainer-info .name h1 {
     font-size: 20px;
-
   }
 
   .about-trainer p {
@@ -1515,18 +1424,113 @@ justify-content: space-between;
   .about-trainer .trainer-info .name button {
     width: 40%;
     margin-right: 26%;
-   
   }
 
   .questions h1 {
-     font-size: 18px !important;
-
+    font-size: 18px !important;
   }
   .questions p {
-        font-size: 9px !important;
-        width: 120% !important;
+    font-size: 10px !important;
   }
-  .another-courses{
+
+  .another-courses h1 {
+    width: 251px;
+    font-size: 18px !important;
+  }
+
+  .another-courses h2 {
+    color: #848484;
+    width: 100%;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 376px) {
+  #co-dev {
+    width: 90vw;
+  }
+  .category-content .course-title h1 {
+    font-size: 15px !important;
+  }
+  .category-content .buy {
+    display: block;
+    width: 50%;
+
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .to-learn p {
+    font-size: 11px !important;
+    width: 140% !important;
+  }
+  .to-learn h2 {
+    width: 100%;
+    font-size: 13px !important;
+  }
+  .category-content .video-container {
+    width: 200%;
+  }
+  .category-content .video-container .vid-card video {
+    width: 90% !important;
+  }
+
+  .reviews {
+    height: 90vh !important;
+  }
+
+  .reviews .rev-icons {
+    margin-right: 0% !important;
+    width: 60% !important;
+    gap: 0% !important;
+  }
+
+  .reviews .rev-icons li {
+    width: 190%;
+  }
+  .reviews .rev-icons li button {
+    font-size: 11px !important;
+  }
+
+  .comments .comment .title {
+    transform: translateX(48%) !important;
+  }
+
+  .about-trainer {
+    width: 100%;
+    height: 100vh !important;
+    transform: translateY(-20%);
+  }
+  .about-trainer p {
+    font-size: 13px !important;
+  }
+
+  .about-trainer .trainer-info .name {
+    transform: translateX(40%);
+  }
+
+  .about-trainer .trainer-info .name h1 {
+    font-size: 20px;
+  }
+
+  .about-trainer p {
+    margin-right: 15%;
+  }
+  .about-trainer .trainer-info .icons {
+    margin-right: 18%;
+  }
+  .about-trainer .trainer-info .name button {
+    width: 40%;
+    margin-right: 26%;
+  }
+
+  .questions h1 {
+    font-size: 18px !important;
+  }
+  .questions p {
+    font-size: 9px !important;
+    width: 120% !important;
+  }
+  .another-courses {
     margin-right: 10%;
     /* width: 150%; */
   }
@@ -1540,95 +1544,87 @@ justify-content: space-between;
     width: 100%;
     font-size: 10px !important;
   }
-
 }
 
-
-@media(max-width:321px){
-  #co-dev{
+@media (max-width: 321px) {
+  #co-dev {
     width: 70% !important;
   }
-  .category-content .course{
+  .category-content .course {
     height: 80vh;
   }
-  .category-content .course video{
+  .category-content .course video {
     width: 160%;
     margin-right: 40px;
   }
-  .category-content .course-title :nth-child(1){
+  .category-content .course-title :nth-child(1) {
     width: 155%;
-
-    }
-    .category-content .buy svg{
-      width: 50%;
-    }
-  .category-content .buy {  
-    width: 30% ; 
   }
-  .category-content .buy p{
+  .category-content .buy svg {
+    width: 50%;
+  }
+  .category-content .buy {
+    width: 30%;
+  }
+  .category-content .buy p {
     font-size: 10px !important;
     color: #fff !important;
-
   }
-  .category-content .course-title p{
+  .category-content .course-title p {
     width: 150% !important;
   }
-  .to-learn p{
+  .to-learn p {
     font-size: 10px !important;
     width: 180% !important;
   }
   .to-learn h2,
-  .to-learn h1{
+  .to-learn h1 {
     width: 180%;
     font-size: 11px !important;
   }
-  .to-learn h1{
+  .to-learn h1 {
     font-size: 15px !important;
   }
-  .category-content .video-container{
+  .category-content .video-container {
     width: 340%;
   }
-  
-  .reviews .rev-icons li svg{
+
+  .reviews .rev-icons li svg {
     width: 20%;
   }
 
-  .reviews .rev-icons li a span,.reviews .rev-icons p{
+  .reviews .rev-icons li a span,
+  .reviews .rev-icons p {
     font-size: 10px !important;
   }
   .reviews .rev-icons {
     width: 82% !important;
   }
-  .reviews .rev-icons li button{
+  .reviews .rev-icons li button {
     font-size: 10px !important;
   }
-  .comments .comment .co-content{
+  .comments .comment .co-content {
     font-size: 13px !important;
   }
   .comments .comment .title {
     transform: translateX(20%) !important;
   }
-  .about-trainer p{
+  .about-trainer p {
     font-size: 10px !important;
     margin-right: 10%;
     width: 150% !important;
-
-
   }
-  .about-trainer .trainer-info .name {  
+  .about-trainer .trainer-info .name {
     transform: translateX(37%);
   }
 
   .about-trainer .trainer-info .name h1 {
     font-size: 15px;
     margin-bottom: 0;
-
   }
   .about-trainer .trainer-info .name h2 {
     font-size: 12px;
     margin-top: 0;
-
-
   }
   .about-trainer .trainer-info .icons {
     margin-right: 1%;
@@ -1636,38 +1632,34 @@ justify-content: space-between;
   .about-trainer .trainer-info .name button {
     width: 60%;
     margin-right: 18%;
-   
-  }  
-  .questions{
+  }
+  .questions {
     height: 60vh !important;
   }
   .questions h1 {
     font-size: 15px !important;
     margin-right: 30% !important;
+  }
+  .questions svg {
+    width: 9px;
+  }
+  .questions p {
+    font-size: 9px !important;
+    width: 150% !important;
+  }
+  .another-courses h1 {
+    width: 251px;
+    font-size: 15px !important;
+  }
 
- }
- .questions svg{
-  width: 9px;
- }
- .questions p {
-       font-size: 9px !important;
-       width: 150% !important;
- }
- .another-courses h1 {
-  width: 251px;
-  font-size: 15px !important;
+  .another-courses h2 {
+    color: #848484;
+    width: 100%;
+    font-size: 10px !important;
+  }
+
+  .another-courses {
+    margin-right: 10%;
+    width: 150%;
+  }
 }
-
-.another-courses h2 {
-  color: #848484;
-  width: 100%;
-  font-size: 10px !important;
-}
-
-.another-courses{
-  margin-right: 10%;
-  width: 150%;
-}
-
-}
-
