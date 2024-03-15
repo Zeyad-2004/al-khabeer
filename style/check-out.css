@@ -23,14 +23,16 @@
 }
 /* ====================== checkout container & wrapper ====================== */
 .checkout-container {
-  padding: 50px 153px 50px 135px;
+  padding: 50px 10px;
   direction: ltr;
   height: 100vh;
+  width: 100vw;
 }
 
 .checkout-wrapper {
   gap: 18px;
   height: 100%;
+  width: 100%;
 }
 
 /* ====================== RIGHT SECTION ====================== */
@@ -45,6 +47,11 @@
 /* ====================== product-wrapper ====================== */
 .checkout-container .right-section .product-wrapper {
   gap: 1rem;
+  width: 100%;
+}
+
+.checkout-container .right-section .product {
+  width: 100%;
 }
 
 .checkout-container .right-section .product-wrapper img {
@@ -154,6 +161,8 @@
 .checkout-container .left-section {
   padding-top: 75px;
   padding-left: 130px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .checkout-container .left-section .paywith {
@@ -315,4 +324,25 @@ gap: 15px;
 }
 .checkout-container .left-section .transfer-form .transfer span{
   color: red;
+}
+
+/* ====================== GENERAL MEDIA ====================== */
+@media (width < 1100px) {
+  .checkout-container .right-section {
+    padding-right: 0;
+  }
+
+  .checkout-container .left-section {
+    padding-left: 0;
+  }
+}
+@media (width < 768px) {
+  .checkout-container {
+    padding: 0;
+  }
+
+  .checkout-container .right-section,
+  .checkout-container .left-section {
+    padding: 0;
+  }
 }
