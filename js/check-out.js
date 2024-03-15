@@ -21,3 +21,8 @@ function change_radio_active(id) {
         radio3.checked = true;
     }
 }
+
+flatpickr('.flatpickr', {
+    dateFormat: "mm/yy",
+  });
+

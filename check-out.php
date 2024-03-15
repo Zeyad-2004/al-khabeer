@@ -1,5 +1,6 @@
 <?php include "./main-component/header.php" ?>
 <?php include "./main-component/navbar.php" ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 <script src="js/<?php echo pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) ?>.js"></script>
 
@@ -50,7 +51,8 @@
                             <div class="expiration">
                                 <div class="date">
                                     <h6>Expiration Date</h6>
-                                    <input type="date">
+                                    <input type="date" class="flatpickr" placeholder="MM/YY">
+
                                 </div>
                                 <div class="cvv">
                                     <h6>CVV</h6>
@@ -135,9 +137,7 @@
                         <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
 
                     </div>
-                </div>
-                </div>
-            </div>
+             
         <?php endif ?>
 
         <?php if (isset($_POST['sub'])) : ?>
@@ -151,12 +151,15 @@
 
 
                 </div>
-                </div>
+                
                 <button type="submit">Pay USD59.28</button>
                 <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-                </div>
+                <
             </form>
         <?php endif ?>
+        </div>
+                </div>
+            </div>
 
         <!-- ===================================================
 ======== transfer form ==================================
@@ -211,5 +214,6 @@
         </section>
     </section>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <?php include "./main-component/footer.php" ?>
