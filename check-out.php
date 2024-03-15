@@ -30,9 +30,8 @@
 
                     </form>
                 </div>
-            </div>
-
-            <div class="forms">
+                <!-- start of forms -->
+                <div class="forms">
                 <!-- ===================================================
                 ========card form ==================================
                 ======================================================== -->
@@ -136,6 +135,8 @@
                         <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
 
                     </div>
+                </div>
+                </div>
             </div>
         <?php endif ?>
 
@@ -163,6 +164,10 @@
 
 
         </div>
+                <!-- end of forms -->
+            </div>
+
+
 
         </section>
         <!-- ===================================================
