@@ -26,7 +26,7 @@
   padding: 50px 10px;
   direction: ltr;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .checkout-wrapper {
@@ -161,8 +161,8 @@
 .checkout-container .left-section {
   padding-top: 75px;
   padding-left: 130px;
-  display: flex;
-  flex-direction: row-reverse;
+  /* display: flex; */
+  /* flex-direction: row-reverse; */
 }
 
 .checkout-container .left-section .paywith {
@@ -211,93 +211,136 @@
 .checkout-container .left-section .forms {
   margin-left: 8%;
 }
-.checkout-container .left-section .forms form{
+
+.checkout-container .left-section .forms .date,
+.checkout-container .left-section .forms .cvv {
+  width: 100%;
+}
+.checkout-container .left-section .forms .date h6,
+.checkout-container .left-section .forms .cvv h6 {
+  color: var(--Text, #0a0d13);
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.checkout-container .left-section .forms form {
   border: none;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.checkout-container .left-section .forms form .c-number{
+.checkout-container .left-section .forms form .c-number {
   margin-bottom: 5%;
 }
-.checkout-container .left-section .forms form .c-number h6{
+
+.checkout-container .left-section .forms form .c-number h6 {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
   color: var(--Text);
 }
-.checkout-container .left-section .forms form .c-number input{
-  border: 1px solid #acacac;
+
+.checkout-container .left-section .forms form .c-number input {
+  border: 1.5px solid #acacac;
   border-radius: 4px;
   width: 100%;
   height: 50px;
-
+  padding: 12px 16px;
 }
 
-.checkout-container .left-section .forms form .expiration{
+.checkout-container .left-section .forms form .expiration {
   display: flex;
+  justify-content: space-between;
 
-  gap: 10%;
+  gap: 1rem;
 }
 
-.checkout-container .left-section .forms form .expiration input{
-  border: 1px solid #acacac;
+.checkout-container .left-section .forms form .expiration input {
+  border: 1.5px solid #acacac;
   border-radius: 4px;
-  width: 120%;
-  height: 70%;
+  width: 100%;
+  /* height: 70%; */ /* no need to set height if you're adding padding like design */
 
+  padding: 12px 16px;
 }
 
-.checkout-container .left-section .forms form .btt{
+.checkout-container .left-section .forms form .btt {
   display: flex;
   flex-direction: column;
-
 }
 
-.checkout-container .left-section .forms form .btt .radio{
+.checkout-container .left-section .forms form .btt .radio {
   margin-top: 5%;
   display: flex;
   gap: 2%;
+  align-items: baseline;
 }
-.checkout-container .left-section .forms form .btt .radio h5{
+
+.checkout-container .left-section .forms form .btt .radio input {
+  border-color: #acacac;
+  outline: none;
+  box-shadow: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-width: 1.5px;
+}
+
+.checkout-container .left-section .forms form .btt .radio input:checked {
+  background-color: var(--second-color);
+  border-color: #fd9802;
+}
+
+.checkout-container .left-section .forms form .btt .radio h5 {
   margin-top: 1.5%;
-  color: #999;
-  font-size: 15px;
+  color: #acacac;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
-
 }
 
-.checkout-container .left-section  button{
-background-color: #fd9802;
-border-radius: 4px;
-width: 100%;
-height: 35px;
-color: #f3f3f3  ;
-font-size: 15px;
-padding: 1%;
-margin-bottom: 3%;
-
+.checkout-container .left-section button {
+  background-color: #fd9802;
+  border-radius: 4px;
+  width: 100%;
+  /* height: 35px; */ /* no height needed if using padding */
+  color: #f3f3f3;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  padding: 20px 0;
+  margin-bottom: 23px;
+  margin-top: 36px;
 }
-.checkout-container .left-section .forms p{
-  color: #999;
-  font-size: 18px;
 
+.checkout-container .left-section .forms p {
+  color: #acacac;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
+
 /* ====================== Bank form====================== */
-.checkout-container .left-section .forms .bank-form .bank select, .checkout-container .left-section .forms .bank-form .bank input{
+.checkout-container .left-section .forms .bank-form .bank select,
+.checkout-container .left-section .forms .bank-form .bank input {
   border: 1px solid #acacac;
   border-radius: 4px;
   width: 100%;
-  height: 70%;  
+  height: 70%;
 }
-.checkout-container .left-section form .squares{
+.checkout-container .left-section form .squares {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-evenly;
-  
 }
-.checkout-container .left-section .squares input{
+.checkout-container .left-section .squares input {
   height: 50%;
   width: 10%;
   text-align: center;
@@ -306,28 +349,40 @@ margin-bottom: 3%;
   border: 1px solid black;
 }
 
-
-.checkout-container .left-section .forms .bank-form .bank div{
+.checkout-container .left-section .forms .bank-form .bank div {
   margin: 10% 0;
 }
 /* ====================== transfer form ====================== */
 
-.checkout-container .left-section .transfer-form .transfer,.polaris{
-display: flex;
-text-align: center;
-align-items: center;
-flex-direction: column;
-gap: 15px;
+.checkout-container .left-section .transfer-form .transfer,
+.polaris {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
 }
-.checkout-container .left-section .transfer-form .transfer div{
-  display: flex;  
+.checkout-container .left-section .transfer-form .transfer div {
+  display: flex;
 }
-.checkout-container .left-section .transfer-form .transfer span{
+.checkout-container .left-section .transfer-form .transfer span {
   color: red;
 }
 
 /* ====================== GENERAL MEDIA ====================== */
-@media (width < 1100px) {
+@media (width < 1460px) {
+  .checkout-container .right-section-wrapper,
+  .checkout-container .left-section-wrapper {
+    padding: 48px;
+    width: 100%;
+  }
+
+  .checkout-container .right-section,
+  .checkout-container .left-section {
+    width: 100%;
+  }
+}
+@media (width < 1200px) {
   .checkout-container .right-section {
     padding-right: 0;
   }

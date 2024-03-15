@@ -3,12 +3,12 @@
 
 <script src="js/<?php echo pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) ?>.js"></script>
 
-<section class="container-fluid checkout-container">
-    <section class="container checkout-wrapper d-flex">
+<section class="checkout-container">
+    <section class="checkout-wrapper d-flex justify-content-center">
         <!-- ===================================================
         ======== LEFT-SECTION ==================================
         ======================================================== -->
-        <section class="left-section container-fluid">
+        <section class="left-section">
             <div class="left-section-wrapper">
                 <h1>Payment</h1>
                 <div class="line-breaker"></div>
@@ -60,7 +60,10 @@
                             </div>
                             <div class="btt">
                                 <div class="radio">
-                                    <input type="checkbox">
+                                <div>
+                                    <input class="form-check-input login-check-box checkbox-danger" type="checkbox"
+                                    id="checkboxNoLabel" value="" aria-label="...">
+                                </div>
                                     <h5>save card details</h5>
                                 </div>
                                 <button name="sub" type="submit">Pay USD59.28</button>
@@ -165,13 +168,13 @@
         <!-- ===================================================
         ======== RIGHT-SECTION ==================================
         ======================================================== -->
-        <section class="right-section container-fluid">
+        <section class="right-section">
             <div class="right-section-wrapper">
                 <h1>Order Summary</h1>
                 <div class="line-breaker"></div>
                 <div class="product-wrapper d-flex">
                     <img src="media/main/autocad.png" alt="product-img">
-                    <div class="product d-flex justify-content-between container-fluid">
+                    <div class="product d-flex justify-content-between">
                         <span>
                             <div class="product-title">AutoCAD Course</div>
                             <div class="product-desc">Lorem, ipsum dolor.</div>
