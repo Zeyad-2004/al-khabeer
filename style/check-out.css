@@ -10,7 +10,6 @@
 .checkout-container .left-section-wrapper {
   padding: 48px;
   width: 570px;
-  width: clamp(350px, 30vw, 570px);
 }
 
 .checkout-container h1 {
@@ -24,16 +23,14 @@
 }
 /* ====================== checkout container & wrapper ====================== */
 .checkout-container {
-  padding: 50px 10px;
+  padding: 50px 153px 50px 135px;
   direction: ltr;
   height: 100vh;
-  width: 100vw;
 }
 
 .checkout-wrapper {
   gap: 18px;
   height: 100%;
-  width: 100%;
 }
 
 /* ====================== RIGHT SECTION ====================== */
@@ -48,11 +45,6 @@
 /* ====================== product-wrapper ====================== */
 .checkout-container .right-section .product-wrapper {
   gap: 1rem;
-  width: 100%;
-}
-
-.checkout-container .right-section .product {
-  width: 100%;
 }
 
 .checkout-container .right-section .product-wrapper img {
@@ -162,8 +154,6 @@
 .checkout-container .left-section {
   padding-top: 75px;
   padding-left: 130px;
-  display: flex;
-  flex-direction: row-reverse;
 }
 
 .checkout-container .left-section .paywith {
@@ -208,23 +198,121 @@
   border-width: 0.2rem;
 }
 
-/* ====================== GENERAL MEDIA ====================== */
-@media (width < 1100px) {
-  .checkout-container .right-section {
-    padding-right: 0;
-  }
-
-  .checkout-container .left-section {
-    padding-left: 0;
-  }
+/* ====================== Card Form ====================== */
+.checkout-container .left-section .forms {
+  margin-left: 8%;
 }
-@media (width < 768px) {
-  .checkout-container {
-    padding: 0;
-  }
+.checkout-container .left-section .forms form{
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.checkout-container .left-section .forms form .c-number{
+  margin-bottom: 5%;
+}
+.checkout-container .left-section .forms form .c-number h6{
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--Text);
+}
+.checkout-container .left-section .forms form .c-number input{
+  border: 1px solid #acacac;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
 
-  .checkout-container .right-section,
-  .checkout-container .left-section {
-    padding: 0;
-  }
+}
+
+.checkout-container .left-section .forms form .expiration{
+  display: flex;
+
+  gap: 10%;
+}
+
+.checkout-container .left-section .forms form .expiration input{
+  border: 1px solid #acacac;
+  border-radius: 4px;
+  width: 120%;
+  height: 70%;
+
+}
+
+.checkout-container .left-section .forms form .btt{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.checkout-container .left-section .forms form .btt .radio{
+  margin-top: 5%;
+  display: flex;
+  gap: 2%;
+}
+.checkout-container .left-section .forms form .btt .radio h5{
+  margin-top: 1.5%;
+  color: #999;
+  font-size: 15px;
+  font-weight: 400;
+
+}
+
+.checkout-container .left-section  button{
+background-color: #fd9802;
+border-radius: 4px;
+width: 100%;
+height: 35px;
+color: #f3f3f3  ;
+font-size: 15px;
+padding: 1%;
+margin-bottom: 3%;
+
+}
+.checkout-container .left-section .forms p{
+  color: #999;
+  font-size: 18px;
+
+}
+/* ====================== Bank form====================== */
+.checkout-container .left-section .forms .bank-form .bank select, .checkout-container .left-section .forms .bank-form .bank input{
+  border: 1px solid #acacac;
+  border-radius: 4px;
+  width: 100%;
+  height: 70%;  
+}
+.checkout-container .left-section form .squares{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.checkout-container .left-section .squares input{
+  height: 50%;
+  width: 10%;
+  text-align: center;
+  font-size: 200%;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+
+.checkout-container .left-section .forms .bank-form .bank div{
+  margin: 10% 0;
+}
+/* ====================== transfer form ====================== */
+
+.checkout-container .left-section .transfer-form .transfer,.polaris{
+display: flex;
+text-align: center;
+align-items: center;
+flex-direction: column;
+gap: 15px;
+}
+.checkout-container .left-section .transfer-form .transfer div{
+  display: flex;  
+}
+.checkout-container .left-section .transfer-form .transfer span{
+  color: red;
 }
