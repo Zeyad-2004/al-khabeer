@@ -1,4 +1,21 @@
 /* ====================== GENERAL STUFF ====================== */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.checkout-container input:focus,
+.checkout-container select {
+  outline: none;
+}
+
 .checkout-container .line-breaker {
   width: 100%;
   height: 1px;
@@ -165,8 +182,8 @@
   /* flex-direction: row-reverse; */
 }
 
-.checkout-container .left-section input{
-  padding:  1% 1.5%;
+.checkout-container .left-section input {
+  padding: 1% 1.5%;
 }
 
 .checkout-container .left-section .paywith {
@@ -312,7 +329,7 @@
   background-color: #fd9802;
   border-radius: 4px;
   width: 100%;
-    /* height: 35px; */ /* no height needed if using padding */
+  /* height: 35px; */ /* no height needed if using padding */
   color: #f3f3f3;
   font-size: 16px;
   font-weight: 700;
@@ -333,39 +350,86 @@
 /* ====================== Bank form====================== */
 .checkout-container .left-section .forms .bank-form .bank select,
 .checkout-container .left-section .forms .bank-form .bank input {
-  border: 1px solid #acacac;
+  border: 1.5px solid #acacac;
   border-radius: 4px;
   width: 100%;
-  height: 70%;
+  padding: 11px 16px;
 }
-.checkout-container .left-section form .squares {
+
+.checkout-container .left-section .forms .bank-form .bank select {
+  appearance: none;
+}
+
+.checkout-container
+  .left-section
+  .forms
+  .bank-form
+  .bank
+  .bank-options-wrapper {
   width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
+  height: initial !important;
+  margin: 0;
+  position: relative;
 }
-.checkout-container .left-section .squares input {
-  height: 50%;
-  width: 10%;
+
+.checkout-container
+  .left-section
+  .forms
+  .bank-form
+  .bank
+  .bank-options-wrapper
+  #select-arrow {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  color: #acacac;
+}
+
+.checkout-container .left-section .bank-pin #bank-pin-title {
+  color: #0a0d13;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 0;
+  width: 100%;
   text-align: center;
-  font-size: 200%;
-  border-radius: 6px;
-  border: 1px solid black;
+}
+
+.checkout-container .left-section .bank-pin .squares {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+.checkout-container .left-section .bank-pin .squares input {
+  height: 52px;
+  width: 50px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  border: 1.5px solid #acacac;
+}
+
+.checkout-container .left-section .bank-pin button {
+  margin-top: 150px;
 }
 
 .checkout-container .left-section .forms .bank-form .bank div {
   margin: 10% 0;
 }
-.checkout-container .left-section .forms .bank-form .bank select{
-  margin-bottom: 40% ;
-
+.checkout-container .left-section .forms .bank-form .bank select {
+  margin-bottom: 40%;
 }
 
-#bank-num{
+#bank-num {
   display: none;
 }
 
-#bank-num h6{
+#bank-num h6 {
   font-weight: bold;
 }
 /* ====================== transfer form ====================== */
@@ -373,21 +437,30 @@
 .checkout-container .left-section .transfer-form .transfer,
 .polaris {
   display: flex;
-   text-align: center;
-  align-items: center; 
+  text-align: center;
+  align-items: center;
   flex-direction: column;
   gap: 10px;
 }
 .checkout-container .left-section .transfer-form .transfer div {
   display: flex;
 }
-.checkout-container .left-section .transfer-form .transfer .polaris h4{
+.checkout-container .left-section .transfer-form .transfer .polaris h4 {
   transform: translateY(40%);
   font-size: large;
   font-weight: bold;
 }
+
+.checkout-container .left-section .transfer-form .transfer .polaris p {
+  margin-top: 36px;
+}
+
 .checkout-container .left-section .transfer-form .transfer span {
   color: red;
+}
+
+.checkout-container .left-section .transfer-form button { 
+  margin-top: 95px;
 }
 
 /* ====================== GENERAL MEDIA ====================== */
