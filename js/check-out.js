@@ -1,4 +1,4 @@
-function change_radio_active(id) {
+function changeRadioActive(id) {
     let radio1 = document.getElementById('option-1');
     let radio2 = document.getElementById('option-2');
     let radio3 = document.getElementById('option-3');
@@ -22,14 +22,50 @@ function change_radio_active(id) {
     }
 }
 
-flatpickr('.flatpickr', {
-    dateFormat: "mm/yy",
-  });
-
-
-  function showBankNum(){
+function showBankNum() {
     var banknum = document.getElementById("bank-num");
     var bankList = document.querySelector(".checkout-container .left-section .forms .bank-form .bank select")
-     bankList.style.marginBottom = '0%';
+    bankList.style.marginBottom = '0%';
     banknum.style.display = 'block';
-  }
+}
+
+function cardNumber(text) {
+    if (text.value.length > 0 && !(text.value[text.value.length - 1] >= '0' && text.value[text.value.length - 1] <= '9')) {
+        text.value = text.value.slice(0, -1);
+    }
+    else {
+        if (text.value.length && (text.value.length - Math.floor(text.value.length / 5)) % 4 == 0) {
+            text.value = text.value + " ";
+        }
+    }
+
+    if (text.value.length > 19) {
+        text.value = text.value.slice(0, 19);
+    }
+}
+
+function cardExpirationDate(text) {
+    if (text.value.length > 0 && !(text.value[text.value.length - 1] >= '0' && text.value[text.value.length - 1] <= '9')) {
+        text.value = text.value.slice(0, -1);
+    }
+    else {
+        if (text.value.length && text.value.length == 2) {
+            text.value = text.value + "/";
+        }
+    }
+
+    if (text.value.length > 5) {
+        text.value = text.value.slice(0, 5);
+    }
+}
+
+function cardCVV(text){
+    if (text.value.length > 0 && !(text.value[text.value.length - 1] >= '0' && text.value[text.value.length - 1] <= '9')) {
+        text.value = text.value.slice(0, -1);
+    }
+    
+    if (text.value.length > 3) {
+        text.value = text.value.slice(0, 3);
+    }
+
+}

@@ -178,8 +178,20 @@ input[type="number"] {
 .checkout-container .left-section {
   padding-top: 75px;
   padding-left: 130px;
-  /* display: flex; */
-  /* flex-direction: row-reverse; */
+}
+.checkout-container .left-section .header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+.checkout-container .left-section .header h1{
+  margin: 0;
+}
+.checkout-container .left-section .header svg{
+  transition-duration: 0.3s;
+}
+.checkout-container .left-section .header svg:hover{
+  color: var(--second-color);
 }
 
 .checkout-container .left-section input {
