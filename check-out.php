@@ -1,6 +1,7 @@
 <?php include "./main-component/header.php" ?>
 <?php include "./main-component/navbar.php" ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script id="pageJsFile" src="js/<?php echo pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) ?>.js"></script>
 
 
 <section class="checkout-container">
