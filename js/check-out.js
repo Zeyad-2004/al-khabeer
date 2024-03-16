@@ -26,3 +26,10 @@ flatpickr('.flatpickr', {
     dateFormat: "mm/yy",
   });
 
+
+  function showBankNum(){
+    var banknum = document.getElementById("bank-num");
+    var bankList = document.querySelector(".checkout-container .left-section .forms .bank-form .bank select")
+     bankList.style.marginBottom = '0%';
+    banknum.style.display = 'block';
+  }

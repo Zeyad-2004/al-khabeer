@@ -85,7 +85,7 @@
                     <div class="bank-form">
                         <form class="bank" method="post" action="">
 
-                            <select name="" placeholder="Choose your bank" id="">
+                            <select onchange="showBankNum()"  name="" placeholder="Choose your bank" id="">
                                 <option value="" disabled selected hidden>Choose your bank</option>
 
                                 <option disabled value="">Access Bank</option>
@@ -97,7 +97,7 @@
                                 <option value="Kuda Microfinamce Bank">Kuda Microfinamce Ban</option>
                                 <option value="First Bank">First Bank</option>
                             </select>
-                            <div>
+                            <div id="bank-num">
                                 <h6>Enter Your Bank Account Number</h6>
                                 <input type="number" name="" id="">
                             </div>

@@ -356,18 +356,35 @@
 .checkout-container .left-section .forms .bank-form .bank div {
   margin: 10% 0;
 }
+.checkout-container .left-section .forms .bank-form .bank select{
+  margin-bottom: 40% ;
+
+}
+
+#bank-num{
+  display: none;
+}
+
+#bank-num h6{
+  font-weight: bold;
+}
 /* ====================== transfer form ====================== */
 
 .checkout-container .left-section .transfer-form .transfer,
 .polaris {
   display: flex;
-  text-align: center;
-  align-items: center;
+   text-align: center;
+  align-items: center; 
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 .checkout-container .left-section .transfer-form .transfer div {
   display: flex;
+}
+.checkout-container .left-section .transfer-form .transfer .polaris h4{
+  transform: translateY(40%);
+  font-size: large;
+  font-weight: bold;
 }
 .checkout-container .left-section .transfer-form .transfer span {
   color: red;
