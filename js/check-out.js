@@ -1,3 +1,25 @@
+
+
+function startTranslate() {
+  if(window.outerWidth <= 768){
+  var translateBtn = document.getElementById('tran');
+  var rightSec = document.querySelector('.checkout-container .right-section');
+  var leftSec = document.querySelector('.checkout-container .left-section');
+
+  translateBtn.addEventListener('click', function() {
+    rightSec.style.transform = "translateX(-45%)";
+    leftSec.style.transform = "translateX(-200%)";
+    var translateBack = document.querySelector('#back');
+
+    translateBack.addEventListener('click', function() {
+    
+      rightSec.style.transform = "translateX(-220%)";
+      leftSec.style.transform = "translateX(10%)";
+  
+    })})};
+};
+startTranslate()
+
 function changeRadioActive(id) {
   let radio1 = document.getElementById("option-1");
   let radio2 = document.getElementById("option-2");
@@ -86,3 +108,4 @@ function cardCVV(text) {
     text.value = text.value.slice(0, 3);
   }
 }
+

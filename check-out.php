@@ -78,7 +78,7 @@
                                         </div>
                                         <h5>save card details</h5>
                                     </div>
-                                    <button name="sub" type="submit">Pay USD59.28</button>
+                                    <button  name="sub" type="submit">Pay USD59.28</button>
                                     <p>Your personal data will be used to process your order, support your experience
                                         throughout this website, and for other purposes described in our privacy policy.</p>
                                 </div>
@@ -115,7 +115,7 @@
                                     <h6>Enter Your Bank Account Number</h6>
                                     <input type="number" name="" id="" placeholder="0123456789">
                                 </div>
-                                <button type="submit">Pay USD59.28</button>
+                                <button id="tran" type="submit">Pay USD59.28</button>
                                 <p>Your personal data will be used to process your order, support your experience throughout
                                     this website, and for other purposes described in our privacy policy.</p>
                             </form>
@@ -155,7 +155,7 @@
                                 </div>
 
                             </form>
-                            <button type="submit">Confirm Payment</button>
+                            <button id="tran"  type="submit">Confirm Payment</button>
                             <p>Your personal data will be used to process your order, support your experience throughout
                                 this website, and for other purposes described in our privacy policy.</p>
 
@@ -166,6 +166,7 @@
                     <?php if (isset ($_POST['sub'])): ?>
                         <script>
                             changeRadioActive(1);
+                            
                         </script>
 
                         <form action="" class="bank-pin">
@@ -179,7 +180,7 @@
 
                             </div>
 
-                            <button type="submit">Pay USD59.28</button>
+                            <button id="tran" type="submit">Pay USD59.28</button>
                             <p class="">Your personal data will be used to process your order, support your experience
                                 throughout
                                 this website, and for other purposes described in our privacy policy.</p>
@@ -236,6 +237,11 @@
                         $59.28
                     </span>
                 </div>
+            </div>
+            <div class="con-right-btt">
+            <button  class="con-right">confirm</button>
+            
+            <button id="back" class="con-right">back</button>
             </div>
         </section>
     </section>
