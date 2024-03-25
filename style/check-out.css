@@ -60,13 +60,13 @@ input[type="number"] {
   padding-top: 75px;
   padding-right: 130px;
 }
-.checkout-container .right-section  .con-right-btt{
+.checkout-container .right-section .con-right-btt {
   display: flex;
   width: 100%;
   margin-top: 1%;
   justify-content: space-around;
 }
-.checkout-container .right-section  .con-right{
+.checkout-container .right-section .con-right {
   display: none;
   background-color: #acacac;
   color: #f3f3f3;
@@ -75,7 +75,6 @@ input[type="number"] {
   padding: 1% 1.5%;
   font-weight: 500;
   font-size: 15px;
-
 }
 
 /* ====================== product-wrapper ====================== */
@@ -513,114 +512,122 @@ input[type="number"] {
   }
 }
 
-@media (width < 1025px){
+@media (width < 1025px) {
   .checkout-container .right-section,
   .checkout-container .left-section {
-    padding-top: 0 ;
+    padding-top: 2rem;
   }
-  
-
-
 }
 @media (width < 769px) {
-  .checkout-container{
-    overflow: hidden;
+  .border {
+    border: 1px solid red;
   }
-  .checkout-container .right-section .product-wrapper .product-desc,.checkout-container .right-section .product-wrapper .product-price,.checkout-container .right-section .product-wrapper .product-title,.checkout-container .right-section .discount-code button,.checkout-container .right-section .total .taxes,.checkout-container .right-section .total .total-title,.checkout-container .right-section .sub-total, .checkout-container .right-section .total .total-price   {
+
+  .checkout-container .right-section,
+  .checkout-container .left-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .checkout-container {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+  }
+
+  .checkout-wrapper {
+    position: relative;
+  }
+  .checkout-container .right-section .product-wrapper .product-desc,
+  .checkout-container .right-section .product-wrapper .product-price,
+  .checkout-container .right-section .product-wrapper .product-title,
+  .checkout-container .right-section .discount-code button,
+  .checkout-container .right-section .total .taxes,
+  .checkout-container .right-section .total .total-title,
+  .checkout-container .right-section .sub-total,
+  .checkout-container .right-section .total .total-price {
     font-size: 80%;
   }
-.checkout-container .right-section   {
-  transform: translateX(-210%)  ;
-  height: 90vh;
-  transition: 0.3s;
-}
-.checkout-container .right-section .discount-code button,.checkout-container .right-section .discount-code input{
-  padding: 4px 4px ;
-  font-size: 12px ;
-}
+  .checkout-container .right-section {
+    transform: translateX(-100%);
+    height: 90vh;
+    transition: 0.3s;
+  }
+  .checkout-container .right-section .discount-code button,
+  .checkout-container .right-section .discount-code input {
+    padding: 4px 4px;
+    font-size: 12px;
+  }
 
-.checkout-container .line-breaker{
-  margin: 20px 0;
-}
-.checkout-container .right-section .right-section-wrapper  {
- 
-  transition: 0.3s;
-}
-.checkout-container .left-section{
-  transform: translateX(10%);
-  font-size: 80%;
-  transition: 0.3s;
-
-
-}
-.checkout-container .left-section .left-section-wrapper,
-.checkout-container .left-section .left-section-wrapper .forms{
-  width: 140%;
-  height: 10% ;
-  transform: translateY(-90%);
-
-}
-.checkout-container .left-section .forms .bank-form .bank input, .checkout-container .left-section .forms .bank-form .bank select{
-font-size: 80%;
-}
-.checkout-container .left-section .left-section-wrapper .forms .bank-pin{
-  transform: translateX(10%);
-  width: 50%;  
-  font-size: 80%;
-
-
-}
-.checkout-container .left-section .bank-pin button{
-  margin-top: 10px;
-
-  padding: 5px 0;
-}
-.checkout-container .left-section .forms p{
-  font-size: 90%;
-    }
-
-.checkout-container .left-section button{
- 
-  font-size: 80%;
-  padding: 5px 0;
-}
-.checkout-container .left-section button,.checkout-container .left-section .forms form .btt .radio{
-  margin: 0px 0px;
-
-}
-.checkout-container .left-section .forms .bank-form .bank select{
-  margin-bottom: 20%;
-}
-.checkout-container .left-section .transfer-form button {
-  margin: 0px 0px;
-}
-
-.checkout-container .right-section  .con-right{
-  display: inline;
-}
-
-}
-
-@media (width < 426px) {
-  
-.checkout-container .left-section{
-  transform: translateX(30%);
-}
-}
-
-@media (width < 350px){
-  .checkout-container .left-section{
-    transform: translateX(40%);
+  .checkout-container .line-breaker {
+    margin: 20px 0;
+  }
+  .checkout-container .right-section .right-section-wrapper {
+    transition: 0.3s;
+  }
+  .checkout-container .left-section {
+    /* transform: translateX(10%); */
+    font-size: 80%;
+    transition: 0.3s;
   }
   .checkout-container .left-section .left-section-wrapper,
-  .checkout-container .left-section .left-section-wrapper .forms{
-    width: 130%;
-    
+  .checkout-container .left-section .left-section-wrapper .forms {
+    width: 100%;
+    /* transform: translateY(-90%); */
   }
-  .checkout-container .left-section .forms p{
+  .checkout-container .left-section .forms .bank-form .bank input,
+  .checkout-container .left-section .forms .bank-form .bank select {
+    font-size: 1rem;
+  }
+  .checkout-container .left-section .left-section-wrapper .forms .bank-pin {
+    /* transform: translateX(10%); */
+    width: 100%;
+    font-size: 80%;
+  }
+  .checkout-container .left-section .bank-pin button {
+    margin-top: 60px;
+
+  }
+  .checkout-container .left-section .forms p {
+    font-size: 14px;
+  }
+
+  .checkout-container .left-section button {
+    font-size: 1rem;
+  }
+  .checkout-container .left-section button{
+    margin: 1rem 0;
+  }
+  .checkout-container .left-section .forms form .btt .radio {
+    margin: 0;
+  }
+  .checkout-container .left-section .forms .bank-form .bank select {
+    margin-bottom: 100px;
+  }
+  .checkout-container .left-section .forms .bank-form .bank div{
+    margin: 1rem 0;
+  }
+  .checkout-container .left-section .transfer-form button {
+    margin: 0px 0px;
+  }
+
+  .checkout-container .right-section .con-right {
+    display: inline;
+  }
+}
+
+@media (width < 350px) {
+
+  .checkout-container .left-section .left-section-wrapper,
+  .checkout-container .left-section .left-section-wrapper .forms {
+    width: 100%;
+  }
+  .checkout-container .left-section .forms p {
     font-size: 77%;
-      }
-  .checkout-container .left-section .forms .date h6,.checkout-container .left-section .forms .cvv h6{
+  }
+  .checkout-container .left-section .forms .date h6,
+  .checkout-container .left-section .forms .cvv h6 {
     font-size: 90%;
-      }
+  }
 }

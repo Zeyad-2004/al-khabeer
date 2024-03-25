@@ -1,24 +1,21 @@
+var translateBtn = document.getElementById("tran");
+var rightSec = document.querySelector(".checkout-container .right-section");
+var leftSec = document.querySelector(".checkout-container .left-section");
 
+translateBtn.addEventListener("click", function () {
+  if (window.innerWidth <= 768) {
+    console.log("it is lower than 768");
+    rightSec.style.transform = "translateX(0)";
+    leftSec.style.transform = "translateX(-100%)";
+    var translateBack = document.getElementById("back");
+    console.log("hello");
 
-function startTranslate() {
-  if(window.outerWidth <= 768){
-  var translateBtn = document.getElementById('tran');
-  var rightSec = document.querySelector('.checkout-container .right-section');
-  var leftSec = document.querySelector('.checkout-container .left-section');
-
-  translateBtn.addEventListener('click', function() {
-    rightSec.style.transform = "translateX(-45%)";
-    leftSec.style.transform = "translateX(-200%)";
-    var translateBack = document.querySelector('#back');
-
-    translateBack.addEventListener('click', function() {
-    
-      rightSec.style.transform = "translateX(-220%)";
-      leftSec.style.transform = "translateX(10%)";
-  
-    })})};
-};
-startTranslate()
+    translateBack.addEventListener("click", function () {
+      leftSec.style.transform = "translateX(0)";
+      rightSec.style.transform = "translateX(-100%)";
+    });
+  }
+});
 
 function changeRadioActive(id) {
   let radio1 = document.getElementById("option-1");
@@ -108,4 +105,3 @@ function cardCVV(text) {
     text.value = text.value.slice(0, 3);
   }
 }
-
