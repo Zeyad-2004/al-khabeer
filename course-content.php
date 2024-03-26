@@ -204,7 +204,7 @@
     <!-- pricing card end =========================================================================== -->
     <!-- start content section -->
     <section class="category-content">
-        <div class="course">
+         <div class="course">
             <div class="course-title">
                 <div>
                     <h1>دورة الأوتوكاد</h1>
@@ -279,10 +279,10 @@
 
                 <div class="line"></div>
             </div>
-            <!-- /************************************************* */ -->
+            
 
 
-        </div>
+        </div> 
 
         <!-- ******************************************** -->
          <div class="course-container">
@@ -513,8 +513,9 @@
         </div> 
 
         <div class="line"></div>
+
         <!-- ************************************************************ -->
-         <div class="to-learn">
+          <div class="to-learn"> 
             <h1>من المتوقع ان تتعلم</h1>
             <h2>لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي هو ببساطة نص شكلي</h2>
             <div class="to-learn-cards">
@@ -609,11 +610,11 @@
                 </div>
 
             </div>
-        </div> 
+         </div>  
 
         <div class="line"></div>
         <!-- ****************************** -->
-         <div class="reviews">
+          <div class="reviews">
             <h1>مراجعات</h1>
 
             <ul class="rev-icons">
@@ -813,11 +814,11 @@
                 </svg>
             </div>
 
-        </div> 
+        </div>  
 
         <div class="line"></div>
         <!-- *************************************** -->
-         <div class="about-trainer">
+         <!-- <div class="about-trainer">
             <h4>عن المدرب</h4>
             <div class="trainer-info">
                 <img src="media/default/profile_picture/profile.png" alt="">
@@ -873,9 +874,9 @@
 
             <p id="pa">هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل</p>
 
-        </div> 
+        </div>  -->
 
-        <div class="line"></div>
+         <div class="line"></div> 
         <!-- *************************************** -->
          <div class="questions">
             <h1>اسئلة شائعة</h1>
@@ -940,12 +941,12 @@
                 </div>
             </div>
 
-        </div> 
+        </div>  
 
-        <div class="line"></div>
+        <div class="line"></div> 
         <!-- *************************************** -->
 
-         <div class="another-courses">
+          <div class="another-courses">
             <h1>دورات قد تكون متهم بها</h1>
             <h2>إذا كنت تبحث عن الدورات التدريبية الرائعة والمميزة التي تساعدك على تحسين مهاراتكوالنمو في مجال عملك أو هوايتك المفضلة، فأنت في المكان المناسب!</h2>
             <div class="test">
@@ -962,7 +963,7 @@
             </div>
             <?php include("main-component/scroll-buttons.php"); getScrollButtons("courses-slider", 333);?>
 
-        </div> 
+        </div>  -
 
     </section>
 

@@ -905,21 +905,21 @@ p {
     box-sizing: border-box;
   }
   
-  #co-dev {
-    width: 90%;
+  /* #co-dev {
+    width: 90vw;
     margin-inline: auto;
-  }
+  } */
 
   .pricing-card {
     display: none;
   }
 
   .category-content {
-    width: 40rem
+    width: 80vw
   }
 
   .category-content .course-title {
-    width: 100%;
+    width: 100vw;
   }
 
   .category-content .course-title :nth-child(1) {
@@ -960,7 +960,7 @@ p {
 
   .category-content .course video {
     order: 1;
-    width: 100%;
+    width: 80vw;
     margin-right: 0;
   }
 
@@ -1005,37 +1005,40 @@ p {
   }
 
   .course-container {
-    width: 50%;
-
+    width: 100%;
     font-family: "Cairo";
     color: #000;
     font-weight: 400;
   }
 
   .course-container h1 {
-    width: 115px;
+    width: 50%;
     font-size: 18px;
-    line-height: 26px; /* 144.444% */
+    line-height: 26px; 
   }
   .course-container p {
     font-size: 13px;
-    width: 190px;
+    width: 50%;
+
     line-height: 18px; /* 138.462% */
   }
 
   .course-container .video-container {
+   
     display: grid;
-    width: 110%;
-    grid-template-columns: 410px;
-    height: 292px;
-    overflow: hidden;
+    grid-template-columns: 100%;
+    height: 50vh;
+    overflow-y: hidden;
+    overflow-x: visible;
+    width: 100%;
+
   }
 
-  .course-container .video-container video {
-    width: 406px;
-    height: 228px;
 
-    /* transform: translateX(-10%); */
+  .course-container .video-container video {
+    width: 120%;
+    height: 50vh;
+
   }
   .line {
     display: none;
@@ -1044,8 +1047,13 @@ p {
   /* ************************************************ */
   .to-learn {
     margin-top: 1rem;
-    width: 35rem;
-   
+    
+  }
+  .to-learn .to-learn-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
   }
   .to-learn .learn-card{
     display: flex;
@@ -1053,7 +1061,8 @@ p {
 
   }
   .to-learn h1 {
-    width: 100%;
+
+    width: 50%;
     font-size: 24px;
   }
   .to-learn .to-learn-cards .learn-card .cont{
@@ -1065,20 +1074,24 @@ p {
     font-size: 14px;
     color: #848484;
   }
+  
   /* ********************************************** */
   .reviews {
     margin-top: 1.5rem;
-    width: 30rem;
+    width: 100%;
     font-family: "Cairo";
     font-weight: 400;
   }
+  
   .reviews h1 {
-    width: 110px;
     font-size: 20px;
   }
 
   .reviews .rev-icons {
     width: 100%;
+    gap: 15%;
+
+   
   }
 
   .reviews .rev-icons li a span,
@@ -1091,14 +1104,13 @@ p {
   }
 
   .reviews .rev-icons li div {
-    width: 100px;
+    width: 100%
   }
 
   .reviews .comments {
     margin-top: 1.5rem;
     height: 144px;
-    margin-right: 5%;
-    width: 30rem;
+    width: 100%;
     overflow: hidden;
   }
 
@@ -1108,7 +1120,6 @@ p {
   }
 
   .more-comments-btn {
-    gap: 2%;
     display: none;
   }
 
@@ -1122,27 +1133,39 @@ p {
     display: flex;
     gap: 5%;
     flex-direction: row;
-    transform: translateY(-10%);
-    width: 30rem;
+    width: 100%
   }
   .comments .comment .co-content svg {
-    width: 40px;
+    width: 50%;
     margin-left: 10%;
   }
   .comments .comment .co-content p {
     font-size: 80%;
   }
-  /* 8*************************************** */
-  .about-trainer {
-    width: 10%;
-    /* height: 80vh; */
-  }
-  .about-trainer .trainer-info .name {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5%;
+  #rev-bt {
+    width: 100%;
+    height: 70px;
+
+    border: 2px;
+    transform: translate(100%, -100%);
   }
 
+ 
+  
+  
+
+  .comments .comment .co-content {
+    display: flex;
+    gap: 5%;
+    flex-direction: row;
+  }
+  /* 8**
+  /* 8*************************************** */
+  .about-trainer {
+    width: 100%;
+    margin-inline: inherit;
+  }
+ 
   .about-trainer .trainer-info .name .test{
     display: block;
   }
@@ -1163,7 +1186,7 @@ p {
     flex-direction: column;
     gap: 5px;
     order: 1;
-    margin-bottom: 0;
+    
   }
 
   .about-trainer .trainer-info .name h1 {
@@ -1178,7 +1201,7 @@ p {
   }
   .about-trainer .trainer-info .name .date {
     order: 3;
-    margin-right: 12%;
+   
 
     width: 100%;
     height: 10px;
@@ -1187,7 +1210,6 @@ p {
 
   .about-trainer .trainer-info {
     display: flex;
-    margin-right: 15px;
     flex-direction: column;
     width: 100%;
   }
@@ -1195,15 +1217,14 @@ p {
   .about-trainer .trainer-info .icons {
     display: flex;
     order: 5;
-    width: 230px;
+    width: 100%;
     gap: 15px;
-    margin-right: 10%;
 
     margin-bottom: 0px;
   }
 
   .about-trainer .trainer-info .name button {
-    width: 10px;
+    width: 100%;
     margin-right: 13%;
     margin-bottom: 15px;
     font-size: 13px;
@@ -1213,10 +1234,11 @@ p {
     display: none;
   }
   .about-trainer #pa {
-    width: 45rem;
+    width: 100%;
+    text-align: center;
     font-size: 12px;
     margin-bottom: 4rem;
-    margin-top: 10.5rem;
+    margin-top: 12.5rem;
   }
 
   /* **************************************************** */
@@ -1273,58 +1295,15 @@ width: 100%;
   
   /* ************************************************ */
 
-  .to-learn .to-learn-cards {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 110%;
-  }
-  .to-learn .to-learn-cards .learn-card {
-    width: 100%;
-  }
+  
+  
 
   /* ********************************************** */
-  .reviews {
-    margin-top: 7%;
-    width: 50%;
-    font-family: "Cairo";
-    font-weight: 400;
-  }
-
-  .reviews .rev-icons {
-    gap: 25%;
-  }
-
-  #rev-bt {
-    width: 100%;
-    height: 70px;
-
-    border: 2px;
-    transform: translate(100%, -100%);
-  }
-
-  .comments {
-    width: 760px;
-    display: flex;
-    flex-direction: column;
-
-    gap: 15px;
-    margin-bottom: 10%;
-  }
-
-  .comments .comment {
-    width: 60%;
-  }
+  
 
   
 
-  .comments .comment .co-content {
-    display: flex;
-    gap: 5%;
-    flex-direction: row;
-    /* transform: translateY(-10%); */
-  }
-  /* 8*************************************** */
+  ************************************* */
   .about-trainer {
     width: 110%;
   }
@@ -1392,23 +1371,13 @@ width: 100%;
     font-size: 11px;
   }
 
-  .to-learn{
-    width: 25rem;
-  }
-  .to-learn .to-learn-cards{
-    width: 25rem;
-  }
+ 
+ 
   
-  .reviews .rev-icons {
-    width: 100%;
-    gap: 1%;
-  }
-  .reviews .comments{
-    width: 20rem;
-  }
+ 
+  
   .about-trainer {
     margin-top: 2rem;
-    width: 100%;
   }
   .about-trainer p {
     font-size: 13px;
@@ -1427,19 +1396,17 @@ width: 100%;
     font-size: 20px;
   }
 
-  .about-trainer #pa {
+  /* .about-trainer #pa {
     margin-right: 0%;
     margin-top: 11.5rem;
-    width: 25rem;
+    width: 100%;
+    border: 1px solid red;
   }
- 
+  */
   .about-trainer .trainer-info .name button {
     width: 20%;
-    margin-right: 10%;
   }
-  .about-trainer .trainer-info .name .date{
-    margin-right: 15%;
-  }
+ 
   /* ****************************** */
   .questions{
     width: 20rem;
@@ -1467,10 +1434,10 @@ width: 100%;
 
 @media (max-width: 376px) {
   .category-content{
-    width: 18rem;
+    width: 100%;
   }
   .category-content .course{
-    width: 20rem;
+    width: 100%;
   }
   .category-content .course-title h1 {
     font-size: 15px;
@@ -1482,27 +1449,25 @@ width: 100%;
     margin-right: 10px;
     font-size: 12px;
   }
-  .to-learn .to-learn-cards{
-    width: 20rem;
-  }
+  
   .to-learn p {
     font-size: 11px;
   }
   .to-learn h2 {
-    width: 23rem;
     font-size: 13px;
   }
 
-
+  .category-content .reviews .rev-icons li .buy{
+    margin-right: 0;
+  }
   .reviews .rev-icons {
     margin-right: 0%;
-    width: 60%;
+   justify-content: space-between;
     gap: 0%;
   }
 
-  .reviews .rev-icons li {
-    width: 190%;
-  }
+  
+  
   .reviews .rev-icons li button {
     font-size: 11px;
   }
@@ -1511,33 +1476,6 @@ width: 100%;
     transform: translateX(48%);
   }
 
-  .about-trainer {
-    width: 100%;
-    height: 100vh;
-    transform: translateY(-20%);
-  }
-  .about-trainer p {
-    font-size: 13px;
-  }
-
-  .about-trainer .trainer-info .name {
-    transform: translateX(40%);
-  }
-
-  .about-trainer .trainer-info .name h1 {
-    font-size: 20px;
-  }
-
-  .about-trainer p {
-    margin-right: 15%;
-  }
-  .about-trainer .trainer-info .icons {
-    margin-right: 18%;
-  }
-  .about-trainer .trainer-info .name button {
-    width: 40%;
-    margin-right: 26%;
-  }
 
   .questions h1 {
     font-size: 18px;
@@ -1546,76 +1484,61 @@ width: 100%;
     font-size: 9px;
     width: 120%;
   }
-  .another-courses {
-    margin-right: 10%;
-    /* width: 150%; */
-  }
-  .another-courses h1 {
-    width: 251px;
-    font-size: 18px;
-  }
+ 
 
-  .another-courses h2 {
-    color: #848484;
-    width: 100%;
-    font-size: 10px;
-  }
 }
 
 @media (max-width: 321px) {
-  #co-dev {
-    width: 70%;
-  }
-  .category-content .course {
-    height: 80vh;
-  }
+
   .category-content .course video {
-    width: 160%;
-    margin-right: 40px;
+    width: 100%;
+    margin-inline: auto;
   }
-  .category-content .course-title :nth-child(1) {
-    width: 155%;
+  .category-content .course-title{
+    width: 100% ;
   }
+ 
   .category-content .buy svg {
     width: 50%;
   }
   .category-content .buy {
-    width: 30%;
-  }
-  .category-content .buy p {
+    width: 50%;
     font-size: 10px;
-    color: #fff;
+
   }
+  .category-content .buy button {
+    font-size: 10px;
+
+  }
+  
   .category-content .course-title p {
-    width: 150%;
+    width: 100%;
   }
+
+  .category-content .course-title h1{
+    width: 100%;
+  }
+
+  
+  /* ****************************************************** */
   .to-learn p {
     font-size: 10px;
-    width: 180%;
   }
   .to-learn h2,
   .to-learn h1 {
-    width: 180%;
     font-size: 11px;
   }
   .to-learn h1 {
     font-size: 15px;
   }
-  .category-content .video-container {
-    width: 340%;
-  }
+  
 
-  .reviews .rev-icons li svg {
-    width: 20%;
-  }
-
+  
   .reviews .rev-icons li a span,
   .reviews .rev-icons p {
     font-size: 10px;
   }
-  .reviews .rev-icons {
-    width: 82%;
-  }
+  
   .reviews .rev-icons li button {
     font-size: 10px;
   }
@@ -1623,59 +1546,7 @@ width: 100%;
     font-size: 13px;
   }
   .comments .comment .title {
-    transform: translateX(20%);
+    transform: translateX(0%);
   }
-  .about-trainer p {
-    font-size: 10px;
-    margin-right: 10%;
-    width: 150%;
-  }
-  .about-trainer .trainer-info .name {
-    transform: translateX(37%);
-  }
-
-  .about-trainer .trainer-info .name h1 {
-    font-size: 15px;
-    margin-bottom: 0;
-  }
-  .about-trainer .trainer-info .name h2 {
-    font-size: 12px;
-    margin-top: 0;
-  }
-  .about-trainer .trainer-info .icons {
-    margin-right: 1%;
-  }
-  .about-trainer .trainer-info .name button {
-    width: 60%;
-    margin-right: 18%;
-  }
-  .questions {
-    height: 60vh;
-  }
-  .questions h1 {
-    font-size: 15px;
-    margin-right: 30%;
-  }
-  .questions svg {
-    width: 9px;
-  }
-  .questions p {
-    font-size: 9px;
-    width: 150%;
-  }
-  .another-courses h1 {
-    width: 251px;
-    font-size: 15px;
-  }
-
-  .another-courses h2 {
-    color: #848484;
-    width: 100%;
-    font-size: 10px;
-  }
-
-  .another-courses {
-    margin-right: 10%;
-    width: 150%;
-  }
+  
 }
