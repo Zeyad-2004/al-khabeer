@@ -519,10 +519,6 @@ input[type="number"] {
   }
 }
 @media (width < 769px) {
-  .border {
-    border: 1px solid red;
-  }
-
   .checkout-container .right-section,
   .checkout-container .left-section {
     position: absolute;

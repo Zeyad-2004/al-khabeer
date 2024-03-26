@@ -1,9 +1,14 @@
+window.onload = function () {
+  console.log("the page has been loaded again!");
+};
+
 var translateBtn = document.getElementById("tran");
 var rightSec = document.querySelector(".checkout-container .right-section");
 var leftSec = document.querySelector(".checkout-container .left-section");
 
 translateBtn.addEventListener("click", function () {
   if (window.innerWidth <= 768) {
+    translateBtn.type = "button";
     rightSec.style.transform = "translateX(0)";
     leftSec.style.transform = "translateX(-100%)";
     var translateBack = document.getElementById("back");
