@@ -539,6 +539,9 @@ input[type="number"] {
   .checkout-wrapper {
     position: relative;
   }
+
+  /* right section =============================== */
+
   .checkout-container .right-section .product-wrapper .product-desc,
   .checkout-container .right-section .product-wrapper .product-price,
   .checkout-container .right-section .product-wrapper .product-title,
@@ -547,17 +550,15 @@ input[type="number"] {
   .checkout-container .right-section .total .total-title,
   .checkout-container .right-section .sub-total,
   .checkout-container .right-section .total .total-price {
-    font-size: 80%;
+    font-size: 14px;
   }
   .checkout-container .right-section {
     transform: translateX(-100%);
-    height: 90vh;
     transition: 0.3s;
   }
-  .checkout-container .right-section .discount-code button,
-  .checkout-container .right-section .discount-code input {
-    padding: 4px 4px;
-    font-size: 12px;
+
+  .checkout-container .right-section .discount-code{
+    flex-direction: column;
   }
 
   .checkout-container .line-breaker {
@@ -566,24 +567,29 @@ input[type="number"] {
   .checkout-container .right-section .right-section-wrapper {
     transition: 0.3s;
   }
+
+
+  .checkout-container .right-section .con-right {
+    display: inline;
+  }
+
+  /* left section ======================== */
   .checkout-container .left-section {
-    /* transform: translateX(10%); */
-    font-size: 80%;
+    font-size: 14px;
     transition: 0.3s;
   }
+
   .checkout-container .left-section .left-section-wrapper,
   .checkout-container .left-section .left-section-wrapper .forms {
     width: 100%;
-    /* transform: translateY(-90%); */
   }
   .checkout-container .left-section .forms .bank-form .bank input,
   .checkout-container .left-section .forms .bank-form .bank select {
     font-size: 1rem;
   }
   .checkout-container .left-section .left-section-wrapper .forms .bank-pin {
-    /* transform: translateX(10%); */
     width: 100%;
-    font-size: 80%;
+    font-size: 14px;
   }
   .checkout-container .left-section .bank-pin button {
     margin-top: 60px;
@@ -612,9 +618,6 @@ input[type="number"] {
     margin: 0px 0px;
   }
 
-  .checkout-container .right-section .con-right {
-    display: inline;
-  }
 }
 
 @media (width < 350px) {
@@ -624,10 +627,10 @@ input[type="number"] {
     width: 100%;
   }
   .checkout-container .left-section .forms p {
-    font-size: 77%;
+    font-size: 10px;
   }
   .checkout-container .left-section .forms .date h6,
   .checkout-container .left-section .forms .cvv h6 {
-    font-size: 90%;
+    font-size: 14px;
   }
 }

@@ -4,11 +4,9 @@ var leftSec = document.querySelector(".checkout-container .left-section");
 
 translateBtn.addEventListener("click", function () {
   if (window.innerWidth <= 768) {
-    console.log("it is lower than 768");
     rightSec.style.transform = "translateX(0)";
     leftSec.style.transform = "translateX(-100%)";
     var translateBack = document.getElementById("back");
-    console.log("hello");
 
     translateBack.addEventListener("click", function () {
       leftSec.style.transform = "translateX(0)";
