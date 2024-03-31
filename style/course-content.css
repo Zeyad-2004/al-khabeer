@@ -492,9 +492,6 @@ p {
 
   margin-bottom: clamp(40px, calc(100vw * (70 / 1400)), 70px);
 }
-.reviews .rev-icons li {
-  height: 65px;
-}
 .reviews .rev-icons li .test {
   display: flex;
   flex-direction: column-reverse;
@@ -904,18 +901,21 @@ p {
   * {
     box-sizing: border-box;
   }
-  
-  /* #co-dev {
-    width: 90vw;
-    margin-inline: auto;
-  } */
+  body{
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
 
   .pricing-card {
     display: none;
   }
 
   .category-content {
-    width: 80vw
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .category-content .course-title {
@@ -1077,170 +1077,86 @@ p {
   
   /* ********************************************** */
   .reviews {
-    margin-top: 1.5rem;
-    width: 100%;
-    font-family: "Cairo";
-    font-weight: 400;
+    width: 85%;
+  }
+  .reviews .scroll-buttons{
+    margin: 15px 0 30px 0;
   }
   
-  .reviews h1 {
-    font-size: 20px;
+  .reviews .title h1 {
+    margin: 0;
+    font-size: clamp(18px, calc(100vw*(26 / 768)), 26px);
+    font-weight: bold;
+  }
+  .reviews .title a {
+    color: white;
+    font-size: clamp(14px, calc(100vw*(20 / 768)), 20px); 
   }
 
   .reviews .rev-icons {
     width: 100%;
-    gap: 15%;
+    padding: 0;
+    margin: 20px 0;
+    gap: 40px;
 
-   
+    justify-content: space-evenly;
   }
-
-  .reviews .rev-icons li a span,
-  .reviews .rev-icons li a p {
-    width: 100%;
-    font-size: 80%;
+  .reviews .rev-icons li .test{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-  .reviews .rev-icons li a p {
-    margin-top: 10px;
+  .reviews .rev-icons li .test :where(p, span){
+    font-weight: 700 !important;
+    font-size: clamp(10px, calc(100vw*(26 / 768)), 26px) !important;
   }
-
-  .reviews .rev-icons li div {
-    width: 100%
+  .reviews .rev-icons li .test span{
+    font-weight: 500 !important;
+  }
+  .reviews .rev-icons li .test div svg{
+    width: clamp(20px, calc(100vw*(30 / 768)), 30px);
+    height: clamp(20px, calc(100vw*(30 / 768)), 30px);
   }
 
   .reviews .comments {
-    margin-top: 1.5rem;
-    height: 144px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     overflow: hidden;
+    gap:0;
   }
 
   .reviews .comment {
     border: none;
-    width: 100%;
+    padding: 0;
+    /* width: 85vw; */
+  }
+  .reviews .comment .co-content{
+    width: 85vw;
+  }
+  .reviews .comment .co-content p{
+    /* width: auto;   */
+    font-size: clamp(15px, calc(100vw * (20 / 768)), 20px);
+  }
+  .reviews .comment .co-content .svg{
+    width: clamp(40px, calc(100vw * (70 / 768)), 70px);
+  }
+  .reviews .comments .comment .title img{
+    width: clamp(40px, calc(100vw * (70 / 768)), 70px);
+    height: clamp(40px, calc(100vw * (70 / 768)), 70px);
+  }
+  .reviews .comments .comment .title div h1{
+    font-size: clamp(15px, calc(100vw * (24 / 768)), 24px);
+  }
+  .reviews .comments .comment .title div h2{
+    font-size: clamp(10px, calc(100vw * (18 / 768)), 18px);
   }
 
-  .more-comments-btn {
+  #comment{
     display: none;
   }
-
-  .more-comments .comment {
-    display: none;
-  }
-
- 
-
-  .comments .comment .co-content {
-    display: flex;
-    gap: 5%;
-    flex-direction: row;
-    width: 100%
-  }
-  .comments .comment .co-content svg {
-    width: 50%;
-    margin-left: 10%;
-  }
-  .comments .comment .co-content p {
-    font-size: 80%;
-  }
-  #rev-bt {
-    width: 100%;
-    height: 70px;
-
-    border: 2px;
-    transform: translate(100%, -100%);
-  }
-
- 
   
-  
-
-  .comments .comment .co-content {
-    display: flex;
-    gap: 5%;
-    flex-direction: row;
-  }
-  /* 8**
-  /* 8*************************************** */
-  .about-trainer {
-    width: 100%;
-    margin-inline: inherit;
-  }
- 
-  .about-trainer .trainer-info .name .test{
-    display: block;
-  }
-  .about-trainer h4 {
-    display: none;
-  }
-
-  .about-trainer img {
-    margin-right: 50%;
-    transform: translateX(50%);
-  }
-
-  .about-trainer .trainer-info .name {
-    display: flex;
-    margin-right: 50%;
-    transform: translateX(25%);
-
-    flex-direction: column;
-    gap: 5px;
-    order: 1;
-    
-  }
-
-  .about-trainer .trainer-info .name h1 {
-    order: 1;
-    font-size: 24px;
-  }
-
-  .about-trainer .trainer-info h2 {
-    order: 2;
-    margin-right: 10px;
-    margin-right: 10%;
-  }
-  .about-trainer .trainer-info .name .date {
-    order: 3;
-   
-
-    width: 100%;
-    height: 10px;
-    margin-bottom: 15px;
-  }
-
-  .about-trainer .trainer-info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .about-trainer .trainer-info .icons {
-    display: flex;
-    order: 5;
-    width: 100%;
-    gap: 15px;
-
-    margin-bottom: 0px;
-  }
-
-  .about-trainer .trainer-info .name button {
-    width: 100%;
-    margin-right: 13%;
-    margin-bottom: 15px;
-    font-size: 13px;
-    order: 4;
-  }
-  #p1 {
-    display: none;
-  }
-  .about-trainer #pa {
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    margin-bottom: 4rem;
-    margin-top: 12.5rem;
-  }
-
   /* **************************************************** */
   .questions {
     text-align: center;
@@ -1294,28 +1210,100 @@ width: 100%;
 
   
   /* ************************************************ */
-
   
-  
-
-  /* ********************************************** */
-  
-
-  
-
-  ************************************* */
   .about-trainer {
-    width: 110%;
-  }
-  .about-trainer p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .about-trainer h4 {
+    font-size: clamp(30px, calc(100vw * (52 / 768)), 52px);
+  }
+  
+  .about-trainer .trainer-info{
+    height: auto;
+    gap: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 8px;
+  }
+  
+  .about-trainer .trainer-info img {
+    width: clamp(180px, calc(100vw * (300/768)), 300px);
+    height: clamp(180px, calc(100vw * (300/768)), 300px);
+
+    margin-bottom: 20px;
+  } 
+
+  .about-trainer .trainer-info .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+  }
+
+  .about-trainer .trainer-info .name .trainer-preif{
+    order: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .about-trainer .trainer-info .name .trainer-preif h1{
+    font-size: clamp(30px, calc(100vw * (38 / 768)), 38px);
+    margin-bottom: 14px;
+  }
+  .about-trainer .trainer-info .name .trainer-preif h2{
+    font-size: clamp(15px, calc(100vw * (20 / 768)), 20px);
+  }
+
+  .about-trainer .trainer-info .name .test{
+    order: 2;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+  .about-trainer .trainer-info .name .test button{
+    font-size:  clamp(12px, calc(100vw * (16 / 768)), 16px);
+  }
+  .about-trainer .trainer-info .name .test button svg{
+    width:  clamp(15px, calc(100vw * (30 / 768)), 30px);
+    height:  clamp(15px, calc(100vw * (30 / 768)), 30px);
+  }
+  .about-trainer .trainer-info .name .test .icons{
+    gap:  clamp(15px, calc(100vw * (25 / 768)), 25px);
+  }
+  .about-trainer .trainer-info .name .test .icons a svg{
+    width:  20px;
+    height:  20px;
+  }
+
+  .about-trainer .trainer-info .name .date {
+    order: 1;
+  }
+  .about-trainer .trainer-info .name .date p{
+    font-size:  clamp(12px, calc(100vw * (16 / 768)), 16px);
+    margin: 0;
+  }
+
+  .about-trainer #pa {
+    width: 75%;
+    
     font-size: 14px;
-    margin-bottom: 15%;
+    font-weight: 400;
+
+    text-align: center;
+    line-height: 26.39px;
   }
-  .about-trainer .trainer-info .name button {
-    width: 20%;
-    margin-right: 15%;
-  }
+  
   /* **************************************************** */
   .questions {
     width: 110%;
@@ -1350,203 +1338,3 @@ width: 100%;
   }
 }
 
-@media (max-width: 426px) {
-  .category-content{
-    width: 20rem;
-  }
-  .category-content .course{
-    width: 22rem;
-  }
-  .course-container{
-    width: 100%;
-  }
-  .category-content .buy {
-    display: block;
-    font-size: 14px;
-  }
-  .category-content .course .course-title{
-    width: 100%;
-  }
-  .category-content .course .course-title p{
-    font-size: 11px;
-  }
-
- 
- 
-  
- 
-  
-  .about-trainer {
-    margin-top: 2rem;
-  }
-  .about-trainer p {
-    font-size: 13px;
-  }
-  .about-trainer img {
-    margin-right: 35%;
-    transform: translateX(0%);
-  }
-  .about-trainer .trainer-info .name {
-    margin-right: 30%;
-    transform: translateX(0%);
-    
-  }
-
-  .about-trainer .trainer-info .name h1 {
-    font-size: 20px;
-  }
-
-  /* .about-trainer #pa {
-    margin-right: 0%;
-    margin-top: 11.5rem;
-    width: 100%;
-    border: 1px solid red;
-  }
-  */
-  .about-trainer .trainer-info .name button {
-    width: 20%;
-  }
- 
-  /* ****************************** */
-  .questions{
-    width: 20rem;
-  }
-  .questions h1 {
-    font-size: 18px;
-  }
-  .questions p {
-    font-size: 10px;
-  }
-  .another-courses .sub-courses {
-    flex-direction: column;
-  }
-  .another-courses h1 {
-    width: 251px;
-    font-size: 18px;
-  }
-
-  .another-courses h2 {
-    color: #848484;
-    width: 100%;
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 376px) {
-  .category-content{
-    width: 100%;
-  }
-  .category-content .course{
-    width: 100%;
-  }
-  .category-content .course-title h1 {
-    font-size: 15px;
-  }
-  .category-content .buy {
-    display: block;
-    width: 50%;
-
-    margin-right: 10px;
-    font-size: 12px;
-  }
-  
-  .to-learn p {
-    font-size: 11px;
-  }
-  .to-learn h2 {
-    font-size: 13px;
-  }
-
-  .category-content .reviews .rev-icons li .buy{
-    margin-right: 0;
-  }
-  .reviews .rev-icons {
-    margin-right: 0%;
-   justify-content: space-between;
-    gap: 0%;
-  }
-
-  
-  
-  .reviews .rev-icons li button {
-    font-size: 11px;
-  }
-
-  .comments .comment .title {
-    transform: translateX(48%);
-  }
-
-
-  .questions h1 {
-    font-size: 18px;
-  }
-  .questions p {
-    font-size: 9px;
-    width: 120%;
-  }
- 
-
-}
-
-@media (max-width: 321px) {
-
-  .category-content .course video {
-    width: 100%;
-    margin-inline: auto;
-  }
-  .category-content .course-title{
-    width: 100% ;
-  }
- 
-  .category-content .buy svg {
-    width: 50%;
-  }
-  .category-content .buy {
-    width: 50%;
-    font-size: 10px;
-
-  }
-  .category-content .buy button {
-    font-size: 10px;
-
-  }
-  
-  .category-content .course-title p {
-    width: 100%;
-  }
-
-  .category-content .course-title h1{
-    width: 100%;
-  }
-
-  
-  /* ****************************************************** */
-  .to-learn p {
-    font-size: 10px;
-  }
-  .to-learn h2,
-  .to-learn h1 {
-    font-size: 11px;
-  }
-  .to-learn h1 {
-    font-size: 15px;
-  }
-  
-
-  
-  .reviews .rev-icons li a span,
-  .reviews .rev-icons p {
-    font-size: 10px;
-  }
-  
-  .reviews .rev-icons li button {
-    font-size: 10px;
-  }
-  .comments .comment .co-content {
-    font-size: 13px;
-  }
-  .comments .comment .title {
-    transform: translateX(0%);
-  }
-  
-}
