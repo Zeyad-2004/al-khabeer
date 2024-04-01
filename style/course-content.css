@@ -1167,35 +1167,6 @@ p {
   }
 
   /* ************************************ */
-  .another-courses {
-    margin-top: 1.5rem  ;
-width: 100%; 
-
-  
-  }
-
-  .another-courses h1 {
-    display: none;
-  }
-
-  .another-courses h2 {
-    
-    display: none;
-
-  }
-
-  .another-courses .subline {
-    display: none;
-  }
-
-  .another-courses .sub-courses {
-    display: flex;
-    margin-top: 5%;
-    flex-direction: row;
-    overflow: hidden;
-    gap: 10%;
-  }
-
   .course-container .video-container-more {
     display: none;
     grid-template-columns: 410px;
@@ -1316,19 +1287,45 @@ width: 100%;
 
   /* ************************************ */
   
-
+  .another-courses{
+    width: 90%;
+  }
+  
   .another-courses h1 {
-    width: 100%;
+    display: none;
   }
 
   .another-courses h2 {
-    width: 100%;
-    font-size: 14px;
-    line-height: 20px;
+    display: none;
   }
+  
+  .another-courses .test {
+    justify-content: left;
 
+    margin: 30px 0;
+  }
+  
+  .another-courses .test .subline {
+    display: none;
+  }
+  
+  .another-courses .test a {
+    font-size: clamp(12px, calc(100vw*(20 / 768)), 20px);
+    font-weight: 700;
+  }
+  
+  .another-courses .test a i {
+    font-size: clamp(16px, calc(100vw*(24 / 768)), 24px);
+    font-weight: 900;
+  }
+  
   .another-courses .sub-courses {
     flex-direction: row;
+    overflow: hidden;
+  }
+  
+  .another-courses .scroll-buttons {
+    margin: 40px 0;
   }
 }
 
