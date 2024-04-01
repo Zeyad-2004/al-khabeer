@@ -103,7 +103,7 @@
                 <h1>السلة</h1>
             </a>
         </div>
-        <div class="icon <?php if (in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses"])) echo 'mobile-navbar-active-icon'; ?>">
+        <div class="icon <?php if (in_array(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME), ["courses", "section_courses", "course-content"])) echo 'mobile-navbar-active-icon'; ?>">
             <a href="courses.php">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
