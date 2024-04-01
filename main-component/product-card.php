@@ -17,12 +17,15 @@
                 <span class="price"><span>1500</span><span>SAR</span></span>
                 <span class="price-discount">90% خصم .</span>
             </div>
-            <div class="buy-button d-flex justify-content-center align-items-center gap-2">
-                <div class="price d-flex flex-row-reverse gap-1">
-                    <span>39.99</span><span>SAR</span>
+            <a href="course-content.php">
+                <div class="buy-button d-flex justify-content-center align-items-center gap-2">
+
+                    <div class="price d-flex flex-row-reverse gap-1">
+                        <span>39.99</span><span>SAR</span>
+                    </div>
+                    <span>شراء الآن</span>
+                    <i class="bx bxs-cart"></i>
                 </div>
-                <span>شراء الآن</span>
-                <i class="bx bxs-cart"></i>
-            </div>
+            </a>
         </div>
         
