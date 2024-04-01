@@ -901,21 +901,19 @@ p {
   * {
     box-sizing: border-box;
   }
-  body{
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
 
   .pricing-card {
     display: none;
   }
 
   .category-content {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    margin: 0;
   }
 
   .category-content .course-title {
@@ -952,10 +950,6 @@ p {
 
   .category-content .buy button svg {
     display: none;
-  }
-
-  .category-content {
-    margin: 3% 1%;
   }
 
   .category-content .course video {
@@ -1096,7 +1090,7 @@ p {
   .reviews .rev-icons {
     width: 100%;
     padding: 0;
-    margin: 20px 0;
+    margin: 25px 0 50px 0;
     gap: 40px;
 
     justify-content: space-evenly;
@@ -1130,7 +1124,7 @@ p {
   .reviews .comment {
     border: none;
     padding: 0;
-    /* width: 85vw; */
+    width: 100%;
   }
   .reviews .comment .co-content{
     width: 85vw;
