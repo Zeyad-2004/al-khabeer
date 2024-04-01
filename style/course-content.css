@@ -240,6 +240,9 @@ p {
 .category-content .course .course-title {
   width: 80%;
 }
+.category-content .course .course-title .mobile-more {
+  display: none;
+}
 .category-content .course .course-title h1 {
   font-size: 48px;
   font-weight: 400;
@@ -915,17 +918,6 @@ p {
     
     margin: 0;
   }
-
-  .category-content .course-title {
-    width: 100vw;
-  }
-
-  .category-content .course-title :nth-child(1) {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-  }
-
   .category-content .buy {
     display: inline-block;
     width: initial;
@@ -951,38 +943,58 @@ p {
   .category-content .buy button svg {
     display: none;
   }
-
+  
+  .category-content .course{
+    width:  90%;
+    
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  
+    margin: 20px 0;
+  }
+  .category-content .course .buy button{
+    font-size: clamp(12px, calc(100vw * (20 / 768)), 20px);
+  }
+  .category-content .course .buy button svg{
+    display: none;
+  }
   .category-content .course video {
-    order: 1;
-    width: 80vw;
-    margin-right: 0;
+    aspect-ratio: 966 / 465;
   }
-
   .category-content .course .course-title {
-    order: 2;
-    padding: 1rem;
-  }
-
-  .category-content .course .course-title h1 {
-    color: #161616;
-    text-align: right;
-    font-family: Cairo;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    margin-bottom: 0;
-  }
-
-  .category-content .course .course-title p {
-    color: #848484;
-    text-align: right;
-    font-family: Cairo;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
+    width: 90%;
     margin-top: 20px;
-    margin-bottom: 0;
-    padding-left: 36px;
+  }
+  
+  .category-content .course .course-title .mobile-more {
+    display: block;
+    margin-top: 20px;
+  }
+  .category-content .course .course-title .mobile-more p{
+    margin: 15px 0;
+  }
+
+  .category-content .course-title :nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .category-content .course .course-title h1 {
+    font-size: clamp(18px, calc(100vw * (26 / 768)), 26px);
+    font-weight: 500;
+    
+    margin: 0;
+  }
+  
+  .category-content .course .course-title p {
+    width: 85%;
+    
+    color: #848484;
+    font-size: clamp(12px, calc(100vw * (20 / 768)), 20px);
+
+    margin-top: 20px;
   }
 
   .category-content .course .course-title .icons {
@@ -992,11 +1004,7 @@ p {
   .category-content .course .information {
     display: none;
   }
-
-  .category-content .course {
-    display: flex;
-    flex-direction: column;
-  }
+  /* ********************************************** */
 
   .course-container {
     width: 100%;
