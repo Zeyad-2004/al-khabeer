@@ -1150,21 +1150,6 @@ p {
   #comment{
     display: none;
   }
-  
-  /* **************************************************** */
-  .questions {
-    text-align: center;
-    width: 100%;
-  }
-  .questions h1 {
-    color: #161616;
-    font-size: 23px;
-  }
-  .questions p {
-    margin-right: 10px;
-    width: 100%;
-    font-size: 18px;
-  }
 
   /* ************************************ */
   .course-container .video-container-more {
@@ -1271,18 +1256,33 @@ p {
   
   /* **************************************************** */
   .questions {
-    width: 110%;
+    width: 90%;
   }
   .questions h1 {
-    width: 100%;
-    font-size: 28px;
+    text-align: right;
+    font-size: clamp(18px, calc(100vw * (26 / 768)), 26px);
+    
+    margin: 20px 0;
   }
-  .questions p {
-    width: 100%;
-    font-size: 13px;
+  .questions .question .title{
+    align-items: baseline;
   }
-  .questions svg {
-    margin-right: 5%;
+  .questions .question .title::before {
+    display: none;
+  }
+  .questions .question .title p {
+    font-size: 18px;
+    font-size: clamp(12px, calc(100vw * (18 / 768)), 18px);
+  }
+  .questions .question .title svg {
+    padding-top: 10px;
+    width: clamp(18px, calc(100vw * (22 / 768)), 22px);
+    height: clamp(18px, calc(100vw * (22 / 768)), 22px);
+  }
+  .questions .question .answer {
+    padding-top: 10px;
+    font-size: clamp(12px, calc(100vw*(16 / 768)), 16px);
+    transition: 0.5s;
   }
 
   /* ************************************ */
