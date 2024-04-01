@@ -1040,33 +1040,44 @@ p {
 
   /* ************************************************ */
   .to-learn {
-    margin-top: 1rem;
-    
+    width: 90%;
+    margin: 20px 0 40px 0;
+  }
+  .to-learn h1{
+    font-size: clamp(18px, calc(100vw*(26 / 768)), 26px);
+    margin-bottom: 15px;
+  }
+  .to-learn h2{
+    font-size: clamp(12px, calc(100vw*(18 / 768)), 18px);
   }
   .to-learn .to-learn-cards {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     width: 100%;
-  }
-  .to-learn .learn-card{
+    
     display: flex;
     flex-direction: column;
-
+    gap: clamp(10px, calc(100vw * (20 / 768)), 20px);
+    
+    margin: clamp(25px, calc(100vw * (35 / 768)), 35px) 0;
   }
-  .to-learn h1 {
-
-    width: 50%;
-    font-size: 24px;
+  .to-learn .to-learn-cards .learn-card{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, calc(100vw * (20 / 768)), 20px);
   }
   .to-learn .to-learn-cards .learn-card .cont{
     width: 100%;
-
+    gap: clamp(10px, calc(100vw * (15 / 768)), 15px);
   }
-
+  .to-learn .to-learn-cards .learn-card .cont svg {
+    width: clamp(13px, calc(100vw*(24 / 768)), 24px);
+    height: clamp(13px, calc(100vw*(24 / 768)), 24px);
+  }
   .to-learn .to-learn-cards .learn-card .cont p {
-    font-size: 14px;
+    width: 90%;
     color: #848484;
+    font-size: clamp(10px, calc(100vw*(20 / 768)), 20px);
   }
   
   /* ********************************************** */
