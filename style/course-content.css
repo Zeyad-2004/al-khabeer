@@ -939,10 +939,6 @@ p {
   .category-content .buy button:active {
     background: #000;
   }
-
-  .category-content .buy button svg {
-    display: none;
-  }
   
   .category-content .course{
     width:  90%;
