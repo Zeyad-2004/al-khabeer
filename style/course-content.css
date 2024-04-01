@@ -1007,41 +1007,55 @@ p {
   /* ********************************************** */
 
   .course-container {
-    width: 100%;
-    font-family: "Cairo";
-    color: #000;
+    width: 85%;
     font-weight: 400;
-  }
 
+    margin-top: 10px;
+  }
+  
   .course-container h1 {
-    width: 50%;
-    font-size: 18px;
-    line-height: 26px; 
+    font-weight: 600;
+    font-size: clamp(18px, calc(100vw * (26 / 768)), 26px);
+    
+    margin-bottom: 20px; 
   }
   .course-container p {
-    font-size: 13px;
-    width: 50%;
-
-    line-height: 18px; /* 138.462% */
+    display: none;
   }
-
+  
   .course-container .video-container {
-   
-    display: grid;
-    grid-template-columns: 100%;
-    height: 50vh;
-    overflow-y: hidden;
-    overflow-x: visible;
     width: 100%;
-
+    display: flex;
+    flex-wrap: initial !important;
+    justify-content: space-between;
+    gap: 20px;
+    
+    overflow: hidden;
+  }
+  .course-container .video-container .vid-card{
+    min-width: 100%;
+  }
+  .course-container .video-container .vid-card h1{
+    font-size: clamp(18px, calc(100vw * (26 / 768)), 26px);
+    margin-bottom: 8px;
+    padding-right: 10px;
+  }
+  .course-container .video-container .vid-card h2{
+    font-size: clamp(12px, calc(100vw * (16 / 768)), 16px);
+    padding-right: 10px;
+  }
+  .course-container .video-container .vid-card h2 svg {
+    width: clamp(10px, calc(100vw*(18 / 768)), 18px);
+    height: clamp(10px, calc(100vw*(18 / 768)), 18px);
   }
 
-
-  .course-container .video-container video {
-    width: 120%;
-    height: 50vh;
-
+  .course-container #vid-card {
+    display: none;
   }
+  .course-container .scroll-buttons {
+    margin: 30px 0 20px 0;
+  }
+
   .line {
     display: none;
   }

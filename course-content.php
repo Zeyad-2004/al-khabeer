@@ -1,5 +1,6 @@
 <?php require_once "main-component/header.php" ?>
 <?php require_once "main-component/navbar.php" ?>
+<?php include_once 'main-component/scroll-buttons.php' ?>
 
 <!-- course content wrapper -->
 <div id="co-dev">
@@ -266,7 +267,7 @@
                         </div>
                     </ul>
                 </div>
-                
+
                 <div class="mobile-more">
                     <h1>عن الدورة</h1>
                     <p>إذا كنت تبحث عن الدورات التدريبية الرائعة والمميزة التي تساعدك على تحسين مهاراتكوالنمو في مجال عملك أو هوايتك المفضلة، فأنت في المكان المناسب!</p>
@@ -294,7 +295,7 @@
         <div class="course-container">
             <h1>محتويات الدورة</h1>
             <p>دورة مقدما من قبل الاستاذ محمد </p>
-            <div class="video-container">
+            <div class="video-container" id="video-container">
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -312,7 +313,6 @@
                         <span>14 ثانية, 28 دقيقة</span> 
                     </h2>
                 </div>
-
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -330,7 +330,6 @@
                         <span>14 ثانية, 28 دقيقة</span> 
                     </h2>
                 </div>
-
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -348,7 +347,6 @@
                         <span>14 ثانية, 28 دقيقة</span> 
                     </h2>
                 </div>
-
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -366,7 +364,6 @@
                         <span>14 ثانية, 28 دقيقة</span> 
                     </h2>
                 </div>
-
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -384,7 +381,6 @@
                         <span>14 ثانية, 28 دقيقة</span> 
                     </h2>
                 </div>
-
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -402,7 +398,6 @@
                         <span>14 ثانية, 28 دقيقة</span> 
                     </h2>
                 </div>
-
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -420,7 +415,6 @@
                         <span>14 ثانية, 28 دقيقة</span> 
                     </h2>
                 </div>
-
                 <div class="vid-card">
                     <video src=""></video>
                     <h1>المحاضرة الاولى</h1>
@@ -508,6 +502,8 @@
                 </div>
 
             </div>
+            <?php getScrollButtons("video-container", "window.innerWidth * 0.85 + 20");?>
+
 
             <div id="vid-card" class="more" onclick="handel_list_elements(this, 6, 'vid-card')">
                 <h6>مشاهدة المزيد</h6>
@@ -804,7 +800,7 @@
                 </div>
 
             </div>
-            <?php include("main-component/scroll-buttons.php"); getScrollButtons("comments", "document.getElementById(this.id.slice(2)).offsetWidth");?>
+            <?php getScrollButtons("comments", "document.getElementById(this.id.slice(2)).offsetWidth");?>
 
             <div id="comment" class="more-comments-btn" onclick="handel_list_elements(this, 3, 'comment')">
                 <h6>المزيد من التعليقات </h6>
