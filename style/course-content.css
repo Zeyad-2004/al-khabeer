@@ -420,6 +420,9 @@ p {
 .category-content .more:hover svg {
   color: var(--second-color);
 }
+.category-content .scroll-buttons {
+  display: none;
+}
 
 /* ############################################# */
 /* ########## to-learn Section Start ########### */
@@ -522,6 +525,9 @@ p {
 
   font-size: clamp(10px, calc(100vw * (14 / 1400)), 14px);
   font-weight: 400;
+}
+.reviews .scroll-buttons {
+  display: none;
 }
 
 .comments {
@@ -865,6 +871,8 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
   row-gap: 40px;
+
+  overflow: hidden;
 }
 .another-courses .scroll-buttons {
   display: none;
@@ -879,7 +887,6 @@ p {
   }
   .another-courses .sub-courses {
     flex-wrap: initial;
-    overflow-x: scroll;
   }
   .another-courses .sub-courses ::-webkit-scrollbar {
     display: none;
@@ -999,6 +1006,9 @@ p {
 
   .category-content .course .information {
     display: none;
+  }
+  .category-content .scroll-buttons {
+    display: flex;
   }
   /* ********************************************** */
 
@@ -1354,6 +1364,7 @@ p {
   }
   
   .another-courses .scroll-buttons {
+    display: flex;
     margin: 40px 0;
   }
 }

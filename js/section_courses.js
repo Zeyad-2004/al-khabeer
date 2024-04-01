@@ -46,7 +46,7 @@ links.forEach(link => {
                 // After all condition make a form to go to the other page with section_id and page with ( __GET__ METHOD)
                 const form = document.createElement("form");
                 form.method = "GET";
-                form.action = "section_courses";
+                form.action = "section_courses.php";
 
                 // Input have section data
                 const section = document.createElement("input");
