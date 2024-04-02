@@ -1,0 +1,912 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* Disable Bootstrap !! margin !! style [Add a "!important" at your custom style] */
+h1, h2, h3, h4, h5, h6, p{    
+    margin: 0 !important;
+}
+#co-dev{
+    width: 100%;
+}
+
+
+/* ############################################# */
+/* ############ Price Card Start ############### */
+/* ############################################# */
+.pricing-card {
+  float: left;
+
+  width: max(220px, 25%);
+  min-height: 80vh;
+  max-height: 90vh;
+  
+  margin-left: clamp(50px, calc(100vw * 0.0625), 100px);
+  padding: 30px clamp(15px, calc(100vw * (30 / 1400)), 30px);
+
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  
+  position: sticky;
+  left: 0;
+  top: 5vh;
+  z-index: 100;
+  overflow-y: scroll;
+  
+
+  background: #fbfbfb;
+}
+.pricing-card::-webkit-scrollbar { /* Hide scrollbar for WebKit browsers */
+  display: none;
+}
+.pricing-card .price {
+  width: 100%;
+  height: 15%;
+
+  margin-bottom: 15px;
+}
+.pricing-card .price div {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  gap:  clamp(6px, calc(100vw * (10 / 1400)), 10px);
+}
+.pricing-card .price .after {
+  margin-bottom: 5px;
+}
+.pricing-card .price .after h3{
+  color: #161616;
+
+  font-size:  clamp(20px, calc(100vw * (30 / 1400)), 30px);
+  font-weight: 400;
+  text-align: right;
+  font-family: "Segoe UI";
+}
+.pricing-card .price .after p{
+  color: #161616;
+  
+  font-size: clamp(12px, calc(100vw * (16 / 1400)), 16px);
+  font-weight: 700;
+  text-align: right;
+}
+.pricing-card .price .before {
+  color: #161616;
+  text-align: right;
+
+  font-size: clamp(11px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+  font-style: normal;
+}
+.pricing-card .price .before p {
+  position: relative;
+}
+.pricing-card .price .before p::after {
+  content: "";
+  display: block;
+  
+  width: 100%;
+  height: 1px;
+  
+  position: absolute;
+  top: 50%;
+  left: 0;
+  
+  background-color: #00000056;
+}
+
+
+.pricing-card .buy-btn {
+  display: flex;
+  flex-direction: column;
+}
+.pricing-card .buy-btn a {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+  font-size: clamp(10px, calc(100vw * (18 / 1400)), 18px);
+  font-weight: 400;
+
+  border-radius: 2px;
+  color: var(--White);
+  background: #fd9802;
+  
+  padding: clamp(9px, calc(100vw * (14 / 1400)), 14px) 0px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.pricing-card .buy-btn a:hover {
+  background: #644c2a;
+}
+.pricing-card .buy-btn a svg {
+  width:  clamp(14px, calc(100vw * (19 / 1400)), 19px);
+}
+
+
+.pricing-card .discount-time {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+
+  color: #FD9802;
+  margin-bottom: 10px;
+
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Segoe UI";
+}
+
+
+.pricing-card .information {
+  width: 100%;
+  
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+
+  margin: 20px 0;
+  padding: clamp(18px, calc(100vw * (30 / 1400)), 30px)
+           clamp(8px, calc(100vw * (20 / 1400)), 20px)
+           clamp(30px, calc(100vw * (50 / 1400)), 50px)
+           clamp(8px, calc(100vw * (20 / 1400)), 20px);
+}
+.pricing-card .information h5{
+  color: #fd9802;
+  
+  font-size:  clamp(8px, calc(100vw * (12 / 1400)), 12px);
+  font-weight: 400;
+  text-align: right;
+  font-family: "Segoe UI";
+
+  margin-bottom: 15px !important;
+
+}
+.pricing-card .information p {
+  color: #161616;
+  
+  font-size:  clamp(10px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+  text-align: right;
+  font-family: "Segoe UI";
+
+  margin-bottom: 15px !important;
+}
+.pricing-card .information a {
+  color: #161616;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  text-decoration: none;
+}
+
+
+.pricing-card .icons {
+  text-align: right;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+
+}
+.pricing-card .icons ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 0;
+}
+.pricing-card .icons ul li .icon-line svg {
+  width: clamp(14px, calc(100vw * (24 / 1400)), 24px);
+  height: clamp(14px, calc(100vw * (24 / 1400)), 24px);
+}
+.pricing-card .icons ul li .icon-line:hover,
+.pricing-card .icons ul li .icon-line:hover svg path {
+  color: var(--second-color);
+  fill: var(--second-color);
+  transition: 0.3s;
+}
+.pricing-card .icons ul li .icon-line {
+  color: #161616;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.pricing-card .icons ul li .icon-line svg {
+  margin-left: 10px;
+}
+
+
+
+/* ############################################# */
+/* ########## Course Section Start ############# */
+/* ############################################# */
+
+
+/* ############################################# */
+/* ########## Category Content Start ########### */
+.buy {
+  display: none;
+  width: 20%;
+  cursor: pointer;
+}
+.category-content {
+  margin: clamp(50px, calc(100vw * 0.0625), 100px) clamp(50px, calc(100vw * 0.0625), 100px);
+  width: 55%;
+  position: relative;
+  z-index: 10;
+}
+.category-content .course{
+    width: 100%;
+}
+.category-content .course .course-title {
+    width: 80%;
+}
+.category-content .course .course-title h1 {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 10px !important;
+}
+.category-content .course .course-title h1 {
+  color: #161616;
+  text-align: right;
+  font-size: clamp(24px, calc(100vw * 0.03), 48px);
+  font-style: normal;
+  font-weight: 400;
+}
+.category-content .course .course-title p {
+  color: #848484;
+  font-size: clamp(12px, calc(100vw * 0.01125), 18px);
+  font-weight: 400;
+  margin-bottom: 10px !important;
+}
+.category-content .course .course-title .icons {
+    height: 18px;
+    margin-bottom: 20px;
+}
+.category-content .course .course-title .icons ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.category-content .course .course-title .icons ul li p{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin: 0 !important;
+    color: #161616;
+
+    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+.category-content .course .course-title .icons ul div {
+    color: #000;
+
+    font-family: "Segoe UI";
+    font-size: 11px;
+    
+    height: 18px;
+    padding: 0 10px;
+    
+    background-color: #fd9802;
+    text-transform: uppercase;
+}
+.category-content .course .course-title .icons ul div p{
+    color: #000;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+.category-content .course video {
+  width: 100%;
+  aspect-ratio: 966/465;
+  
+  background-image: url("../media/main/autocad.png");
+  background-size: cover;
+  background-position: center;
+
+  margin-bottom: 10px;
+}
+.category-content .course .information h3 {
+  color: #000;
+  font-size: clamp(14px, calc(100vw * (18 / 1400)), 18px);
+
+  margin-bottom: 10px !important;
+}
+.category-content .course .information h5 {
+    color: #000;
+    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
+    margin-bottom: 10px !important;
+}
+.category-content .course .information p {
+    color: #848484;
+    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
+    margin-bottom: 20px !important;
+}
+
+
+.line {
+    width: 60%;
+    height: 3px;
+
+    position: relative;
+    right: -100px;
+    
+    margin: 30px 0;
+    background-color: #fd9802;
+}
+
+
+/* ############################################# */
+/* ########## Course Container Start ########### */
+.course-container {
+  width: 90%;
+}
+.course-container h1 {
+    color: #000;
+    
+    font-size:  clamp(16px, calc(100vw * (24 / 1400)), 24px);
+    font-weight: 400;
+
+    text-align: right;
+    margin-bottom: 10px !important;
+}
+.course-container p {
+    font-size:  clamp(11px, calc(100vw * (14 / 1400)), 14px);
+    
+    margin-bottom: 25px !important;
+}
+.course-container .video-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 45% 45%;
+  column-gap: 10%;
+  row-gap: 40px;
+}
+.course-container .video-container video {
+  width: 100%;
+  aspect-ratio: 406/228;
+
+  background-image: url("../media/main/revit.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.course-container .video-container .vid-card h1 {
+  color: #161616;
+  font-size:  clamp(12px, calc(100vw * (18 / 1400)), 18px);
+}
+.course-container .video-container .vid-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #848484;
+  font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
+}
+.course-container .video-container .vid-card h2 svg {
+  width: clamp(10px, calc(100vw * (16 / 1400)), 16px);
+  aspect-ratio: 1;
+}
+
+.course-container .video-container-more {
+  display: none;
+  grid-template-columns: 410px 410px;
+  gap: 30px;
+}
+
+.category-content .more {
+    width: 100%;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+    margin: 25px 0;
+}
+.category-content .more h6 {
+  font-size: clamp(9px, calc(100vw*(20 / 1400)), 20px);
+}
+.category-content .more svg {
+  width: clamp(14px, calc(100vw*(24 / 1400)), 24px);
+  height: clamp(14px, calc(100vw*(24 / 1400)), 24px);
+}
+.category-content .more >*{
+    transition: 0.3s;
+}
+.category-content .more:hover,
+.category-content .more:hover svg{
+    color: var(--second-color);
+}
+
+
+/* ############################################# */
+/* ########## to-learn Section Start ########### */
+.to-learn {
+  width: 100%;
+  margin: 60px 0;
+}
+.to-learn h1 {
+  color: #000;
+  
+  font-size:  clamp(14px, calc(100vw * (18 / 1400)), 18px);
+  font-weight: 600;
+  text-align: right;
+  
+  margin-bottom: 10px !important;
+}
+.to-learn h2 {
+    color: #000;
+
+    font-size:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
+    font-weight: 600;
+    text-align: right;
+    
+    margin-bottom: clamp(20px, calc(100vw * (40 / 1400)), 40px) !important;
+}
+.to-learn .to-learn-cards {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.to-learn .to-learn-cards .learn-card {
+    width: 100%;
+    
+    display: flex;
+    gap: 2%;
+}
+.to-learn .to-learn-cards .learn-card .cont {
+    width: 32%;
+    
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.to-learn .to-learn-cards .learn-card .cont svg{
+    width:  clamp(9px, calc(100vw * (14 / 1400)), 14px);
+    aspect-ratio: 1;
+}
+.to-learn .to-learn-cards .learn-card .cont p {
+    color: #848484;
+
+    font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+    font-weight: 500;
+    text-align: right;
+}
+
+
+/* ############################################# */
+/* ########## Review Section Start ############# */
+.reviews {
+    width: 100%;
+}
+.reviews h1 {
+  color: #161616;
+  font-size:  clamp(20px, calc(100vw * (30 / 1400)), 30px);
+
+  margin-bottom: 30px !important;
+}
+.reviews .rev-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 75px;
+
+  margin-bottom: clamp(40px, calc(100vw * (70 / 1400)), 70px);
+}
+.reviews .rev-icons li {
+    height: 65px;
+}
+.reviews .rev-icons li .test {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.reviews .rev-icons li .test div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.reviews .rev-icons li .test div svg {
+  width: clamp(15px, calc(100vw * (30 / 1400)), 30px);
+  aspect-ratio: 1;
+}
+.reviews .rev-icons li .test div p {
+    color: #161616;
+    
+    font-size:  clamp(15px, calc(100vw * (30 / 1400)), 30px);
+}
+.reviews .rev-icons li:nth-child(1) .test :where(p, span){
+  color: #fd9802;
+}
+.reviews .rev-icons li .test span {
+  color: #161616;
+
+  font-size: clamp(10px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+}
+
+.comments {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+.comments .comment {
+    width: 100%;
+    padding:  clamp(10px, calc(100vw * (20 / 1400)), 20px) 10px;
+
+    display: flex;
+    flex-direction: column;
+    
+    border: 2px solid rgba(217, 217, 217, 0.50);
+    border-radius: 9px;
+
+    margin-bottom: 20px;
+}
+.comments .comment .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+.comments .comment .title h1,
+.comments .comment .title h2 {
+    color: #161616;
+  
+    font-size:  clamp(11px, calc(100vw * (14 / 1400)), 14px);
+    font-weight: 400;
+    text-align: right;
+
+    margin: 0 !important;
+}
+.comments .comment .title h2 {
+  color: #848484;
+
+  font-size:  clamp(8px, calc(100vw * (14 / 1400)), 14px);
+}
+.comments .comment .title div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    height: clamp(30px, calc(100vw * (40 / 1400)), 40px);
+}
+.comments .comment .title img {
+  width:  clamp(30px, calc(100vw * (40 / 1400)), 40px);
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+}
+.comments .comment .co-content {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  margin-bottom: clamp(10px, calc(100vw * (20 / 1400)), 20px);
+}
+.comments .comment .co-content .svg {
+    text-align: center;
+    width:  clamp(30px, calc(100vw * (40 / 1400)), 40px);
+}
+.comments .comment .co-content .svg svg {
+    width:  clamp(20px, calc(100vw * (40 / 1400)), 40px);
+    aspect-ratio: 1;
+}
+.comments .comment .co-content p {
+  color: #848484;
+  width: 85%;
+
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+}
+
+.more-comments-btn {
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    
+    cursor: pointer;
+    margin-top: 10px;
+}
+.more-comments-btn h6 {
+  font-size: clamp(9px, calc(100vw * (20 / 1400)), 20px);
+}
+.more-comments-btn svg {
+  width: clamp(14px, calc(100vw * (24 / 1400)), 24px);
+  height: clamp(14px, calc(100vw * (24 / 1400)), 24px);
+}
+.more-comments-btn >*{
+    transition: 0.3s;
+}
+.more-comments-btn:hover,
+.more-comments-btn:hover svg {
+    color: var(--second-color);
+}
+
+
+/* ############################################# */
+/* ########### About Trainer Start ############# */
+.about-trainer {
+  width: 100%;
+
+  margin-bottom: 40px;
+}
+.about-trainer h4 {
+  color: #161616;
+  font-size:  clamp(18px, calc(100vw * (30 / 1400)), 30px);
+
+  margin-bottom: clamp(20px, calc(100vw * (40 / 1400)), 40px) !important;
+}
+.about-trainer .trainer-info {
+  display: flex;
+  width: 100%;
+  height:  clamp(100px, calc(100vw * (180 / 1400)), 180px);
+  gap: 10%;
+
+  margin-bottom:  clamp(35px, calc(100vw * (75 / 1400)), 75px);
+}
+.about-trainer .trainer-info img {
+  width:  clamp(100px, calc(100vw * (180 / 1400)), 180px);
+  height:  clamp(100px, calc(100vw * (180 / 1400)), 180px);
+}
+.about-trainer .trainer-info .name {
+  display: flex;
+  flex-direction: column;
+  
+  margin-bottom:  clamp(28px, calc(100vw * (50 / 1400)), 50px);
+}
+.about-trainer .trainer-info .name h1 {
+  font-size:  clamp(20px, calc(100vw * (30 / 1400)), 30px);
+  margin-bottom: 5px !important;
+}
+.about-trainer .trainer-info .name h2 {
+  color: #848484;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+
+}
+.about-trainer .trainer-info .name .test {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+
+  margin-top:  clamp(14px, calc(100vw * (25 / 1400)), 25px);
+  margin-bottom:  clamp(10px, calc(100vw * (20 / 1400)), 20px);
+}
+.about-trainer .trainer-info .name .date p {
+  color: #848484;
+  font-size: clamp(9px, calc(100vw * (14 / 1400)), 14px);
+  font-weight: 400;
+}
+.about-trainer .trainer-info .name .test .icons {
+  display: flex;
+  gap: 12px;
+}
+.about-trainer .trainer-info .name .test .icons a svg{
+  width: clamp(12px, calc(100vw * (14 / 1400)), 16px);
+  aspect-ratio: 1;
+
+  transition: 0.3s;
+}
+.about-trainer .trainer-info .name .test .icons a:hover svg {
+  fill: var(--second-color);
+}
+
+.about-trainer .trainer-info .name .test button {
+  color: #fff;
+  font-size: clamp(8px, calc(100vw * (14 / 1400)), 14px);
+  text-align: center;
+  
+  padding: 1px 10px;
+  border-radius: 2px;
+  background: var(--second-color);
+  
+  transition: 0.3s;
+}
+.about-trainer .trainer-info .name .test button:hover {
+  background: #644c2a;
+}
+.about-trainer p {
+  color: #161616;
+
+  font-size:  clamp(10px, calc(100vw * (18 / 1400)), 18px);
+  font-weight: 400;
+  text-align: right;
+
+  margin-bottom:  clamp(9px, calc(100vw * (34 / 1400)), 34px) !important;
+}
+
+
+/* ############################################# */
+/* ########## Questions Section Start ########## */
+.questions {
+  max-width: 90%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-weight: 400;
+  font-style: normal;
+
+  overflow: hidden
+}
+.questions h1 {
+  margin: 5%;
+
+  color: #161616;
+  font-size: clamp(20px, calc(100vw*(48 / 1400)), 48px);
+  font-weight: 700;
+}
+.questions .question .title{
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+.questions .question .title::before{
+  content: "";
+  width: 60%;
+  height: 3px;
+
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+
+  background: rgba(217, 217, 217, 0.25);
+}
+.questions .question .title p {
+  color: #161616;
+  max-width: 90%;
+
+  font-size: clamp(8px, calc(100vw * (20 / 1400)), 20px);
+  text-align: right;
+
+  position: relative;
+}
+
+.questions .question .title svg {
+  width: 10%;
+  height:  clamp(8px, calc(100vw * (16 / 1400)), 16px);
+  
+  cursor: pointer;
+  transition: 0.3s;
+}
+.questions .question .title svg path{
+  transition: 0.3s;
+}
+.questions .question .title svg:hover path{
+  fill: var(--second-color);
+}
+.questions .question .answer{
+  width: 90%;
+  color: var(--second-color);
+  font-size:  clamp(12px, calc(100vw * (20 / 1400)), 20px);
+
+  /* transition: opacity 0.5s linear; */
+  transition: 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  padding-top: 10px;
+}
+.visible {
+  opacity: 1;
+  height: 100%;
+  padding-top: 30px;
+}
+
+
+/* ############################################# */
+/* ########## Another Courses Start ############ */
+.another-courses {
+  width: 100%;
+}
+.another-courses h1 {
+  color: #161616;
+  
+  font-size: clamp(14px, calc(100vw * (24 / 1400)), 24px);
+  font-weight: 400;
+
+  margin-bottom: 15px !important;
+}
+.another-courses h2 {
+  width: 90%;
+  color: #848484;
+
+  font-size: clamp(10px, calc(100vw * (18 / 1400)), 18px);
+  font-weight: 400;
+}
+.another-courses .test{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.another-courses .test .subline {
+  width: 30%;
+  height: 2px;
+  
+  margin: 30px 0;
+  background-color: #fd9802 !important;
+}
+.another-courses .test a{
+  display: flex;
+  align-items: center;
+  color: #000;
+  
+  font-size:  clamp(10px, calc(100vw * (16 / 1400)), 16px);
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.another-courses .test a:hover {
+  color: var(--second-color);
+}
+
+.another-courses .test a i {
+  font-family: "Font Awesome 6 Free";
+  font-size: 14px;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.another-courses .sub-courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 40px;
+}
+.another-courses .scroll-buttons{
+  display: none;
+}
+
+/* ############################################# */
+/* ######## Another Courses Slider Style #######*/
+@media (width < 1100px) {
+  .another-courses .sub-courses {
+    gap: 50px;
+    justify-content: space-between;
+  }
+  .another-courses .sub-courses {
+    flex-wrap: initial !important;
+    overflow-x: scroll;
+  }
+  .another-courses .sub-courses ::-webkit-scrollbar {
+    display: none !important;
+  }
+  .another-courses .scroll-buttons {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    width: 100%;
+    margin-top: 34px;
+    margin-inline: auto;
+  }
+}
+/* ******************************Responsive section*********************** */
+
+

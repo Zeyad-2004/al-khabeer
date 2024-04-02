@@ -1,0 +1,636 @@
+/* ====================== GENERAL STUFF ====================== */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.checkout-container input:focus,
+.checkout-container select {
+  outline: none;
+}
+
+.checkout-container .line-breaker {
+  width: 100%;
+  height: 1px;
+  background: #acacac;
+  margin: 36px 0;
+}
+
+.checkout-container .right-section-wrapper,
+.checkout-container .left-section-wrapper {
+  padding: 48px;
+  width: 570px;
+}
+
+.checkout-container h1 {
+  margin-bottom: -20px;
+  color: var(--Text, #0a0d13);
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+}
+/* ====================== checkout container & wrapper ====================== */
+.checkout-container {
+  padding: 50px 10px;
+  direction: ltr;
+  height: 100vh;
+  width: 100%;
+}
+
+.checkout-wrapper {
+  gap: 18px;
+  height: 100%;
+  width: 100%;
+}
+
+/* ====================== RIGHT SECTION ====================== */
+
+.checkout-container .right-section {
+  border: 1px solid #d9d9d9;
+  background: #f9fafa;
+  padding-top: 75px;
+  padding-right: 130px;
+}
+.checkout-container .right-section .con-right-btt {
+  display: flex;
+  width: 100%;
+  margin-top: 1%;
+  justify-content: space-around;
+}
+.checkout-container .right-section .con-right {
+  display: none;
+  background-color: #acacac;
+  color: #f3f3f3;
+  width: 30%;
+  border-radius: 5px;
+  padding: 1% 1.5%;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* ====================== product-wrapper ====================== */
+.checkout-container .right-section .product-wrapper {
+  gap: 1rem;
+  width: 100%;
+}
+
+.checkout-container .right-section .product {
+  width: 100%;
+}
+
+.checkout-container .right-section .product-wrapper img {
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.checkout-container .right-section .product-wrapper .product-title {
+  color: var(--Text, #0a0d13);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.checkout-container .right-section .product-wrapper .product-desc {
+  color: var(--Stroke, #acacac);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.checkout-container .right-section .product-wrapper .product-price {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ====================== discount wrapper ====================== */
+.checkout-container .right-section .discount-code {
+  width: 100%;
+  gap: 1rem;
+}
+.checkout-container .right-section .discount-code input {
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: 1.5px solid #adadac;
+  background-color: #fff;
+  outline: none;
+  width: 100%;
+}
+
+.checkout-container .right-section .discount-code input::placeholder {
+  color: #adadac;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.checkout-container .right-section .discount-code button {
+  padding: 13px 23px;
+  border-radius: 4px;
+  background-color: #adadac;
+  border: 1.5px solid #adadac;
+  color: var(--Text-2, #f3f3f3);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.checkout-container .right-section .discount-code button:hover {
+  filter: brightness(0.9);
+}
+
+/* ====================== subtotal ====================== */
+.checkout-container .right-section .sub-total {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ====================== total price ====================== */
+.checkout-container .right-section .total .total-title {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.checkout-container .right-section .total .taxes {
+  color: var(--Stroke, #acacac);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.checkout-container .right-section .total .total-price {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ====================== LEFT-SECTION ====================== */
+.checkout-container .left-section {
+  padding-top: 75px;
+  padding-left: 130px;
+}
+.checkout-container .left-section .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+.checkout-container .left-section .header h1 {
+  margin: 0;
+}
+.checkout-container .left-section .header svg {
+  transition-duration: 0.3s;
+}
+.checkout-container .left-section .header svg:hover {
+  color: var(--second-color);
+}
+
+.checkout-container .left-section input {
+  padding: 1% 1.5%;
+}
+
+.checkout-container .left-section .paywith {
+  color: var(--Text, #0a0d13);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.checkout-container .left-section .payment-options {
+  gap: 1rem;
+  margin-top: 16px;
+}
+
+.checkout-container .left-section .payment-options label,
+.checkout-container .left-section .payment-options input {
+  cursor: pointer;
+}
+
+.checkout-container .left-section .payment-options input {
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0.2rem solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #999;
+}
+.checkout-container .left-section .payment-options input:focus-visible {
+  outline-offset: 0;
+}
+
+.checkout-container .left-section .payment-options input:hover {
+  border-width: 0;
+}
+
+.checkout-container .left-section .payment-options input:checked {
+  box-shadow: 0 0 0 2px #fd9802;
+  background-color: #fd9802;
+  border-width: 0.2rem;
+}
+
+.checkout-container .left-section .payment-options a label {
+  color: black;
+}
+
+/* ====================== Card Form ====================== */
+.checkout-container .left-section .forms {
+  margin-top: 36px;
+}
+
+.checkout-container .left-section .forms .date,
+.checkout-container .left-section .forms .cvv {
+  width: 100%;
+}
+.checkout-container .left-section .forms .date h6,
+.checkout-container .left-section .forms .cvv h6 {
+  color: var(--Text, #0a0d13);
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.checkout-container .left-section .forms form {
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.checkout-container .left-section .forms form .c-number {
+  margin-bottom: 5%;
+}
+
+.checkout-container .left-section .forms form .c-number h6 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: var(--Text);
+}
+
+.checkout-container .left-section .forms form .c-number input {
+  border: 1.5px solid #acacac;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  padding: 12px 16px;
+}
+
+.checkout-container .left-section .forms form .expiration {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.checkout-container .left-section .forms form .expiration input {
+  border: 1.5px solid #acacac;
+  border-radius: 4px;
+  width: 100%;
+
+  padding: 12px 16px;
+}
+
+.checkout-container .left-section .forms form .btt {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-container .left-section .forms form .btt .radio {
+  margin-top: 5%;
+  display: flex;
+  gap: 2%;
+  align-items: baseline;
+}
+
+.checkout-container .left-section .forms form .btt .radio input {
+  border-color: #acacac;
+  outline: none;
+  box-shadow: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-width: 1.5px;
+}
+
+.checkout-container .left-section .forms form .btt .radio input:checked {
+  background-color: var(--second-color);
+  border-color: #fd9802;
+}
+
+.checkout-container .left-section .forms form .btt .radio h5 {
+  margin-top: 1.5%;
+  color: #acacac;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.checkout-container .left-section button {
+  background-color: #fd9802;
+  border-radius: 4px;
+  width: 100%;
+  color: #f3f3f3;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  padding: 14px 0;
+  margin-bottom: 23px;
+  margin-top: 36px;
+}
+
+.checkout-container .left-section .forms p {
+  color: #acacac;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ====================== Bank form====================== */
+.checkout-container .left-section .forms .bank-form .bank select,
+.checkout-container .left-section .forms .bank-form .bank input {
+  border: 1.5px solid #acacac;
+  border-radius: 4px;
+  width: 100%;
+  padding: 11px 16px;
+}
+
+.checkout-container .left-section .forms .bank-form .bank select {
+  appearance: none;
+}
+
+.checkout-container
+  .left-section
+  .forms
+  .bank-form
+  .bank
+  .bank-options-wrapper {
+  width: 100%;
+  height: initial !important;
+  margin: 0;
+  position: relative;
+}
+
+.checkout-container
+  .left-section
+  .forms
+  .bank-form
+  .bank
+  .bank-options-wrapper
+  #select-arrow {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  color: #acacac;
+}
+
+.checkout-container .left-section .bank-pin #bank-pin-title {
+  color: #0a0d13;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.checkout-container .left-section .bank-pin .squares {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+.checkout-container .left-section .bank-pin .squares input {
+  height: 52px;
+  width: 50px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  border: 1.5px solid #acacac;
+}
+
+.checkout-container .left-section .bank-pin button {
+  margin-top: 150px;
+}
+
+.checkout-container .left-section .forms .bank-form .bank div {
+  margin: 10% 0;
+}
+.checkout-container .left-section .forms .bank-form .bank select {
+  margin-bottom: 40%;
+}
+
+#bank-num {
+  display: none;
+}
+
+#bank-num h6 {
+  font-weight: bold;
+}
+/* ====================== transfer form ====================== */
+
+.checkout-container .left-section .transfer-form .transfer,
+.polaris {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.checkout-container .left-section .transfer-form .transfer div {
+  display: flex;
+}
+.checkout-container .left-section .transfer-form .transfer .polaris h4 {
+  transform: translateY(40%);
+  font-size: large;
+  font-weight: bold;
+}
+
+.checkout-container .left-section .transfer-form .transfer .polaris p {
+  margin-top: 36px;
+}
+
+.checkout-container .left-section .transfer-form .transfer span {
+  color: red;
+}
+
+.checkout-container .left-section .transfer-form button {
+  margin-top: 95px;
+}
+
+/* ====================== GENERAL MEDIA ====================== */
+@media (width < 1460px) {
+  .checkout-container .right-section-wrapper,
+  .checkout-container .left-section-wrapper {
+    padding: 28px;
+    width: 100%;
+  }
+
+  .checkout-container .right-section,
+  .checkout-container .left-section {
+    width: 100%;
+  }
+}
+@media (width < 1200px) {
+  .checkout-container .right-section {
+    padding-right: 0;
+    height: 100vh;
+  }
+
+  .checkout-container .left-section {
+    padding-left: 0;
+  }
+}
+
+@media (width < 1025px) {
+  .checkout-container .right-section,
+  .checkout-container .left-section {
+    padding-top: 2rem;
+  }
+}
+@media (width < 769px) {
+  .checkout-container .right-section,
+  .checkout-container .left-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .checkout-container {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+  }
+
+  .checkout-wrapper {
+    position: relative;
+  }
+
+  /* right section =============================== */
+
+  .checkout-container .right-section .product-wrapper .product-desc,
+  .checkout-container .right-section .product-wrapper .product-price,
+  .checkout-container .right-section .product-wrapper .product-title,
+  .checkout-container .right-section .discount-code button,
+  .checkout-container .right-section .total .taxes,
+  .checkout-container .right-section .total .total-title,
+  .checkout-container .right-section .sub-total,
+  .checkout-container .right-section .total .total-price {
+    font-size: 14px;
+  }
+  .checkout-container .right-section {
+    transform: translateX(-100%);
+    transition: 0.3s;
+  }
+
+  .checkout-container .right-section .discount-code{
+    flex-direction: column;
+  }
+
+  .checkout-container .line-breaker {
+    margin: 20px 0;
+  }
+  .checkout-container .right-section .right-section-wrapper {
+    transition: 0.3s;
+  }
+
+
+  .checkout-container .right-section .con-right {
+    display: inline;
+  }
+
+  /* left section ======================== */
+  .checkout-container .left-section {
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .checkout-container .left-section .left-section-wrapper,
+  .checkout-container .left-section .left-section-wrapper .forms {
+    width: 100%;
+  }
+  .checkout-container .left-section .forms .bank-form .bank input,
+  .checkout-container .left-section .forms .bank-form .bank select {
+    font-size: 1rem;
+  }
+  .checkout-container .left-section .left-section-wrapper .forms .bank-pin {
+    width: 100%;
+    font-size: 14px;
+  }
+  .checkout-container .left-section .bank-pin button {
+    margin-top: 60px;
+
+  }
+  .checkout-container .left-section .forms p {
+    font-size: 14px;
+  }
+
+  .checkout-container .left-section button {
+    font-size: 1rem;
+  }
+  .checkout-container .left-section button{
+    margin: 1rem 0;
+  }
+  .checkout-container .left-section .forms form .btt .radio {
+    margin: 0;
+  }
+  .checkout-container .left-section .forms .bank-form .bank select {
+    margin-bottom: 100px;
+  }
+  .checkout-container .left-section .forms .bank-form .bank div{
+    margin: 1rem 0;
+  }
+  .checkout-container .left-section .transfer-form button {
+    margin: 0px 0px;
+  }
+
+}
+
+@media (width < 350px) {
+
+  .checkout-container .left-section .left-section-wrapper,
+  .checkout-container .left-section .left-section-wrapper .forms {
+    width: 100%;
+  }
+  .checkout-container .left-section .forms p {
+    font-size: 10px;
+  }
+  .checkout-container .left-section .forms .date h6,
+  .checkout-container .left-section .forms .cvv h6 {
+    font-size: 14px;
+  }
+}
